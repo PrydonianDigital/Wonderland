@@ -260,13 +260,14 @@ function wl_av_repeatable() {
 		'type'        => 'group',
 		'options'     => array(
 			'group_title'   => __( 'AV #{#}', 'wl' ),
-			'add_button'    => __( 'Add Another AV', 'wl' ),
+			'add_button'    => __( 'Add Another AV Item', 'wl' ),
 			'remove_button' => __( 'Remove AV', 'wl' ),
 			'sortable'      => true,
 		),
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name'       => __( 'Title', 'wl' ),
+		'description' => __( 'Used for the "Additional formats" video switcher', 'wl' ),
 		'id'         => 'title',
 		'type'       => 'text',
 	) );
@@ -293,7 +294,7 @@ function wl_av_repeatable() {
 		'type' => 'file',
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
-		'name' => __( 'OGG', 'wl' ),
+		'name' => __( 'OGG/OGV', 'wl' ),
 		'id'   => 'ogg',
 		'type' => 'file',
 	) );
@@ -312,7 +313,7 @@ function wl_print_repeatable() {
 		'type'        => 'group',
 		'options'     => array(
 			'group_title'   => __( 'Print #{#}', 'wl' ),
-			'add_button'    => __( 'Add Another Print', 'wl' ),
+			'add_button'    => __( 'Add Another Print Image', 'wl' ),
 			'remove_button' => __( 'Remove Print', 'wl' ),
 			'sortable'      => true,
 		),
@@ -348,7 +349,7 @@ function wl_digital_image_repeatable() {
 		'type'        => 'group',
 		'options'     => array(
 			'group_title'   => __( 'Digital #{#}', 'wl' ),
-			'add_button'    => __( 'Add Another Digital', 'wl' ),
+			'add_button'    => __( 'Add Another Digital Image', 'wl' ),
 			'remove_button' => __( 'Remove Digital', 'wl' ),
 			'sortable'      => true,
 		),
@@ -383,13 +384,14 @@ function wl_digital_swf_repeatable() {
 		'type'        => 'group',
 		'options'     => array(
 			'group_title'   => __( 'Digital #{#}', 'wl' ),
-			'add_button'    => __( 'Add Another Digital', 'wl' ),
+			'add_button'    => __( 'Add Another SWF', 'wl' ),
 			'remove_button' => __( 'Remove Digital', 'wl' ),
 			'sortable'      => true,
 		),
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name'       => __( 'SWF Title', 'wl' ),
+		'description' => __( 'Used for the "Additional formats" SWF switcher', 'wl' ),
 		'id'         => 'swftitle',
 		'type'       => 'text',
 	) );
@@ -406,11 +408,13 @@ function wl_digital_swf_repeatable() {
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name'        => __( 'SWF Width', 'wl' ),
+		'description' => __( 'Used to display the SWF file properly', 'wl' ),
 		'id'          => 'swfwidth',
 		'type'        => 'text_small',
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name'        => __( 'SWF Height', 'wl' ),
+		'description' => __( 'Used to display the SWF file properly', 'wl' ),
 		'id'          => 'swfheight',
 		'type'        => 'text_small',
 	) );
@@ -461,7 +465,7 @@ function add_menu_icons_styles(){
 
 	echo '<style>
 	#adminmenu #menu-posts-portfolio div.wp-menu-image:before, #dashboard_right_now .portfolio-count a:before {
-		content: "\f481";
+		content: "\f115";
 	}
 	#adminmenu #menu-posts-taxonomy div.wp-menu-image:before, #dashboard_right_now .taxonomy-count a:before {
 		content: "\f323";

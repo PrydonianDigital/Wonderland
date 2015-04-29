@@ -51,7 +51,11 @@
 
 						<?php } ?>
 
-
+						<?php
+							$swfentries = get_post_meta( get_the_ID(), '_cmbdigitalswf_digital', true );
+							foreach ( (array) $swfentries as $key => $swfentry ) {
+								if ( $key < 1 ) {} else {
+						?>
 						<div class="additional">
 
 							<h2>Additional formats</h2>
@@ -75,8 +79,14 @@
 							</p>
 
 						</div>
-
-
-
+						<?php
+								}
+						?>
+						<?php
+							}
+						?>
 
 					</div>
+<script>
+
+</script>
