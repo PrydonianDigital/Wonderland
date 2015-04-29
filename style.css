@@ -1,0 +1,21 @@
+/*
+Theme Name: Wonderland
+Theme URI: http://madeinwonderland.com
+Description: WordPress theme for Wonderland
+Version: 1.0
+Author: Mark Duwe
+Author URI: http://prydonian.digital
+Tags:
+License: Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported License
+License URI: http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US
+*/
+
+.filterBtn, .logo, .filter, .aboutBtn {
+	text-transform: uppercase;
+}
+.videoPlay, .flashPlay {
+	display: none;
+}
+.desc {
+	padding-bottom: 10px !important;
+}

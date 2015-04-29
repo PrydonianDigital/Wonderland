@@ -1,0 +1,533 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: Wonderland\n"
+"POT-Creation-Date: 2015-04-27 14:17-0000\n"
+"PO-Revision-Date: 2015-04-27 14:20-0000\n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"Language: de_DE\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"X-Generator: Poedit 1.7.6\n"
+"X-Poedit-Basepath: ..\n"
+"X-Poedit-SourceCharset: UTF-8\n"
+"X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
+"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"Plural-Forms: nplurals=2; plural=(n != 1);\n"
+"X-Poedit-SearchPath-0: .\n"
+"X-Poedit-SearchPathExcluded-0: *.js\n"
+
+#: functions.php:64
+msgctxt "Post Type General Name"
+msgid "Portfolio Items"
+msgstr "Referenzobjekte"
+
+#: functions.php:65
+msgctxt "Post Type Singular Name"
+msgid "Portfolio"
+msgstr "Referenzobjekte"
+
+#: functions.php:66
+msgid "Portfolio"
+msgstr "Referenzobjekte"
+
+#: functions.php:67
+msgid "Portfolio Item"
+msgstr "Portfolio Item"
+
+#: functions.php:68
+msgid "Parent Portfolio Item:"
+msgstr "Übergeordnetes Portfolio Element:"
+
+#: functions.php:69
+msgid "All Portfolio Items"
+msgstr "Alle Referenzen"
+
+#: functions.php:70
+msgid "Add New Portfolio Item"
+msgstr "Add New Portfolio Item"
+
+#: functions.php:71
+msgid "Add New"
+msgstr "Hinzufügen"
+
+#: functions.php:72
+msgid "New Portfolio Item"
+msgstr "New Portfolio Item"
+
+#: functions.php:73
+msgid "Edit Portfolio Item"
+msgstr "Edit Portfolio Item"
+
+#: functions.php:74
+msgid "Update Portfolio Item"
+msgstr "Update Portfolioelement"
+
+#: functions.php:75
+msgid "View Portfolio Item"
+msgstr "Portfolio Eintrag ansehen"
+
+#: functions.php:76
+msgid "Search Portfolio Items"
+msgstr "Portfolio Einträge durchsuchen"
+
+#: functions.php:77
+msgid "Not found"
+msgstr "Nicht gefunden"
+
+#: functions.php:78
+msgid "Not found in Trash"
+msgstr "Es wurde kein Eintrag im Papierkorb gefunden"
+
+#: functions.php:81
+msgid "portfolio"
+msgstr "Portfolio"
+
+#: functions.php:82
+msgid "Post Type Description"
+msgstr "Beitrag Typ Beschreibung"
+
+#: functions.php:106
+msgctxt "Taxonomy General Name"
+msgid "Types"
+msgstr "Typen"
+
+#: functions.php:107
+msgctxt "Taxonomy Singular Name"
+msgid "Type"
+msgstr "Typ"
+
+#: functions.php:108
+msgid "Type"
+msgstr "Typ"
+
+#: functions.php:109
+msgid "All Types"
+msgstr "Alle Arten"
+
+#: functions.php:110
+msgid "Parent Type"
+msgstr "Muttertyp."
+
+#: functions.php:111
+msgid "Parent Type:"
+msgstr "Muttertyp."
+
+#: functions.php:112
+msgid "New Type"
+msgstr "Neuer Typ"
+
+#: functions.php:113
+msgid "Add New Type"
+msgstr "Fügen neuen Typ hinzu"
+
+#: functions.php:114
+msgid "Edit Type"
+msgstr "Typ bearbeiten"
+
+#: functions.php:115
+msgid "Update Type"
+msgstr "Aktualisierung Art"
+
+#: functions.php:116
+msgid "View Type"
+msgstr "View Type"
+
+#: functions.php:117
+msgid "Separate Types with commas"
+msgstr "Typen durch Komma trennen"
+
+#: functions.php:118
+msgid "Add or remove Types"
+msgstr "Dateierweiterungen hinzufügen / entfernen"
+
+#: functions.php:119
+msgid "Choose from the most used"
+msgstr "Wählen Sie aus den meist verwendetsten Schlagworten"
+
+#: functions.php:120
+msgid "Popular Types"
+msgstr "Beliebte Arten"
+
+#: functions.php:121
+msgid "Search Types"
+msgstr "Suche nach Beitragstypen"
+
+#: functions.php:122
+msgid "Not Found"
+msgstr "Nicht gefunden"
+
+#: functions.php:150
+msgid "About Wonderland"
+msgstr "Über Wunderland"
+
+#: functions.php:158 index.php:28 single.php:28
+msgid "Find Us"
+msgstr "Finden Sie uns"
+
+#: functions.php:164 index.php:32 single.php:32
+msgid "Contact Us"
+msgstr "Kontaktformular"
+
+#: functions.php:179
+msgid "Client Details"
+msgstr "Kunden-Details"
+
+#: functions.php:193
+msgid "Client Name"
+msgstr "Kundenname"
+
+#: functions.php:198
+msgid "Media Order"
+msgstr "Medienordnung"
+
+#: functions.php:199
+msgid ""
+"What order are the categories in? (only shown in that order on the front-"
+"end)."
+msgstr ""
+"Welcher Reihenfolge sind die Kategorien in? (nur in dieser Reihenfolge auf "
+"den Vorderseiten angezeigt)."
+
+#: functions.php:204
+msgid "AV/Print/Digital"
+msgstr "AV/Print/Digital"
+
+#: functions.php:205
+msgid "AV/Digital/Print"
+msgstr "AV/Digital/Print"
+
+#: functions.php:206
+msgid "Print/Digital/AV"
+msgstr "Print/Digital/AV"
+
+#: functions.php:207
+msgid "Print/AV/Digital"
+msgstr "Print/AV/Digital"
+
+#: functions.php:208
+msgid "Digital/AV/Print"
+msgstr "Digital/AV/Print"
+
+#: functions.php:209
+msgid "Digital/Print/AV"
+msgstr "Digital/Print/AV"
+
+#: functions.php:220
+msgid "Archive?"
+msgstr "Archiv"
+
+#: functions.php:240 header-single.php:33 header-single.php:47 header.php:33
+#: header.php:47
+msgid "AV"
+msgstr "AV"
+
+#: functions.php:247
+msgid "AV #{#}"
+msgstr "AV #{#}"
+
+#: functions.php:248
+msgid "Add Another AV"
+msgstr "Fügen Sie ein anderes AV"
+
+#: functions.php:249
+msgid "Remove AV"
+msgstr "AV entfernen"
+
+#: functions.php:254 functions.php:306
+msgid "Title"
+msgstr "Titel"
+
+#: functions.php:259 functions.php:311
+msgid "Description"
+msgstr "Beschreibung"
+
+#: functions.php:260 functions.php:312 functions.php:353 functions.php:388
+msgid "Write a short description for this entry (optional)"
+msgstr "Schreibe eine kurze Beschreibung für diesen Eintrag (optional)"
+
+#: functions.php:265
+msgid "Poster Image"
+msgstr "Plakat-Bild"
+
+#: functions.php:266
+msgid "Used as video poster"
+msgstr "Verwendet als video poster"
+
+#: functions.php:271
+msgid "MP4"
+msgstr "MP4"
+
+#: functions.php:276
+msgid "WEBM"
+msgstr "WEBM"
+
+#: functions.php:281
+msgid "OGG"
+msgstr "Ogg"
+
+#: functions.php:292
+msgid "Print"
+msgstr "Drucken"
+
+#: functions.php:299
+msgid "Print #{#}"
+msgstr "Drucken #{#}"
+
+#: functions.php:300
+msgid "Add Another Print"
+msgstr "Weitere Print hinzufügen"
+
+#: functions.php:301
+msgid "Remove Print"
+msgstr "Entfernen Sie drucken"
+
+#: functions.php:317 functions.php:347
+msgid "Image"
+msgstr "Bild"
+
+#: functions.php:328
+msgid "Digital Image"
+msgstr "Digitales Bild"
+
+#: functions.php:335 functions.php:370
+msgid "Digital #{#}"
+msgstr "Digital #{#}"
+
+#: functions.php:336 functions.php:371
+msgid "Add Another Digital"
+msgstr "Hinzufügen einer anderen Digital"
+
+#: functions.php:337 functions.php:372
+msgid "Remove Digital"
+msgstr "Digital zu entfernen"
+
+#: functions.php:342
+msgid "Image Title"
+msgstr "Bildtitel"
+
+#: functions.php:352
+msgid "Image Description"
+msgstr "Bildbeschreibung"
+
+#: functions.php:363
+msgid "Digital SWF"
+msgstr "Digitale SWF"
+
+#: functions.php:377
+msgid "SWF Title"
+msgstr "SWF-Titel"
+
+#: functions.php:382
+msgid "SWF File"
+msgstr "SWF-Datei"
+
+#: functions.php:387
+msgid "SWF Description"
+msgstr "Beitrag Typ Beschreibung"
+
+#: functions.php:393
+msgid "SWF Width"
+msgstr "SWF-Breite"
+
+#: functions.php:398
+msgid "SWF Height"
+msgstr "SWF-Höhe"
+
+#: header-single.php:24 header.php:24
+msgid "WONDERLAND"
+msgstr "WONDERLAND"
+
+#: header-single.php:32 header-single.php:46 header.php:32 header.php:46
+msgid "ALL"
+msgstr "ALLE"
+
+#: header-single.php:34 header-single.php:48 header.php:34 header.php:48
+msgid "PRINT"
+msgstr "Print."
+
+#: header-single.php:35 header.php:35
+msgid "DIGITAL"
+msgstr "DIGITAL"
+
+#: header-single.php:37 header-single.php:51 header.php:37 header.php:51
+msgid "ABOUT"
+msgstr "Über"
+
+#: meta/includes/CMB2.php:112
+msgid "Metabox configuration is required to have an ID parameter"
+msgstr ""
+"Metabox Konfiguration ist erforderlich, um eine ID-Parameter zu erhalten"
+
+#: meta/includes/CMB2.php:302
+msgid "Click to toggle"
+msgstr "Zum Umschalten hier klicken"
+
+#: meta/includes/CMB2_Ajax.php:37
+msgid "Please Try Again"
+msgstr "Bitte versuchen Sie es erneut."
+
+#: meta/includes/CMB2_Ajax.php:133 meta/tests/test-cmb-types.php:766
+msgid "Remove Embed"
+msgstr "Einbindungscode entfernen"
+
+#: meta/includes/CMB2_Ajax.php:137 meta/tests/test-cmb-types.php:767
+#, php-format
+msgid "No oEmbed Results Found for %s. View more info at"
+msgstr "Keine oEmbed gefunden für%s. Weitere Infos unter"
+
+#: meta/includes/CMB2_Field.php:885
+msgid "Add Group"
+msgstr "Gruppe hinzufügen"
+
+#: meta/includes/CMB2_Field.php:886
+msgid "Remove Group"
+msgstr "Gruppe entfernen"
+
+#: meta/includes/CMB2_Field.php:908 meta/includes/CMB2_Field.php:912
+#: meta/tests/test-cmb-field.php:170
+msgid "None"
+msgstr "Keine"
+
+#: meta/includes/CMB2_Types.php:294
+msgid "Add Row"
+msgstr "Zeile hinzufügen"
+
+#: meta/includes/CMB2_Types.php:353 meta/includes/CMB2_Types.php:986
+#: meta/includes/CMB2_hookup.php:183 meta/tests/test-cmb-types.php:147
+#: meta/tests/test-cmb-types.php:155 meta/tests/test-cmb-types.php:715
+#: meta/tests/test-cmb-types.php:740
+msgid "Remove"
+msgstr "Entfernen"
+
+#: meta/includes/CMB2_Types.php:722 meta/includes/CMB2_Types.php:770
+msgid "No terms"
+msgstr "Keine Begriffe"
+
+#: meta/includes/CMB2_Types.php:835 meta/tests/test-cmb-types.php:691
+#: meta/tests/test-cmb-types.php:717
+msgid "Add or Upload Files"
+msgstr "Hinzufügen oder Dateien hochladen"
+
+#: meta/includes/CMB2_Types.php:893 meta/tests/test-cmb-types.php:727
+#: meta/tests/test-cmb-types.php:742
+msgid "Add or Upload File"
+msgstr "Hinzufügen oder Dateien hochladen"
+
+#: meta/includes/CMB2_Types.php:967 meta/includes/CMB2_hookup.php:182
+msgid "Remove Image"
+msgstr "Bild entfernen"
+
+#: meta/includes/CMB2_Types.php:981 meta/includes/CMB2_hookup.php:184
+#: meta/tests/test-cmb-types.php:716 meta/tests/test-cmb-types.php:741
+msgid "File:"
+msgstr "Datei:"
+
+#: meta/includes/CMB2_Types.php:984 meta/includes/CMB2_hookup.php:185
+#: meta/tests/test-cmb-types.php:714 meta/tests/test-cmb-types.php:739
+msgid "Download"
+msgstr "Herunterladen"
+
+#: meta/includes/CMB2_hookup.php:128 meta/includes/CMB2_hookup.php:165
+msgid "Clear"
+msgstr "Aufheben"
+
+#: meta/includes/CMB2_hookup.php:129
+msgid "Default"
+msgstr "NICHTERFÜLLUNG"
+
+#: meta/includes/CMB2_hookup.php:130
+msgid "Select Color"
+msgstr "Farbe auswählen"
+
+#: meta/includes/CMB2_hookup.php:131
+msgid "Current Color"
+msgstr "Aktuelle Farbe"
+
+#: meta/includes/CMB2_hookup.php:155
+msgid "mm/dd/yy"
+msgstr "mm/dd/yy"
+
+#: meta/includes/CMB2_hookup.php:156
+msgid "Sunday, Monday, Tuesday, Wednesday, Thursday, Friday, Saturday"
+msgstr "Sonntag, Montag, Dienstag, Mittwoch, Donnerstag, Freitag, Samstag"
+
+#: meta/includes/CMB2_hookup.php:157
+msgid "Su, Mo, Tu, We, Th, Fr, Sa"
+msgstr "So, Mo, Di, Mi, Do, Fr, Sa"
+
+#: meta/includes/CMB2_hookup.php:158
+msgid "Sun, Mon, Tue, Wed, Thu, Fri, Sat"
+msgstr "Son, Mon, Die, Mit, Don, Fre, Sam"
+
+#: meta/includes/CMB2_hookup.php:159
+msgid ""
+"January, February, March, April, May, June, July, August, September, "
+"October, November, December"
+msgstr ""
+"Januar, Februar, März, April, Mai, Juni, Juli, August, September, Oktober, "
+"November, Dezember"
+
+#: meta/includes/CMB2_hookup.php:160
+msgid "Jan, Feb, Mar, Apr, May, Jun, Jul, Aug, Sep, Oct, Nov, Dec"
+msgstr ""
+"Jan, Feb, Mar, Apr, Mai, Juni, Juli, August, September, Oktober, November, "
+"Dezember"
+
+#: meta/includes/CMB2_hookup.php:161
+msgid "Next"
+msgstr "Nächste"
+
+#: meta/includes/CMB2_hookup.php:162
+msgid "Prev"
+msgstr "Vorheriger"
+
+#: meta/includes/CMB2_hookup.php:163
+msgid "Today"
+msgstr "Heute"
+
+#: meta/includes/CMB2_hookup.php:164 meta/includes/CMB2_hookup.php:174
+msgid "Done"
+msgstr "Fertig"
+
+#: meta/includes/CMB2_hookup.php:168
+msgid "Choose Time"
+msgstr "Wählen Sie die Zeit"
+
+#: meta/includes/CMB2_hookup.php:169
+msgid "Time"
+msgstr "Time"
+
+#: meta/includes/CMB2_hookup.php:170
+msgid "Hour"
+msgstr "Uhrzeit"
+
+#: meta/includes/CMB2_hookup.php:171
+msgid "Minute"
+msgstr "Minute"
+
+#: meta/includes/CMB2_hookup.php:172
+msgid "Second"
+msgstr "Sekunde"
+
+#: meta/includes/CMB2_hookup.php:173
+msgid "Now"
+msgstr "Jetzt"
+
+#: meta/includes/CMB2_hookup.php:175
+msgid "hh:mm TT"
+msgstr "hh: mm TT"
+
+#: meta/includes/CMB2_hookup.php:181
+msgid "Use this file"
+msgstr "Diese Datei verwenden"
+
+#: meta/includes/CMB2_hookup.php:186
+msgid "Select / Deselect All"
+msgstr "Alles / Nichts auswählen"
+
+#: meta/includes/helper-functions.php:254
+msgid "Save"
+msgstr "Speichern"
