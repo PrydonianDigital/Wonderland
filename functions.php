@@ -305,7 +305,7 @@ add_action( 'cmb2_init', 'wl_print_repeatable' );
 function wl_print_repeatable() {
 	$prefix = '_cmbprint_';
 	$cmb_group = new_cmb2_box( array(
-		'id'           => $prefix . 'metabox',
+		'id'           => $prefix . 'print',
 		'title'        => __( 'Print', 'wl' ),
 		'object_types' => array( 'portfolio', ),
 	) );
@@ -341,7 +341,7 @@ add_action( 'cmb2_init', 'wl_digital_image_repeatable' );
 function wl_digital_image_repeatable() {
 	$prefix = '_cmbdigitalimg_';
 	$cmb_group = new_cmb2_box( array(
-		'id'           => $prefix . 'metabox',
+		'id'           => $prefix . 'dimage',
 		'title'        => __( 'Digital Image', 'wl' ),
 		'object_types' => array( 'portfolio', ),
 	) );
@@ -376,7 +376,7 @@ add_action( 'cmb2_init', 'wl_digital_swf_repeatable' );
 function wl_digital_swf_repeatable() {
 	$prefix = '_cmbdigitalswf_';
 	$cmb_group = new_cmb2_box( array(
-		'id'           => $prefix . 'metabox',
+		'id'           => $prefix . 'dswf',
 		'title'        => __( 'Digital SWF', 'wl' ),
 		'object_types' => array( 'portfolio', ),
 	) );

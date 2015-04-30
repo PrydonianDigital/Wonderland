@@ -52,7 +52,7 @@
 						</div>
 
 						<?php
-							$entries = get_post_meta( get_the_ID(), '_cmbav_av', true );
+							$entries = get_post_meta( get_the_ID(), '_cmbav_dswf', true );
 							foreach ( (array) $entries as $key => $entry ) {
 								if ( $key < 1 ) {} else {
 						?>

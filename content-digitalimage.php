@@ -1,3 +1,9 @@
+				<?php
+					$entries = get_post_meta( get_the_ID(), '_cmbav_dimage', true );
+					foreach ( (array) $entries as $key => $entry ) {
+						if ( $key < 1 ) {} else {
+				?>
+
 					<div class="dg">
 
 						<?php
@@ -29,3 +35,10 @@
 						<?php } ?>
 
 					</div>
+
+				<?php
+						}
+				?>
+				<?php
+					}
+				?>
