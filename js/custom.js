@@ -58,16 +58,27 @@ $(document).ready(function() {
 		$('.videoPlay[data-video="'+playNext+'"]').show();
 	});
 
-	$('.flashPlay').first().show();
 	$('.selector').first().addClass('selected');
-	$('.dg').on('click', '.selector', function(e){
-		e.preventDefault();
-		var playNext = $(this).data('swf')
-		$('.selector').removeClass('selected');
-		$(this).addClass('selected');
-		$('.flashPlay').hide();
-		$('.flashPlay[data-swf="'+playNext+'"]').show();
-	});
+//	var $swfTitle 	= $('.selector').first().data('title'),
+//		$swf		= $('.selector').first().data('swf'),
+//		$desc		= $('.selector').first().data('description'),
+//		$width		= $('.selector').first().data('width'),
+//		$height		= $('.selector').first().data('height');
+//	$('#flashObject').html('var flashvars = {};var params = {};var attributes = {};attributes.id = "flashBanner";swfobject.embedSWF("'+$swf+'", "flashBanner", "'+$width+'", "'+$height+'", "9.0.0", false,flashvars, params, attributes);');
+
+//	$('.dg').on('click', '.selector', function(e){
+//		e.preventDefault();
+//		$('.selector').removeClass('selected');
+//		$('#flashObject').empty();
+//		$(this).addClass('selected');
+//	var $swfTitle 	= $(this).data('title'),
+//		$swf		= $(this).data('swf'),
+//		$desc		= $(this).data('description'),
+//		$width		= $(this).data('width'),
+//		$height		= $(this).data('height');
+//		$('#flashObject').html('var flashvars = {};var params = {};var attributes = {};attributes.id = "flashBanner";swfobject.embedSWF("'+$swf+'", "flashBanner", "'+$width+'", "'+$height+'", "9.0.0", false,flashvars, params, attributes);');
+//		$('#flashBanner').flash("'+$swf+'")
+//	});
 
 	$('.menu').hide();
 

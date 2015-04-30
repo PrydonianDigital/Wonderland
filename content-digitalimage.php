@@ -1,9 +1,5 @@
 					<div class="dg">
 
-						<div class="line-break"></div>
-
-						<h3>Digital</h3><a class="anchor" id="digital"></a>
-
 						<?php
 						$entries = get_post_meta( get_the_ID(), '_cmbdigitalimg_digital', true );
 

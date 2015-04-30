@@ -1,61 +1,56 @@
 					<div class="dg">
 
+
+
 						<div class="line-break"></div>
 
-						<?php
-						$swfentries = get_post_meta( get_the_ID(), '_cmbdigitalswf_digital', true );
-
-						foreach ( (array) $swfentries as $key => $swfentry ) {
-
-						    $swftitle = $swfdescription = $swfwidth = $swfheight = $swf = '';
-
-						    if ( isset( $swfentry['swftitle'] ) )
-						        $swftitle = esc_html( $swfentry['swftitle'] );
-
-						    if ( isset( $swfentry['swfdescription'] ) )
-						        $swfdescription = esc_html( $swfentry['swfdescription'] );
-
-						    if ( isset( $swfentry['swfwidth'] ) )
-						        $swfwidth = esc_html( $swfentry['swfwidth'] );
-
-						    if ( isset( $swfentry['swfheight'] ) )
-						        $swfheight = esc_html( $swfentry['swfheight'] );
-
-						    if ( isset( $swfentry['swf'] ) )
-						        $swf = esc_html( $swfentry['swf']);
-
-						?>
-
-						<div class="flashPlay" data-swf="<?php echo $swftitle; ?>">
+						<div class="flashPlay">
 
 							<div class="flashBanner">
 
-								<object id="flash_896241048" width="<?php echo $swfwidth; ?>" height="<?php echo $swfheight; ?>" type="application/x-shockwave-flash" data="<?php echo $swf; ?>">
-									<param value="transparent" name="wmode">
-									<param value="<?php echo $swf; ?>" name="movie">
-								</object>
+								<?php
+								$swfentries = get_post_meta( get_the_ID(), '_cmbdigitalswf_digital', true );
 
-								<p class="desc"><?php echo $swfdescription; ?></p>
+								foreach ( (array) $swfentries as $key => $swfentry ) {
 
-							</div>
+									$swftitle = $swfdescription = $swfwidth = $swfheight = $swf = '';
 
-							<div class="flashFail">
+									if ( isset( $swfentry['swftitle'] ) )
+										$swftitle = esc_html( $swfentry['swftitle'] );
 
-								<p>Sorry, this content needs the <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a> to be viewed.</p>
+									if ( isset( $swfentry['swfdescription'] ) )
+										$swfdescription = esc_html( $swfentry['swfdescription'] );
 
-								<p>If viewing this on a mobile or tablet device please visit the site on desktop to see this content in full.</p>
+									if ( isset( $swfentry['swfwidth'] ) )
+										$swfwidth = esc_html( $swfentry['swfwidth'] );
+
+									if ( isset( $swfentry['swfheight'] ) )
+										$swfheight = esc_html( $swfentry['swfheight'] );
+
+									if ( isset( $swfentry['swf'] ) )
+										$swf = esc_html( $swfentry['swf']);
+
+								?>
+								<span class="swfData" data-title="<?php echo $swftitle; ?>" data-swf="<?php echo $swf; ?>" data-description="<?php echo $swfdescription; ?>" data-width="<?php echo $swfwidth; ?>" data-height="<?php echo $swfheight; ?>"></span>
+								<?php } ?>
+								<div id="flashBanner">
+
+									<div id="flashFail">
+
+										<p>Sorry, this content needs the <a href="http://get.adobe.com/flashplayer/" target="_blank">Flash plugin</a> to be viewed.</p>
+
+										<p>If viewing this on a mobile or tablet device please visit the site on desktop to see this content in full.</p>
+
+									</div>
+
+								</div>
+
+								<p class="desc"></p>
 
 							</div>
 
 						</div>
 
-						<?php } ?>
-
-						<?php
-							$swfentries = get_post_meta( get_the_ID(), '_cmbdigitalswf_digital', true );
-							foreach ( (array) $swfentries as $key => $swfentry ) {
-								if ( $key < 1 ) {} else {
-						?>
 						<div class="additional">
 
 							<h2>Additional formats</h2>
@@ -64,29 +59,65 @@
 								<?php
 								$swfentries = get_post_meta( get_the_ID(), '_cmbdigitalswf_digital', true );
 
-								foreach ( (array) $swfentries as $key => $entry ) {
+								foreach ( (array) $swfentries as $key => $swfentry ) {
 
-								    $swftitle = '';
+									$swftitle = $swfdescription = $swfwidth = $swfheight = $swf = '';
 
-								    if ( isset( $entry['swftitle'] ) )
-								        $swftitle = esc_html( $entry['swftitle'] );
+									if ( isset( $swfentry['swftitle'] ) )
+										$swftitle = esc_html( $swfentry['swftitle'] );
+
+									if ( isset( $swfentry['swfdescription'] ) )
+										$swfdescription = esc_html( $swfentry['swfdescription'] );
+
+									if ( isset( $swfentry['swfwidth'] ) )
+										$swfwidth = esc_html( $swfentry['swfwidth'] );
+
+									if ( isset( $swfentry['swfheight'] ) )
+										$swfheight = esc_html( $swfentry['swfheight'] );
+
+									if ( isset( $swfentry['swf'] ) )
+										$swf = esc_html( $swfentry['swf']);
 
 								?>
-								<a href="" class="selector" data-swf="<?php echo $swftitle; ?>"><?php echo $swftitle; ?></a>
+
+								<a class="selector" data-title="<?php echo $swftitle; ?>" data-swf="<?php echo $swf; ?>" data-description="<?php echo $swfdescription; ?>" data-width="<?php echo $swfwidth; ?>" data-height="<?php echo $swfheight; ?>"><?php echo $swftitle; ?></a>
 
 								<?php } ?>
 
 							</p>
 
 						</div>
-						<?php
-								}
-						?>
-						<?php
-							}
-						?>
 
 					</div>
 <script>
-
+$(function() {
+	var $swfTitle 	= $('.swfData').first().data('title'),
+		$swf		= $('.swfData').first().data('swf'),
+		$desc		= $('.swfData').first().data('description'),
+		$width		= $('.swfData').first().data('width'),
+		$height		= $('.swfData').first().data('height');
+	$('#flashBanner').flash({
+		swf: $swf,
+		width: $width,
+		height: $height
+	});
+	$('.flashBanner .desc').html($desc);
+	$('.dg').on('click', '.selector', function(e){
+		e.preventDefault();
+		$('.selector').removeClass('selected');
+		$('#flashObject').empty();
+		$(this).addClass('selected');
+	var $swfTitle 	= $(this).data('title'),
+		$swf		= $(this).data('swf'),
+		$desc		= $(this).data('description'),
+		$width		= $(this).data('width'),
+		$height		= $(this).data('height');
+	$('#flashBanner').flash({
+		swf: $swf,
+		width: $width,
+		height: $height
+	});
+	$('.flashBanner .desc').html($desc);
+	});
+});
 </script>

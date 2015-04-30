@@ -13,7 +13,7 @@ License URI: http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US
 .filterBtn, .logo, .filter, .aboutBtn {
 	text-transform: uppercase;
 }
-.videoPlay, .flashPlay {
+.videoPlay {
 	display: none;
 }
 .desc {

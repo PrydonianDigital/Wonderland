@@ -65,6 +65,10 @@
 
 					<?php if( has_term( 'Digital', 'type' ) ) { ?>
 
+						<div class="line-break"></div>
+
+						<h3>Digital</h3><a class="anchor" id="digital"></a>
+
 						<?php get_template_part( 'content', 'digitalimage' ); ?>
 
 						<?php get_template_part( 'content', 'digitalswf' ); ?>
@@ -91,6 +95,10 @@
 
 					<?php if( has_term( 'Digital', 'type' ) ) { ?>
 
+						<div class="line-break"></div>
+
+						<h3>Digital</h3><a class="anchor" id="digital"></a>
+
 						<?php get_template_part( 'content', 'digitalswf' ); ?>
 
 						<?php get_template_part( 'content', 'digitalimage' ); ?>
@@ -110,6 +118,10 @@
 					<?php } ?>
 
 					<?php if( has_term( 'Digital', 'type' ) ) { ?>
+
+						<div class="line-break"></div>
+
+						<h3>Digital</h3><a class="anchor" id="digital"></a>
 
 						<?php get_template_part( 'content', 'digitalimage' ); ?>
 
@@ -137,6 +149,10 @@
 
 					<?php if( has_term( 'Digital', 'type' ) ) { ?>
 
+						<div class="line-break"></div>
+
+						<h3>Digital</h3><a class="anchor" id="digital"></a>
+
 						<?php get_template_part( 'content', 'digitalswf' ); ?>
 
 						<?php get_template_part( 'content', 'digitalimage' ); ?>
@@ -163,6 +179,10 @@
 
 					<?php if( has_term( 'Digital', 'type' ) ) { ?>
 
+						<div class="line-break"></div>
+
+						<h3>Digital</h3><a class="anchor" id="digital"></a>
+
 						<?php get_template_part( 'content', 'digitalimage' ); ?>
 
 						<?php get_template_part( 'content', 'digitalswf' ); ?>
@@ -188,6 +208,10 @@
 					<?php } ?>
 
 					<?php if( has_term( 'Digital', 'type' ) ) { ?>
+
+						<div class="line-break"></div>
+
+						<h3>Digital</h3><a class="anchor" id="digital"></a>
 
 						<?php get_template_part( 'content', 'digitalswf' ); ?>
 
@@ -221,6 +245,10 @@
 
 					<?php if( has_term( 'Digital', 'type' ) ) { ?>
 
+						<div class="line-break"></div>
+
+						<h3>Digital</h3><a class="anchor" id="digital"></a>
+
 						<?php get_template_part( 'content', 'digitalimage' ); ?>
 
 						<?php get_template_part( 'content', 'digitalswf' ); ?>
@@ -247,6 +275,10 @@
 
 					<?php if( has_term( 'Digital', 'type' ) ) { ?>
 
+						<div class="line-break"></div>
+
+						<h3>Digital</h3><a class="anchor" id="digital"></a>
+
 						<?php get_template_part( 'content', 'digitalswf' ); ?>
 
 						<?php get_template_part( 'content', 'digitalimage' ); ?>
@@ -260,6 +292,10 @@
 				<div class="twelve columns offset-by-two">
 
 					<?php if( has_term( 'Digital', 'type' ) ) { ?>
+
+						<div class="line-break"></div>
+
+						<h3>Digital</h3><a class="anchor" id="digital"></a>
 
 						<?php get_template_part( 'content', 'digitalimage' ); ?>
 
@@ -287,6 +323,10 @@
 
 					<?php if( has_term( 'Digital', 'type' ) ) { ?>
 
+						<div class="line-break"></div>
+
+						<h3>Digital</h3><a class="anchor" id="digital"></a>
+
 						<?php get_template_part( 'content', 'digitalswf' ); ?>
 
 						<?php get_template_part( 'content', 'digitalimage' ); ?>
@@ -313,6 +353,10 @@
 
 					<?php if( has_term( 'Digital', 'type' ) ) { ?>
 
+						<div class="line-break"></div>
+
+						<h3>Digital</h3><a class="anchor" id="digital"></a>
+
 						<?php get_template_part( 'content', 'digitalimage' ); ?>
 
 						<?php get_template_part( 'content', 'digitalswf' ); ?>
@@ -338,6 +382,10 @@
 				<div class="twelve columns offset-by-two">
 
 					<?php if( has_term( 'Digital', 'type' ) ) { ?>
+
+						<div class="line-break"></div>
+
+						<h3>Digital</h3><a class="anchor" id="digital"></a>
 
 						<?php get_template_part( 'content', 'digitalswf' ); ?>
 

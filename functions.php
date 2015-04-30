@@ -29,10 +29,11 @@ add_action( 'after_setup_theme', 'wonderland_init' );
 
 function wl_scripts() {
 	wp_deregister_script( 'jquery' );
-	wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.10.1.min.js', false, '1.10.1', true );
+	wp_deregister_script( 'swfobject' );
+	wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.10.1.min.js', false, '1.10.1', false );
 	wp_register_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.js', false, '2.8.1', false );
 	wp_register_script( 'video', 'http://vjs.zencdn.net/4.10/video.js', false, '4.10', true );
-	wp_register_script( 'swfobject', get_template_directory_uri() . '/js/jquery.swfobject.1-1-1.min.js', false, '1.1.1', true );
+	wp_register_script( 'swfobject', get_template_directory_uri() . '/js/jquery.swfobject.1-1-1.min.js', false, '1.1.1', false );
 	wp_register_script( 'isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', false, '2.1.1', true );
 	wp_register_script( 'custom', get_template_directory_uri() . '/js/custom.js', false, '1.0', true );
 	wp_enqueue_script( 'jquery' );
