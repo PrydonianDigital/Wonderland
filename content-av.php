@@ -33,11 +33,14 @@
 
 						<div class="videoPlay">
 
-							<div id="videoWrapper">
+							<div id="videoWrapper" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
+								<span id="videoTitle" itemprop="name"></span>
+								<meta itemprop="thumbnailUrl" content="" />
+								 <meta itemprop="embedURL" content="" />
 								<video id="wonderlandPlayer" class="video-js vjs-default-skin vjs-big-play-centered" controls width="auto" height="auto" poster=""><source src="" type="video/mp4" /><source src="" type="video/webm" /><source src="" type="video/ogg" /><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>
 							</div><!--videoWrapper-->
 
-							<p class="desc"></p>
+							<p class="desc" itemprop="description"></p>
 
 						</div>
 
@@ -109,6 +112,9 @@
 								{ type: "video/ogg", src: $ogg }
 							);
 						});
+						$('#videoTitle').html($videoTitle);
+						$('meta[itemprop="thumbnailUrl"]').attr('content', $poster);
+						$('meta[itemprop="embedUrl"]').attr('content', $mp4);
 						$('.videoPlay .desc').html($desc);
 						$('.av').on('click', '.selector', function(e){
 							e.preventDefault();

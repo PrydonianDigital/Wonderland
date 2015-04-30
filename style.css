@@ -28,6 +28,9 @@ License URI: http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US
 .vjs-fullscreen {
 	padding-top: 0px
 }
+#videoTitle {
+	display: none;
+}
 
 /* Smaller than standard 960 (devices and browsers) */
 	@media only screen and (max-width: 959px) {

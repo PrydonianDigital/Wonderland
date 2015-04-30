@@ -31,7 +31,7 @@
 								?>
 								<span class="swfData" data-title="<?php echo $swftitle; ?>" data-swf="<?php echo $swf; ?>" data-description="<?php echo $swfdescription; ?>" data-width="<?php echo $swfwidth; ?>" data-height="<?php echo $swfheight; ?>"></span>
 								<?php } ?>
-								<div id="flashBanner">
+								<div id="flashBanner" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
 
 									<div id="flashFail">
 
@@ -42,7 +42,9 @@
 									</div>
 
 								</div>
-
+								<span id="videoTitle" itemprop="name"></span>
+								<meta itemprop="thumbnailUrl" content="" />
+								<meta itemprop="embedURL" content="" />
 								<p class="desc"></p>
 
 							</div>
@@ -109,6 +111,9 @@
 							$width		= $('.swfData').first().data('width'),
 							$height		= $('.swfData').first().data('height');
 						if(exists($swf)) {
+						$('#videoTitle').html($swfTitle);
+						$('meta[itemprop="embedUrl"]').attr('content', $swf);
+						$('.flashBanner .desc').html($desc);
 						$('#flashBanner').flash({
 							swf: $swf,
 							width: $width,

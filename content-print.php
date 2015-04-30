@@ -17,11 +17,13 @@
 
 						?>
 
-						<div class="image">
+						<div class="image" itemscope itemtype="http://schema.org/ImageObject">
 
-							<img src="<?php echo $image; ?>"  class="scale-with-grid" alt="<?php echo $title; ?>" />
+							<span id="imageTitle" itemprop="name"><?php echo $title; ?></span>
 
-							<p class="desc"><?php echo $description; ?>
+							<img src="<?php echo $image; ?>"  class="scale-with-grid" alt="<?php echo $title; ?>" itemprop="contentURL" />
+
+							<p class="desc" itemprop="description"><?php echo $description; ?>
 
 						</div>
 
