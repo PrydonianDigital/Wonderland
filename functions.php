@@ -11,7 +11,6 @@ function wonderland_init()	{
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'jetpack-responsive-videos' );
-	add_theme_support( 'title-tag' );
 	set_post_thumbnail_size( 700, 394, true );
 	add_image_size( 'featured', 700, 394, true );
 	add_image_size( 'full', 1000, 563, true );
@@ -30,31 +29,23 @@ add_action( 'after_setup_theme', 'wonderland_init' );
 function wl_scripts() {
 	wp_deregister_script( 'jquery' );
 	wp_deregister_script( 'swfobject' );
-	wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.10.1.min.js', false, '1.10.1', false );
+	wp_register_script( 'scripts', get_template_directory_uri() . '/js/scripts.min.js', false, '1.10.1', false );
 	wp_register_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.js', false, '2.8.1', false );
 	wp_register_script( 'video', 'http://vjs.zencdn.net/4.10/video.js', false, '4.10', false );
-	wp_register_script( 'swfobject', get_template_directory_uri() . '/js/jquery.swfobject.1-1-1.min.js', false, '1.1.1', false );
-	wp_register_script( 'isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', false, '2.1.1', true );
 	wp_register_script( 'custom', get_template_directory_uri() . '/js/custom.js', false, '1.0', true );
-	wp_enqueue_script( 'jquery' );
+	wp_enqueue_script( 'scripts' );
 	wp_enqueue_script( 'modernizr' );
 	wp_enqueue_script( 'video' );
-	wp_enqueue_script( 'swfobject' );
-	wp_enqueue_script( 'isotope' );
 	wp_enqueue_script( 'custom' );
 }
 add_action( 'wp_enqueue_scripts', 'wl_scripts' );
 
 function wl_styles() {
 	wp_register_style( 'grid', get_template_directory_uri() . '/css/grid.css', false, '1.2' );
-	wp_register_style( 'reset', get_template_directory_uri() . '/css/reset.css', false, '2.0' );
-	wp_register_style( 'main', get_template_directory_uri() . '/css/main.css', false, '2.0' );
 	wp_register_style( 'main', get_template_directory_uri() . '/css/screens.css', false, '2.0' );
 	wp_register_style( 'video', 'http://vjs.zencdn.net/4.10/video-js.css', false, '4.10' );
 	wp_enqueue_style( 'grid' );
-	wp_enqueue_style( 'reset' );
 	wp_enqueue_style( 'main' );
-	wp_enqueue_style( 'screens' );
 	wp_enqueue_style( 'video' );
 }
 add_action( 'wp_enqueue_scripts', 'wl_styles' );
@@ -421,6 +412,32 @@ function wl_digital_swf_repeatable() {
 	) );
 }
 
+function wl_SEO() {
+	$prefix = '_wl_seo_';
+	$cmb_portfolio = new_cmb2_box( array(
+		'id'           => $prefix . 'metabox',
+		'title'        => __( 'SEO', 'wl' ),
+		'object_types' => array( 'portfolio', ),
+		'context'      => 'normal',
+		'priority'     => 'high',
+		'show_names'   => true,
+		'show_on'      => array( 'post_type' => array( 'portfolio', ) ),
+	) );
+	$cmb_portfolio->add_field( array(
+	    'name' => 'SEO Description',
+	    'desc' => 'Add some text in here to describe this piece of work (optional)',
+	    'id'   => $prefix . 'desc',
+	    'type' => 'textarea_small'
+	) );
+	$cmb_portfolio->add_field( array(
+	    'name' => 'SEO Keywords',
+	    'desc' => 'Add some comma separated keywords in here to describe this piece of work (optional)',
+	    'id'   => $prefix . 'keywords',
+	    'type' => 'text'
+	) );
+}
+add_action( 'cmb2_init', 'wl_SEO' );
+
 // Upload SWF
 add_filter('upload_mimes', 'upload_swf');
 function upload_swf($existing_mimes){
@@ -482,3 +499,120 @@ function remove_footer_admin () {
 	echo '<style>#wp-admin-bar-updates,.update-plugins{display:none !important;}.category-adder {display: none !important;}</style>';
 }
 add_filter('admin_footer_text', 'remove_footer_admin');
+
+// Sitemap
+add_action( "save_post", "eg_create_sitemap" );
+function eg_create_sitemap() {
+    if ( str_replace( '-', '', get_option( 'gmt_offset' ) ) < 10 ) {
+        $tempo = '-0' . str_replace( '-', '', get_option( 'gmt_offset' ) );
+    } else {
+        $tempo = get_option( 'gmt_offset' );
+    }
+    if( strlen( $tempo ) == 3 ) { $tempo = $tempo . ':00'; }
+    $postsForSitemap = get_posts( array(
+        'numberposts' => -1,
+        'orderby'     => 'modified',
+        'post_type'   => array( 'post', 'page', 'portfolio' ),
+        'order'       => 'DESC'
+    ) );
+    $sitemap .= '<?xml version="1.0" encoding="UTF-8"?>' . '<?xml-stylesheet type="text/xsl" href="' .
+        esc_url( home_url( '/' ) ) . 'sitemap.xsl"?>';
+    $sitemap .= "\n" . '<urlset xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation="http://www.sitemaps.org/schemas/sitemap/0.9 http://www.sitemaps.org/schemas/sitemap/0.9/sitemap.xsd" xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">' . "\n";
+    $sitemap .= "\t" . '<url>' . "\n" .
+        "\t\t" . '<loc>' . esc_url( home_url( '/' ) ) . '</loc>' .
+        "\n\t\t" . '<lastmod>' . date( "Y-m-d\TH:i:s", current_time( 'timestamp', 0 ) ) . $tempo . '</lastmod>' .
+        "\n\t\t" . '<changefreq>daily</changefreq>' .
+        "\n\t\t" . '<priority>1.0</priority>' .
+        "\n\t" . '</url>' . "\n";
+    foreach( $postsForSitemap as $post ) {
+        setup_postdata( $post);
+        $postdate = explode( " ", $post->post_modified );
+        $sitemap .= "\t" . '<url>' . "\n" .
+            "\t\t" . '<loc>' . get_permalink( $post->ID ) . '</loc>' .
+            "\n\t\t" . '<lastmod>' . $postdate[0] . 'T' . $postdate[1] . $tempo . '</lastmod>' .
+            "\n\t\t" . '<changefreq>Weekly</changefreq>' .
+            "\n\t\t" . '<priority>0.5</priority>' .
+            "\n\t" . '</url>' . "\n";
+    }
+    $sitemap .= '</urlset>';
+    $fp = fopen( ABSPATH . "sitemap.xml", 'w' );
+    fwrite( $fp, $sitemap );
+    fclose( $fp );
+}
+
+// SEO
+function basic_wp_seo() {
+  global $page, $paged, $post;
+	$default_keywords = 'Wonderland';
+	$output = '';
+
+	// description
+	$seo_desc = get_post_meta( $post->ID, '_wl_seo_desc', true );
+	$description = get_bloginfo('description', 'display');
+	$pagedata = get_post($post->ID);
+	if (is_singular()) {
+		if (!empty($seo_desc)) {
+			$content = $seo_desc;
+		} else if (!empty($pagedata)) {
+			$content = apply_filters('the_excerpt_rss', $pagedata->post_content);
+			$content = substr(trim(strip_tags($content)), 0, 155);
+			$content = preg_replace('#\n#', ' ', $content);
+			$content = preg_replace('#\s{2,}#', ' ', $content);
+			$content = trim($content);
+		}
+	} else {
+		$content = $description;
+	}
+	$output .= '<meta name="description" content="' . esc_attr($content) . '">' . "\n";
+
+	// keywords
+	$keys = get_post_meta( $post->ID, '_wl_seo_keywords', true );
+	$cats = get_the_category();
+	$tags = get_the_tags();
+	if (empty($keys)) {
+		if (!empty($cats)) foreach($cats as $cat) $keys .= $cat->name . ', ';
+		if (!empty($tags)) foreach($tags as $tag) $keys .= $tag->name . ', ';
+		$keys .= $default_keywords;
+	}
+	$output .= '<meta name="keywords" content="' . esc_attr($keys) . '">' . "\n";
+
+	// robots
+	if (is_category() || is_tag()) {
+		$paged = (get_query_var('paged')) ? get_query_var('paged') : 1;
+		if ($paged > 1) {
+			$output .=  '<meta name="robots" content="noindex,follow">' . "\n";
+		} else {
+			$output .=  '<meta name="robots" content="index,follow">' . "\n";
+		}
+	} else if (is_home() || is_singular()) {
+		$output .=  '<meta name="robots" content="index,follow">' . "\n";
+	} else {
+		$output .= '<meta name="robots" content="noindex,follow">' . "\n";
+	}
+
+	// title
+	$title_custom = get_post_meta($post->ID, 'wl_seo_title', true);
+	$url = ltrim(esc_url($_SERVER['REQUEST_URI']), '/');
+	$name = get_bloginfo('name', 'display');
+	$title = trim(wp_title('', false));
+	$cat = single_cat_title('', false);
+	$tag = single_tag_title('', false);
+	$search = get_search_query();
+
+	if (!empty($title_custom)) $title = $title_custom;
+	if ($paged >= 2 || $page >= 2) $page_number = ' | ' . sprintf('Page %s', max($paged, $page));
+	else $page_number = '';
+
+	if (is_home() || is_front_page()) $seo_title = $name . ' | ' . $description;
+	elseif (is_singular())            $seo_title = $title . ' | ' . $name;
+	elseif (is_tag())                 $seo_title = 'Tag Archive: ' . $tag . ' | ' . $name;
+	elseif (is_category())            $seo_title = 'Category Archive: ' . $cat . ' | ' . $name;
+	elseif (is_archive())             $seo_title = 'Archive: ' . $title . ' | ' . $name;
+	elseif (is_search())              $seo_title = 'Search: ' . $search . ' | ' . $name;
+	elseif (is_404())                 $seo_title = '404 - Not Found: ' . $url . ' | ' . $name;
+	else                              $seo_title = $name . ' | ' . $description;
+
+	$output .= "\t\t" . '<title>' . esc_attr($seo_title . $page_number) . '</title>' . "\n";
+
+	return $output;
+}
