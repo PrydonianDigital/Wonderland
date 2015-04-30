@@ -47,16 +47,16 @@ $(document).ready(function() {
 
 	});
 
-	$('.videoPlay').first().show();
-	$('.selector').first().addClass('selected');
-	$('.av').on('click', '.selector', function(e){
-		e.preventDefault();
-		var playNext = $(this).data('video')
-		$('.selector').removeClass('selected');
-		$(this).addClass('selected');
-		$('.videoPlay').hide();
-		$('.videoPlay[data-video="'+playNext+'"]').show();
-	});
+//	$('.videoPlay').first().show();
+//	$('.selector').first().addClass('selected');
+//	$('.av').on('click', '.selector', function(e){
+//		e.preventDefault();
+//		var playNext = $(this).data('video')
+//		$('.selector').removeClass('selected');
+//		$(this).addClass('selected');
+//		$('.videoPlay').hide();
+//		$('.videoPlay[data-video="'+playNext+'"]').show();
+//	});
 
 	$('.selector').first().addClass('selected');
 //	var $swfTitle 	= $('.selector').first().data('title'),

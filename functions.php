@@ -32,7 +32,7 @@ function wl_scripts() {
 	wp_deregister_script( 'swfobject' );
 	wp_register_script( 'jquery', get_template_directory_uri() . '/js/jquery-1.10.1.min.js', false, '1.10.1', false );
 	wp_register_script( 'modernizr', get_template_directory_uri() . '/js/modernizr.js', false, '2.8.1', false );
-	wp_register_script( 'video', 'http://vjs.zencdn.net/4.10/video.js', false, '4.10', true );
+	wp_register_script( 'video', 'http://vjs.zencdn.net/4.10/video.js', false, '4.10', false );
 	wp_register_script( 'swfobject', get_template_directory_uri() . '/js/jquery.swfobject.1-1-1.min.js', false, '1.1.1', false );
 	wp_register_script( 'isotope', get_template_directory_uri() . '/js/isotope.pkgd.min.js', false, '2.1.1', true );
 	wp_register_script( 'custom', get_template_directory_uri() . '/js/custom.js', false, '1.0', true );
@@ -325,15 +325,15 @@ function wl_print_repeatable() {
 		'type'       => 'text',
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
+		'name' => __( 'Image', 'wl' ),
+		'id'   => 'image',
+		'type' => 'file',
+	) );
+	$cmb_group->add_group_field( $group_field_id, array(
 		'name'        => __( 'Description', 'wl' ),
 		'description' => __( 'Write a short description for this entry (optional)', 'wl' ),
 		'id'          => 'description',
 		'type'        => 'textarea_small',
-	) );
-	$cmb_group->add_group_field( $group_field_id, array(
-		'name' => __( 'Image', 'wl' ),
-		'id'   => 'image',
-		'type' => 'file',
 	) );
 }
 
