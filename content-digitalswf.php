@@ -51,6 +51,12 @@
 
 						</div>
 
+						<?php
+							$entries = get_post_meta( get_the_ID(), '_cmbav_av', true );
+							foreach ( (array) $entries as $key => $entry ) {
+								if ( $key < 1 ) {} else {
+						?>
+
 						<div class="additional">
 
 							<h2>Additional formats</h2>
@@ -87,6 +93,13 @@
 							</p>
 
 						</div>
+
+						<?php
+								}
+						?>
+						<?php
+							}
+						?>
 
 					</div>
 <script>
