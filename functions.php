@@ -41,11 +41,9 @@ function wl_scripts() {
 add_action( 'wp_enqueue_scripts', 'wl_scripts' );
 
 function wl_styles() {
-	wp_register_style( 'grid', get_template_directory_uri() . '/css/grid.css', false, '1.2' );
-	wp_register_style( 'main', get_template_directory_uri() . '/css/screens.css', false, '2.0' );
+	wp_register_style( 'base', get_template_directory_uri() . '/css/base.css', false, '1.2' );
 	wp_register_style( 'video', 'http://vjs.zencdn.net/4.10/video-js.css', false, '4.10' );
-	wp_enqueue_style( 'grid' );
-	wp_enqueue_style( 'main' );
+	wp_enqueue_style( 'base' );
 	wp_enqueue_style( 'video' );
 }
 add_action( 'wp_enqueue_scripts', 'wl_styles' );
@@ -193,16 +191,6 @@ function wl_portfolio() {
 		'id'      		=> $prefix . 'media_order',
 		'type'    	=> 'select',
 		'options' 		=> array(
-//			'a' 		=> __( 'AV Only', 'wl' ),
-//			'p' 		=> __( 'Print Only', 'wl' ),
-//			'di' 		=> __( 'Digital Image Only', 'wl' ),
-//			'ds' 		=> __( 'Digital SWF Only', 'wl' ),
-//			'dids' 		=> __( 'Digital Image/Digital SWF', 'wl' ),
-//			'dsdi' 		=> __( 'Digital SWF/Digital Image', 'wl' ),
-//			'ap' 		=> __( 'AV/Print', 'wl' ),
-//			'pa' 		=> __( 'Print/AV', 'wl' ),
-//			'adi' 		=> __( 'AV/Digital Image', 'wl' ),
-//			'ads' 		=> __( 'AV/Digital SWF', 'wl' ),
 			'apdids' 	=> __( 'AV / Print / Digital Image / Digital SWF', 'wl' ),
 			'apdsdi' 	=> __( 'AV / Print / Digital SWF / Digital Image', 'wl' ),
 			'adidsp' 	=> __( 'AV / Digital Image / Digital SWF / Print', 'wl' ),
@@ -214,7 +202,7 @@ function wl_portfolio() {
 			'didsap' 	=> __( 'Digital Image / Digital SWF / AV / Print', 'wl' ),
 			'dsdiap' 	=> __( 'Digital SWF / Digital Image / AV / Print', 'wl' ),
 			'didspa' 	=> __( 'Digital Image / Digital SWF / Print / AV', 'wl' ),
-			'didspa' 	=> __( 'Digital SWF / Digital Image / Print / AV', 'wl' ),
+			'dsdipa' 	=> __( 'Digital SWF / Digital Image / Print / AV', 'wl' ),
 		)
 	) );
 }
