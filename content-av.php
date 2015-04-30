@@ -1,9 +1,5 @@
 					<div class="av">
 
-						<div class="line-break"></div>
-
-						<h3>AV</h3><a class="anchor" id="av"></a>
-
 						<?php
 						$entries = get_post_meta( get_the_ID(), '_cmbav_av', true );
 

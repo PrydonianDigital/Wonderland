@@ -53,11 +53,19 @@
 
 					<?php if( has_term( 'AV', 'type' ) ) { ?>
 
+						<div class="line-break"></div>
+
+						<h3>AV</h3><a class="anchor" id="av"></a>
+
 						<?php get_template_part( 'content', 'av' ); ?>
 
 					<?php } ?>
 
 					<?php if( has_term( 'Print', 'type' ) ) { ?>
+
+						<div class="line-break"></div>
+
+						<h3>Print</h3><a class="anchor" id="print"></a>
 
 						<?php get_template_part( 'content', 'print' ); ?>
 
@@ -83,11 +91,19 @@
 
 					<?php if( has_term( 'AV', 'type' ) ) { ?>
 
+						<div class="line-break"></div>
+
+						<h3>AV</h3><a class="anchor" id="av"></a>
+
 						<?php get_template_part( 'content', 'av' ); ?>
 
 					<?php } ?>
 
 					<?php if( has_term( 'Print', 'type' ) ) { ?>
+
+						<div class="line-break"></div>
+
+						<h3>Print</h3><a class="anchor" id="print"></a>
 
 						<?php get_template_part( 'content', 'print' ); ?>
 
@@ -113,6 +129,10 @@
 
 					<?php if( has_term( 'AV', 'type' ) ) { ?>
 
+						<div class="line-break"></div>
+
+						<h3>AV</h3><a class="anchor" id="av"></a>
+
 						<?php get_template_part( 'content', 'av' ); ?>
 
 					<?php } ?>
@@ -130,6 +150,10 @@
 					<?php } ?>
 
 					<?php if( has_term( 'Print', 'type' ) ) { ?>
+
+						<div class="line-break"></div>
+
+						<h3>Print</h3><a class="anchor" id="print"></a>
 
 						<?php get_template_part( 'content', 'print' ); ?>
 
@@ -143,6 +167,10 @@
 
 					<?php if( has_term( 'AV', 'type' ) ) { ?>
 
+						<div class="line-break"></div>
+
+						<h3>AV</h3><a class="anchor" id="av"></a>
+
 						<?php get_template_part( 'content', 'av' ); ?>
 
 					<?php } ?>
@@ -160,6 +188,10 @@
 					<?php } ?>
 
 					<?php if( has_term( 'Print', 'type' ) ) { ?>
+
+						<div class="line-break"></div>
+
+						<h3>Print</h3><a class="anchor" id="print"></a>
 
 						<?php get_template_part( 'content', 'print' ); ?>
 
@@ -173,6 +205,10 @@
 
 					<?php if( has_term( 'Print', 'type' ) ) { ?>
 
+						<div class="line-break"></div>
+
+						<h3>Print</h3><a class="anchor" id="print"></a>
+
 						<?php get_template_part( 'content', 'print' ); ?>
 
 					<?php } ?>
@@ -190,6 +226,10 @@
 					<?php } ?>
 
 					<?php if( has_term( 'AV', 'type' ) ) { ?>
+
+						<div class="line-break"></div>
+
+						<h3>AV</h3><a class="anchor" id="av"></a>
 
 						<?php get_template_part( 'content', 'av' ); ?>
 
@@ -203,6 +243,10 @@
 
 					<?php if( has_term( 'Print', 'type' ) ) { ?>
 
+						<div class="line-break"></div>
+
+						<h3>Print</h3><a class="anchor" id="print"></a>
+
 						<?php get_template_part( 'content', 'print' ); ?>
 
 					<?php } ?>
@@ -221,6 +265,10 @@
 
 					<?php if( has_term( 'AV', 'type' ) ) { ?>
 
+						<div class="line-break"></div>
+
+						<h3>AV</h3><a class="anchor" id="av"></a>
+
 						<?php get_template_part( 'content', 'av' ); ?>
 
 					<?php } ?>
@@ -233,11 +281,19 @@
 
 					<?php if( has_term( 'Print', 'type' ) ) { ?>
 
+						<div class="line-break"></div>
+
+						<h3>Print</h3><a class="anchor" id="print"></a>
+
 						<?php get_template_part( 'content', 'print' ); ?>
 
 					<?php } ?>
 
 					<?php if( has_term( 'AV', 'type' ) ) { ?>
+
+						<div class="line-break"></div>
+
+						<h3>AV</h3><a class="anchor" id="av"></a>
 
 						<?php get_template_part( 'content', 'av' ); ?>
 
@@ -263,11 +319,19 @@
 
 					<?php if( has_term( 'Print', 'type' ) ) { ?>
 
+						<div class="line-break"></div>
+
+						<h3>Print</h3><a class="anchor" id="print"></a>
+
 						<?php get_template_part( 'content', 'print' ); ?>
 
 					<?php } ?>
 
 					<?php if( has_term( 'AV', 'type' ) ) { ?>
+
+						<div class="line-break"></div>
+
+						<h3>AV</h3><a class="anchor" id="av"></a>
 
 						<?php get_template_part( 'content', 'av' ); ?>
 
@@ -305,11 +369,19 @@
 
 					<?php if( has_term( 'AV', 'type' ) ) { ?>
 
+						<div class="line-break"></div>
+
+						<h3>AV</h3><a class="anchor" id="av"></a>
+
 						<?php get_template_part( 'content', 'av' ); ?>
 
 					<?php } ?>
 
 					<?php if( has_term( 'Print', 'type' ) ) { ?>
+
+						<div class="line-break"></div>
+
+						<h3>Print</h3><a class="anchor" id="print"></a>
 
 						<?php get_template_part( 'content', 'print' ); ?>
 
@@ -335,11 +407,19 @@
 
 					<?php if( has_term( 'AV', 'type' ) ) { ?>
 
+						<div class="line-break"></div>
+
+						<h3>AV</h3><a class="anchor" id="av"></a>
+
 						<?php get_template_part( 'content', 'av' ); ?>
 
 					<?php } ?>
 
 					<?php if( has_term( 'Print', 'type' ) ) { ?>
+
+						<div class="line-break"></div>
+
+						<h3>Print</h3><a class="anchor" id="print"></a>
 
 						<?php get_template_part( 'content', 'print' ); ?>
 
@@ -365,11 +445,19 @@
 
 					<?php if( has_term( 'Print', 'type' ) ) { ?>
 
+						<div class="line-break"></div>
+
+						<h3>Print</h3><a class="anchor" id="print"></a>
+
 						<?php get_template_part( 'content', 'print' ); ?>
 
 					<?php } ?>
 
 					<?php if( has_term( 'AV', 'type' ) ) { ?>
+
+						<div class="line-break"></div>
+
+						<h3>AV</h3><a class="anchor" id="av"></a>
 
 						<?php get_template_part( 'content', 'av' ); ?>
 
@@ -395,11 +483,19 @@
 
 					<?php if( has_term( 'Print', 'type' ) ) { ?>
 
+						<div class="line-break"></div>
+
+						<h3>Print</h3><a class="anchor" id="print"></a>
+
 						<?php get_template_part( 'content', 'print' ); ?>
 
 					<?php } ?>
 
 					<?php if( has_term( 'AV', 'type' ) ) { ?>
+
+						<div class="line-break"></div>
+
+						<h3>AV</h3><a class="anchor" id="av"></a>
 
 						<?php get_template_part( 'content', 'av' ); ?>
 

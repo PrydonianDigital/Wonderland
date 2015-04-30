@@ -1,6 +1,3 @@
-					<div class="line-break"></div>
-
-					<h3>Print</h3><a class="anchor" id="print"></a>
 
 						<?php
 						$entries = get_post_meta( get_the_ID(), '_cmbprint_print', true );
