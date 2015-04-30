@@ -1,9 +1,3 @@
-				<?php
-					$entries = get_post_meta( get_the_ID(), '_cmbav_dimage', true );
-					foreach ( (array) $entries as $key => $entry ) {
-						if ( $key < 1 ) {} else {
-				?>
-
 					<div class="dg">
 
 						<div class="line-break"></div>
@@ -13,7 +7,7 @@
 							<div class="flashBanner">
 
 								<?php
-								$swfentries = get_post_meta( get_the_ID(), '_cmbdigitalswf_digital', true );
+								$swfentries = get_post_meta( get_the_ID(), '_cmbdigitalswf_digitalswf', true );
 
 								foreach ( (array) $swfentries as $key => $swfentry ) {
 
@@ -56,7 +50,7 @@
 						</div>
 
 						<?php
-							$entries = get_post_meta( get_the_ID(), '_cmbav_dswf', true );
+							$entries = get_post_meta( get_the_ID(), '_cmbdigitalswf_digitalswf', true );
 							foreach ( (array) $entries as $key => $entry ) {
 								if ( $key < 1 ) {} else {
 						?>
@@ -67,7 +61,7 @@
 
 							<p>
 								<?php
-								$swfentries = get_post_meta( get_the_ID(), '_cmbdigitalswf_digital', true );
+								$swfentries = get_post_meta( get_the_ID(), '_cmbdigitalswf_digitalswf', true );
 
 								foreach ( (array) $swfentries as $key => $swfentry ) {
 
@@ -114,11 +108,15 @@
 							$desc		= $('.swfData').first().data('description'),
 							$width		= $('.swfData').first().data('width'),
 							$height		= $('.swfData').first().data('height');
+						if(exists($swf)) {
 						$('#flashBanner').flash({
 							swf: $swf,
 							width: $width,
 							height: $height
 						});
+						} else {
+							$('#flashBanner').hide();
+						}
 						$('.flashBanner .desc').html($desc);
 						$('.dg').on('click', '.selector', function(e){
 							e.preventDefault();
@@ -138,11 +136,14 @@
 						$('.flashBanner .desc').html($desc);
 						});
 					});
-					</script>
-
-				<?php
-						}
-				?>
-				<?php
+					function exists(data) {
+						if(!data || data==null || data=='undefined' || typeof(data)=='undefined') return false;
+						else return true;
 					}
-				?>
+					function element_exists(id){
+						if($(id).length > 0){
+							return true;
+						}
+						return false;
+					}
+					</script>

@@ -1,13 +1,7 @@
-				<?php
-					$entries = get_post_meta( get_the_ID(), '_cmbav_dimage', true );
-					foreach ( (array) $entries as $key => $entry ) {
-						if ( $key < 1 ) {} else {
-				?>
-
 					<div class="dg">
 
 						<?php
-						$entries = get_post_meta( get_the_ID(), '_cmbdigitalimg_digital', true );
+						$entries = get_post_meta( get_the_ID(), '_cmbdigitalimg_digitalimage', true );
 
 						foreach ( (array) $entries as $key => $entry ) {
 
@@ -35,10 +29,3 @@
 						<?php } ?>
 
 					</div>
-
-				<?php
-						}
-				?>
-				<?php
-					}
-				?>

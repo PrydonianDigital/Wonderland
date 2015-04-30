@@ -346,7 +346,7 @@ function wl_digital_image_repeatable() {
 		'object_types' => array( 'portfolio', ),
 	) );
 	$group_field_id = $cmb_group->add_field( array(
-		'id'          => $prefix . 'digital',
+		'id'          => $prefix . 'digitalimage',
 		'type'        => 'group',
 		'options'     => array(
 			'group_title'   => __( 'Digital #{#}', 'wl' ),
@@ -381,7 +381,7 @@ function wl_digital_swf_repeatable() {
 		'object_types' => array( 'portfolio', ),
 	) );
 	$group_field_id = $cmb_group->add_field( array(
-		'id'          => $prefix . 'digital',
+		'id'          => $prefix . 'digitalswf',
 		'type'        => 'group',
 		'options'     => array(
 			'group_title'   => __( 'Digital #{#}', 'wl' ),
