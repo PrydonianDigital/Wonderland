@@ -55,12 +55,12 @@
 					?>
 
 					<?php global $post; $double = get_post_meta( $post->ID, '_wl_portfolio_double', true ); if( $double == 'on' ) : ?>
-					<div <?php post_class('item triple');?> style="background-image:url(<?php echo $url; ?>);">
+					<div <?php post_class('item triple');?> style="background-image:url(<?php echo $url; ?>);" itemscope itemtype="http://schema.org/ImageObject">
 					<?php else : ?>
-					<div <?php post_class('item double');?> style="background-image:url(<?php echo $url; ?>);">
+					<div <?php post_class('item double');?> style="background-image:url(<?php echo $url; ?>);" itemscope itemtype="http://schema.org/ImageObject">
 					<?php endif; ?>
 					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
-						<h5><?php the_title(); ?></h5>
+						<h5 itemprop="name"><?php the_title(); ?></h5>
 						<div class="icons"></div>
 					</a>
 					</div>
