@@ -543,7 +543,8 @@ function eg_create_sitemap() {
 // SEO
 function basic_wp_seo() {
   global $page, $paged, $post;
-	$default_keywords = 'Wonderland';
+	$default_keywords = 'Wonderland, movie advertising, London, agency, London agency, trailers, TV spots, Blu-Ray campaigns, DVD campaigns';
+	$default_desc = 'Wonderland is a movie advertising agency based in the heart of central London. Our range of work includes movie trailers, TV spots and post‑theatrical Blu‑Ray & DVD campaigns.';
 	$output = '';
 
 	// description
@@ -561,7 +562,7 @@ function basic_wp_seo() {
 			$content = trim($content);
 		}
 	} else {
-		$content = $description;
+		$content = $default_desc;
 	}
 	$output .= '<meta name="description" content="' . esc_attr($content) . '">' . "\n";
 
@@ -603,16 +604,16 @@ function basic_wp_seo() {
 	if ($paged >= 2 || $page >= 2) $page_number = ' | ' . sprintf('Page %s', max($paged, $page));
 	else $page_number = '';
 
-	if (is_home() || is_front_page()) $seo_title = $name . ' | ' . $description;
-	elseif (is_singular())            $seo_title = $title . ' | ' . $name;
-	elseif (is_tag())                 $seo_title = 'Tag Archive: ' . $tag . ' | ' . $name;
-	elseif (is_category())            $seo_title = 'Category Archive: ' . $cat . ' | ' . $name;
-	elseif (is_archive())             $seo_title = 'Archive: ' . $title . ' | ' . $name;
-	elseif (is_search())              $seo_title = 'Search: ' . $search . ' | ' . $name;
-	elseif (is_404())                 $seo_title = '404 - Not Found: ' . $url . ' | ' . $name;
-	else                              $seo_title = $name . ' | ' . $description;
+	if (is_home() || is_front_page()) $seo_title = $name;
+	elseif (is_singular())            $seo_title = $title . ' &raquo; ' . $name;
+	elseif (is_tag())                 $seo_title = 'Tag Archive: ' . $tag . ' &raquo; ' . $name;
+	elseif (is_category())            $seo_title = 'Category Archive: ' . $cat . ' &raquo; ' . $name;
+	elseif (is_archive())             $seo_title = 'Archive: ' . $title . ' &raquo; ' . $name;
+	elseif (is_search())              $seo_title = 'Search: ' . $search . ' &raquo; ' . $name;
+	elseif (is_404())                 $seo_title = '404 - Not Found: ' . $url . ' &raquo; ' . $name;
+	else                              $seo_title = $name . ' &raquo; ' . $description;
 
-	$output .= "\t\t" . '<title>' . esc_attr($seo_title . $page_number) . '</title>' . "\n";
+	$output .= '<title>' . esc_attr($seo_title . $page_number) . '</title>' . "\n";
 
 	return $output;
 }
