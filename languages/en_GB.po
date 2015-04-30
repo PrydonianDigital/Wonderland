@@ -1,8 +1,8 @@
 msgid ""
 msgstr ""
 "Project-Id-Version: Wonderland\n"
-"POT-Creation-Date: 2015-04-27 14:16-0000\n"
-"PO-Revision-Date: 2015-04-27 14:16-0000\n"
+"POT-Creation-Date: 2015-04-30 13:37-0000\n"
+"PO-Revision-Date: 2015-04-30 13:37-0000\n"
 "Last-Translator: \n"
 "Language-Team: \n"
 "Language: en_GB\n"
@@ -13,324 +13,366 @@ msgstr ""
 "X-Poedit-Basepath: ..\n"
 "X-Poedit-SourceCharset: UTF-8\n"
 "X-Poedit-KeywordsList: __;_e;_n:1,2;_x:1,2c;_ex:1,2c;_nx:4c,1,2;esc_attr__;"
-"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;"
-"_n_noop:1,2;_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
+"esc_attr_e;esc_attr_x:1,2c;esc_html__;esc_html_e;esc_html_x:1,2c;_n_noop:1,2;"
+"_nx_noop:3c,1,2;__ngettext_noop:1,2\n"
 "Plural-Forms: nplurals=2; plural=(n != 1);\n"
 "X-Poedit-SearchPath-0: .\n"
 "X-Poedit-SearchPathExcluded-0: *.js\n"
 
-#: functions.php:64
+#: functions.php:65
 msgctxt "Post Type General Name"
 msgid "Portfolio Items"
 msgstr ""
 
-#: functions.php:65
+#: functions.php:66
 msgctxt "Post Type Singular Name"
 msgid "Portfolio"
 msgstr ""
 
-#: functions.php:66
+#: functions.php:67
 msgid "Portfolio"
 msgstr ""
 
-#: functions.php:67
+#: functions.php:68
 msgid "Portfolio Item"
 msgstr ""
 
-#: functions.php:68
+#: functions.php:69
 msgid "Parent Portfolio Item:"
 msgstr ""
 
-#: functions.php:69
+#: functions.php:70
 msgid "All Portfolio Items"
 msgstr ""
 
-#: functions.php:70
+#: functions.php:71
 msgid "Add New Portfolio Item"
 msgstr ""
 
-#: functions.php:71
+#: functions.php:72
 msgid "Add New"
 msgstr ""
 
-#: functions.php:72
+#: functions.php:73
 msgid "New Portfolio Item"
 msgstr ""
 
-#: functions.php:73
+#: functions.php:74
 msgid "Edit Portfolio Item"
 msgstr ""
 
-#: functions.php:74
+#: functions.php:75
 msgid "Update Portfolio Item"
 msgstr ""
 
-#: functions.php:75
+#: functions.php:76
 msgid "View Portfolio Item"
 msgstr ""
 
-#: functions.php:76
+#: functions.php:77
 msgid "Search Portfolio Items"
 msgstr ""
 
-#: functions.php:77
+#: functions.php:78
 msgid "Not found"
 msgstr ""
 
-#: functions.php:78
+#: functions.php:79
 msgid "Not found in Trash"
 msgstr ""
 
-#: functions.php:81
+#: functions.php:82
 msgid "portfolio"
 msgstr ""
 
-#: functions.php:82
+#: functions.php:83
 msgid "Post Type Description"
 msgstr ""
 
-#: functions.php:106
+#: functions.php:107
 msgctxt "Taxonomy General Name"
 msgid "Types"
 msgstr ""
 
-#: functions.php:107
+#: functions.php:108
 msgctxt "Taxonomy Singular Name"
 msgid "Type"
 msgstr ""
 
-#: functions.php:108
+#: functions.php:109
 msgid "Type"
 msgstr ""
 
-#: functions.php:109
+#: functions.php:110
 msgid "All Types"
 msgstr ""
 
-#: functions.php:110
+#: functions.php:111
 msgid "Parent Type"
 msgstr ""
 
-#: functions.php:111
+#: functions.php:112
 msgid "Parent Type:"
 msgstr ""
 
-#: functions.php:112
+#: functions.php:113
 msgid "New Type"
 msgstr ""
 
-#: functions.php:113
+#: functions.php:114
 msgid "Add New Type"
 msgstr ""
 
-#: functions.php:114
+#: functions.php:115
 msgid "Edit Type"
 msgstr ""
 
-#: functions.php:115
+#: functions.php:116
 msgid "Update Type"
 msgstr ""
 
-#: functions.php:116
+#: functions.php:117
 msgid "View Type"
 msgstr ""
 
-#: functions.php:117
+#: functions.php:118
 msgid "Separate Types with commas"
 msgstr ""
 
-#: functions.php:118
+#: functions.php:119
 msgid "Add or remove Types"
 msgstr ""
 
-#: functions.php:119
+#: functions.php:120
 msgid "Choose from the most used"
 msgstr ""
 
-#: functions.php:120
+#: functions.php:121
 msgid "Popular Types"
 msgstr ""
 
-#: functions.php:121
+#: functions.php:122
 msgid "Search Types"
 msgstr ""
 
-#: functions.php:122
+#: functions.php:123
 msgid "Not Found"
 msgstr ""
 
-#: functions.php:150
+#: functions.php:151
 msgid "About Wonderland"
 msgstr ""
 
-#: functions.php:158 index.php:28 single.php:28
+#: functions.php:159 index.php:28 single-portfolio.php:28
 msgid "Find Us"
 msgstr ""
 
-#: functions.php:164 index.php:32 single.php:32
+#: functions.php:165 index.php:32 single-portfolio.php:32
 msgid "Contact Us"
 msgstr ""
 
-#: functions.php:179
+#: functions.php:180
 msgid "Client Details"
 msgstr ""
 
-#: functions.php:193
+#: functions.php:194
 msgid "Client Name"
 msgstr ""
 
-#: functions.php:198
+#: functions.php:199
 msgid "Media Order"
 msgstr ""
 
-#: functions.php:199
+#: functions.php:200
 msgid ""
 "What order are the categories in? (only shown in that order on the front-"
 "end)."
 msgstr ""
 
-#: functions.php:204
-msgid "AV/Print/Digital"
+#: functions.php:215
+msgid "AV / Print / Digital Image / Digital SWF"
 msgstr ""
 
-#: functions.php:205
-msgid "AV/Digital/Print"
+#: functions.php:216
+msgid "AV / Print / Digital SWF / Digital Image"
 msgstr ""
 
-#: functions.php:206
-msgid "Print/Digital/AV"
+#: functions.php:217
+msgid "AV / Digital Image / Digital SWF / Print"
 msgstr ""
 
-#: functions.php:207
-msgid "Print/AV/Digital"
+#: functions.php:218
+msgid "AV / Digital SWF / Digital Image / Print"
 msgstr ""
 
-#: functions.php:208
-msgid "Digital/AV/Print"
-msgstr ""
-
-#: functions.php:209
-msgid "Digital/Print/AV"
+#: functions.php:219
+msgid "Print / Digital Image / Digital SWF / AV"
 msgstr ""
 
 #: functions.php:220
+msgid "Print / Digital SWF / Digital Image / AV"
+msgstr ""
+
+#: functions.php:221
+msgid "Print / AV / Digital Image / Digital SWF"
+msgstr ""
+
+#: functions.php:222
+msgid "Print / AV / Digital SWF / Digital Image"
+msgstr ""
+
+#: functions.php:223
+msgid "Digital Image / Digital SWF / AV / Print"
+msgstr ""
+
+#: functions.php:224
+msgid "Digital SWF / Digital Image / AV / Print"
+msgstr ""
+
+#: functions.php:225
+msgid "Digital Image / Digital SWF / Print / AV"
+msgstr ""
+
+#: functions.php:226
+msgid "Digital SWF / Digital Image / Print / AV"
+msgstr ""
+
+#: functions.php:236
 msgid "Archive?"
 msgstr ""
 
-#: functions.php:240 header-single.php:33 header-single.php:47 header.php:33
-#: header.php:47
+#: functions.php:256
 msgid "AV"
 msgstr ""
 
-#: functions.php:247
+#: functions.php:263
 msgid "AV #{#}"
 msgstr ""
 
-#: functions.php:248
-msgid "Add Another AV"
-msgstr ""
-
-#: functions.php:249
-msgid "Remove AV"
-msgstr ""
-
-#: functions.php:254 functions.php:306
-msgid "Title"
-msgstr ""
-
-#: functions.php:259 functions.php:311
-msgid "Description"
-msgstr ""
-
-#: functions.php:260 functions.php:312 functions.php:353 functions.php:388
-msgid "Write a short description for this entry (optional)"
+#: functions.php:264
+msgid "Add Another AV Item"
 msgstr ""
 
 #: functions.php:265
-msgid "Poster Image"
+msgid "Remove AV"
 msgstr ""
 
-#: functions.php:266
-msgid "Used as video poster"
+#: functions.php:270 functions.php:323
+msgid "Title"
 msgstr ""
 
 #: functions.php:271
+msgid "Used for the \"Additional formats\" video switcher"
+msgstr ""
+
+#: functions.php:276 functions.php:333
+msgid "Description"
+msgstr ""
+
+#: functions.php:277 functions.php:334 functions.php:370 functions.php:406
+msgid "Write a short description for this entry (optional)"
+msgstr ""
+
+#: functions.php:282
+msgid "Poster Image"
+msgstr ""
+
+#: functions.php:283
+msgid ""
+"The poster specifies an image to be shown while the video is downloading, or "
+"until the user hits the play button. If this is not included, the first "
+"frame of the video will be used instead."
+msgstr ""
+
+#: functions.php:288
 msgid "MP4"
 msgstr ""
 
-#: functions.php:276
+#: functions.php:293
 msgid "WEBM"
 msgstr ""
 
-#: functions.php:281
-msgid "OGG"
+#: functions.php:298
+msgid "OGG/OGV"
 msgstr ""
 
-#: functions.php:292
+#: functions.php:309
 msgid "Print"
 msgstr ""
 
-#: functions.php:299
+#: functions.php:316
 msgid "Print #{#}"
 msgstr ""
 
-#: functions.php:300
-msgid "Add Another Print"
+#: functions.php:317
+msgid "Add Another Print Image"
 msgstr ""
 
-#: functions.php:301
+#: functions.php:318
 msgid "Remove Print"
 msgstr ""
 
-#: functions.php:317 functions.php:347
+#: functions.php:328 functions.php:364
 msgid "Image"
 msgstr ""
 
-#: functions.php:328
+#: functions.php:345
 msgid "Digital Image"
 msgstr ""
 
-#: functions.php:335 functions.php:370
+#: functions.php:352 functions.php:387
 msgid "Digital #{#}"
 msgstr ""
 
-#: functions.php:336 functions.php:371
-msgid "Add Another Digital"
+#: functions.php:353
+msgid "Add Another Digital Image"
 msgstr ""
 
-#: functions.php:337 functions.php:372
+#: functions.php:354 functions.php:389
 msgid "Remove Digital"
 msgstr ""
 
-#: functions.php:342
+#: functions.php:359
 msgid "Image Title"
 msgstr ""
 
-#: functions.php:352
+#: functions.php:369
 msgid "Image Description"
 msgstr ""
 
-#: functions.php:363
+#: functions.php:380
 msgid "Digital SWF"
 msgstr ""
 
-#: functions.php:377
+#: functions.php:388
+msgid "Add Another SWF"
+msgstr ""
+
+#: functions.php:394
 msgid "SWF Title"
 msgstr ""
 
-#: functions.php:382
+#: functions.php:395
+msgid "Used for the \"Additional formats\" SWF switcher"
+msgstr ""
+
+#: functions.php:400
 msgid "SWF File"
 msgstr ""
 
-#: functions.php:387
+#: functions.php:405
 msgid "SWF Description"
 msgstr ""
 
-#: functions.php:393
+#: functions.php:411
 msgid "SWF Width"
 msgstr ""
 
-#: functions.php:398
+#: functions.php:412 functions.php:418
+msgid "Used to display the SWF file properly"
+msgstr ""
+
+#: functions.php:417
 msgid "SWF Height"
 msgstr ""
 
@@ -338,20 +380,16 @@ msgstr ""
 msgid "WONDERLAND"
 msgstr ""
 
-#: header-single.php:32 header-single.php:46 header.php:32 header.php:46
-msgid "ALL"
+#: header-single.php:32 header-single.php:50 header.php:32 header.php:50
+msgid "all"
 msgstr ""
 
-#: header-single.php:34 header-single.php:48 header.php:34 header.php:48
-msgid "PRINT"
+#: header-single.php:41 header-single.php:59 header.php:41 header.php:59
+msgid "About"
 msgstr ""
 
-#: header-single.php:35 header.php:35
-msgid "DIGITAL"
-msgstr ""
-
-#: header-single.php:37 header-single.php:51 header.php:37 header.php:51
-msgid "ABOUT"
+#: header-single.php:49 header.php:49
+msgid "Filter &raquo;"
 msgstr ""
 
 #: meta/includes/CMB2.php:112
@@ -366,11 +404,11 @@ msgstr ""
 msgid "Please Try Again"
 msgstr ""
 
-#: meta/includes/CMB2_Ajax.php:133 meta/tests/test-cmb-types.php:766
+#: meta/includes/CMB2_Ajax.php:133
 msgid "Remove Embed"
 msgstr ""
 
-#: meta/includes/CMB2_Ajax.php:137 meta/tests/test-cmb-types.php:767
+#: meta/includes/CMB2_Ajax.php:137
 #, php-format
 msgid "No oEmbed Results Found for %s. View more info at"
 msgstr ""
@@ -384,7 +422,6 @@ msgid "Remove Group"
 msgstr ""
 
 #: meta/includes/CMB2_Field.php:908 meta/includes/CMB2_Field.php:912
-#: meta/tests/test-cmb-field.php:170
 msgid "None"
 msgstr ""
 
@@ -393,9 +430,7 @@ msgid "Add Row"
 msgstr ""
 
 #: meta/includes/CMB2_Types.php:353 meta/includes/CMB2_Types.php:986
-#: meta/includes/CMB2_hookup.php:183 meta/tests/test-cmb-types.php:147
-#: meta/tests/test-cmb-types.php:155 meta/tests/test-cmb-types.php:715
-#: meta/tests/test-cmb-types.php:740
+#: meta/includes/CMB2_hookup.php:183
 msgid "Remove"
 msgstr ""
 
@@ -403,13 +438,11 @@ msgstr ""
 msgid "No terms"
 msgstr ""
 
-#: meta/includes/CMB2_Types.php:835 meta/tests/test-cmb-types.php:691
-#: meta/tests/test-cmb-types.php:717
+#: meta/includes/CMB2_Types.php:835
 msgid "Add or Upload Files"
 msgstr ""
 
-#: meta/includes/CMB2_Types.php:893 meta/tests/test-cmb-types.php:727
-#: meta/tests/test-cmb-types.php:742
+#: meta/includes/CMB2_Types.php:893
 msgid "Add or Upload File"
 msgstr ""
 
@@ -418,12 +451,10 @@ msgid "Remove Image"
 msgstr ""
 
 #: meta/includes/CMB2_Types.php:981 meta/includes/CMB2_hookup.php:184
-#: meta/tests/test-cmb-types.php:716 meta/tests/test-cmb-types.php:741
 msgid "File:"
 msgstr ""
 
 #: meta/includes/CMB2_Types.php:984 meta/includes/CMB2_hookup.php:185
-#: meta/tests/test-cmb-types.php:714 meta/tests/test-cmb-types.php:739
 msgid "Download"
 msgstr ""
 
