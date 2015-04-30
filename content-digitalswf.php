@@ -1,6 +1,10 @@
+				<?php
+					$entries = get_post_meta( get_the_ID(), '_cmbav_dimage', true );
+					foreach ( (array) $entries as $key => $entry ) {
+						if ( $key < 1 ) {} else {
+				?>
+
 					<div class="dg">
-
-
 
 						<div class="line-break"></div>
 
@@ -102,35 +106,43 @@
 						?>
 
 					</div>
-<script>
-$(function() {
-	var $swfTitle 	= $('.swfData').first().data('title'),
-		$swf		= $('.swfData').first().data('swf'),
-		$desc		= $('.swfData').first().data('description'),
-		$width		= $('.swfData').first().data('width'),
-		$height		= $('.swfData').first().data('height');
-	$('#flashBanner').flash({
-		swf: $swf,
-		width: $width,
-		height: $height
-	});
-	$('.flashBanner .desc').html($desc);
-	$('.dg').on('click', '.selector', function(e){
-		e.preventDefault();
-		$('.selector').removeClass('selected');
-		$('#flashObject').empty();
-		$(this).addClass('selected');
-	var $swfTitle 	= $(this).data('title'),
-		$swf		= $(this).data('swf'),
-		$desc		= $(this).data('description'),
-		$width		= $(this).data('width'),
-		$height		= $(this).data('height');
-	$('#flashBanner').flash({
-		swf: $swf,
-		width: $width,
-		height: $height
-	});
-	$('.flashBanner .desc').html($desc);
-	});
-});
-</script>
+
+					<script>
+					$(function() {
+						var $swfTitle 	= $('.swfData').first().data('title'),
+							$swf		= $('.swfData').first().data('swf'),
+							$desc		= $('.swfData').first().data('description'),
+							$width		= $('.swfData').first().data('width'),
+							$height		= $('.swfData').first().data('height');
+						$('#flashBanner').flash({
+							swf: $swf,
+							width: $width,
+							height: $height
+						});
+						$('.flashBanner .desc').html($desc);
+						$('.dg').on('click', '.selector', function(e){
+							e.preventDefault();
+							$('.selector').removeClass('selected');
+							$('#flashObject').empty();
+							$(this).addClass('selected');
+						var $swfTitle 	= $(this).data('title'),
+							$swf		= $(this).data('swf'),
+							$desc		= $(this).data('description'),
+							$width		= $(this).data('width'),
+							$height		= $(this).data('height');
+						$('#flashBanner').flash({
+							swf: $swf,
+							width: $width,
+							height: $height
+						});
+						$('.flashBanner .desc').html($desc);
+						});
+					});
+					</script>
+
+				<?php
+						}
+				?>
+				<?php
+					}
+				?>
