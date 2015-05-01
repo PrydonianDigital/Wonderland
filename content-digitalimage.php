@@ -20,11 +20,11 @@
 
 						<div class="image" itemscope itemtype="http://schema.org/ImageObject">
 
-							<span id="imageTitle" itemprop="name"><?php echo $title; ?></span>
+							<span id="imageTitle" itemprop="name"><?php echo $imgtitle; ?></span>
 
-							<img src="<?php echo $image; ?>"  class="scale-with-grid" alt="<?php echo $title; ?>" itemprop="contentURL" />
+							<img src="<?php echo $image; ?>"  class="scale-with-grid" alt="<?php echo $imgtitle; ?>" itemprop="contentURL" />
 
-							<p class="desc" itemprop="description"><?php echo $description; ?>
+							<p class="desc" itemprop="description"><?php echo $imgdescription; ?></p>
 
 						</div>
 
