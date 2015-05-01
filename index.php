@@ -49,7 +49,13 @@
 					$temp = $wp_query;
 					$portfolio_query = null;
 					$portfolio_query = new WP_Query();
-					$portfolio_query->query('showposts=20&post_type=portfolio'.'&paged='.$paged);
+					$args = array(
+						'showposts' => 20,
+						'post_type' => 'portfolio',
+						'post__not_in' => get_option( 'sticky_posts' ),
+						'paged' => $paged
+					);
+					$portfolio_query->query($args);
 					while ($portfolio_query->have_posts()) : $portfolio_query->the_post();
 					$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
 					?>
