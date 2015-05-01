@@ -45,7 +45,7 @@
 								<span id="videoTitle" itemprop="name"></span>
 								<meta itemprop="thumbnailUrl" content="" />
 								<meta itemprop="embedURL" content="" />
-								<p class="desc"></p>
+								<p class="desc" itemprop="description"></p>
 
 							</div>
 
