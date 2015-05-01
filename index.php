@@ -58,12 +58,14 @@
 					$portfolio_query->query($args);
 					while ($portfolio_query->have_posts()) : $portfolio_query->the_post();
 					$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+					$thumbLarge = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbLarge' ); $urlLarge = $thumbLarge['0'];
+					$thumbSquare = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbSquare' ); $urlSquare = $thumbSquare['0'];
 					?>
 
 					<?php global $post; $double = get_post_meta( $post->ID, '_wl_portfolio_double', true ); if( $double == 'on' ) : ?>
-					<div <?php post_class('item triple');?> style="background-image:url(<?php echo $url; ?>);" itemscope itemtype="http://schema.org/Article">
+					<div <?php post_class('item triple');?> style="background-image:url(<?php echo $urlLarge; ?>); background-size: 450px 253px" itemscope itemtype="http://schema.org/Article">
 					<?php else : ?>
-					<div <?php post_class('item double');?> style="background-image:url(<?php echo $url; ?>);" itemscope itemtype="http://schema.org/Article">
+					<div <?php post_class('item double');?> style="background-image:url(<?php echo $urlSquare; ?>); background-size: 220px 220px" itemscope itemtype="http://schema.org/Article">
 					<?php endif; ?>
 					<meta itemprop="keywords" content="<?php $keywords = get_post_meta( get_the_ID(), '_wl_seo_keywords', true ); echo $keywords; ?>" />
 					<meta itemprop="description" content="<?php $description = get_post_meta( get_the_ID(), '_wl_seo_desc', true ); echo $description; ?>" />

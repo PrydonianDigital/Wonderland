@@ -11,14 +11,9 @@ function wonderland_init()	{
 	add_theme_support( 'automatic-feed-links' );
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'jetpack-responsive-videos' );
-	set_post_thumbnail_size( 700, 394, true );
-	add_image_size( 'featured', 700, 394, true );
-	add_image_size( 'full', 1000, 563, true );
-	add_image_size( 'article', 350, 197, false );
-	add_image_size( 'lecture', 220, 353, false );
-	add_image_size( 'lecture', 220, 353, false );
-	add_image_size( 'shop', 200, 350, true );
-	add_image_size( 'calendar', 90, 90, true );
+	set_post_thumbnail_size( 640, 360, true );
+	add_image_size( 'thumbLarge', 640, 360, true );
+	add_image_size( 'thumbSquare', 360, 360, true );
 	add_editor_style( 'editor-style.css' );
 	$markup = array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', );
 	add_theme_support( 'html5', $markup );
@@ -71,7 +66,7 @@ function portfolio() {
 		'label'               => __( 'portfolio', 'wl' ),
 		'description'         => __( 'Post Type Description', 'wl' ),
 		'labels'              => $labels,
-		'supports'            => array( 'title', 'thumbnail', 'page-attributes' ),
+		'supports'            => array( 'title', 'thumbnail' ),
 		'taxonomies'          => array( 'type' ),
 		'hierarchical'        => false,
 		'public'              => true,
@@ -245,16 +240,19 @@ function wl_av_repeatable() {
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name' => __( 'MP4', 'wl' ),
+		'description' => __( '(required)', 'wl' ),
 		'id'   => 'mp4',
 		'type' => 'file',
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name' => __( 'WEBM', 'wl' ),
+		'description' => __( '(required)', 'wl' ),
 		'id'   => 'webm',
 		'type' => 'file',
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name' => __( 'OGG/OGV', 'wl' ),
+		'description' => __( '(required)', 'wl' ),
 		'id'   => 'ogg',
 		'type' => 'file',
 	) );
@@ -280,17 +278,19 @@ function wl_print_repeatable() {
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name'       => __( 'Title', 'wl' ),
+		'description' => __( 'Used for the alt text of the image (optional)', 'wl' ),
 		'id'         => 'title',
 		'type'       => 'text',
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name' => __( 'Image', 'wl' ),
+		'description' => __( '(required)', 'wl' ),
 		'id'   => 'image',
 		'type' => 'file',
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name'        => __( 'Description', 'wl' ),
-		'description' => __( 'Write a short description for this entry (optional)', 'wl' ),
+		'description' => __( 'Write a short description for this image (optional)', 'wl' ),
 		'id'          => 'description',
 		'type'        => 'textarea_small',
 	) );
@@ -308,19 +308,21 @@ function wl_digital_image_repeatable() {
 		'id'          => $prefix . 'digitalimage',
 		'type'        => 'group',
 		'options'     => array(
-			'group_title'   => __( 'Digital #{#}', 'wl' ),
+			'group_title'   => __( 'Digital Image #{#}', 'wl' ),
 			'add_button'    => __( 'Add Another Digital Image', 'wl' ),
-			'remove_button' => __( 'Remove Digital', 'wl' ),
+			'remove_button' => __( 'Remove Digital Image', 'wl' ),
 			'sortable'      => true,
 		),
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name'       => __( 'Image Title', 'wl' ),
+		'description' => __( 'Used for the alt text of the image (optional)', 'wl' ),
 		'id'         => 'imgtitle',
 		'type'       => 'text',
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name'       => __( 'Image', 'wl' ),
+		'description' => __( '(required)', 'wl' ),
 		'id'         => 'image',
 		'type'       => 'file',
 	) );
@@ -336,16 +338,16 @@ function wl_digital_swf_repeatable() {
 	$prefix = '_cmbdigitalswf_';
 	$cmb_group = new_cmb2_box( array(
 		'id'           => $prefix . 'dswf',
-		'title'        => __( 'Digital SWF', 'wl' ),
+		'title'        => __( 'SWF', 'wl' ),
 		'object_types' => array( 'portfolio', ),
 	) );
 	$group_field_id = $cmb_group->add_field( array(
 		'id'          => $prefix . 'digitalswf',
 		'type'        => 'group',
 		'options'     => array(
-			'group_title'   => __( 'Digital #{#}', 'wl' ),
+			'group_title'   => __( 'SWF #{#}', 'wl' ),
 			'add_button'    => __( 'Add Another SWF', 'wl' ),
-			'remove_button' => __( 'Remove Digital', 'wl' ),
+			'remove_button' => __( 'Remove SWF', 'wl' ),
 			'sortable'      => true,
 		),
 	) );
@@ -357,6 +359,7 @@ function wl_digital_swf_repeatable() {
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name' => __( 'SWF File', 'wl' ),
+		'description' => __( '(required)', 'wl' ),
 		'id'   => 'swf',
 		'type' => 'file',
 	) );
@@ -368,13 +371,13 @@ function wl_digital_swf_repeatable() {
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name'        => __( 'SWF Width', 'wl' ),
-		'description' => __( 'Used to display the SWF file properly', 'wl' ),
+		'description' => __( 'Used to display the SWF file properly (required)', 'wl' ),
 		'id'          => 'swfwidth',
 		'type'        => 'text_small',
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name'        => __( 'SWF Height', 'wl' ),
-		'description' => __( 'Used to display the SWF file properly', 'wl' ),
+		'description' => __( 'Used to display the SWF file properly (required)', 'wl' ),
 		'id'          => 'swfheight',
 		'type'        => 'text_small',
 	) );
@@ -393,13 +396,13 @@ function wl_SEO() {
 	) );
 	$cmb_portfolio->add_field( array(
 	    'name' => 'SEO Description',
-	    'desc' => 'Add some text in here to describe this piece of work (optional)',
+	    'desc' => 'Add some text in here to describe this piece of work (optional, but recommended for search engines)',
 	    'id'   => $prefix . 'desc',
 	    'type' => 'textarea_small'
 	) );
 	$cmb_portfolio->add_field( array(
 	    'name' => 'SEO Keywords',
-	    'desc' => 'Add some comma separated keywords in here to describe this piece of work (optional)',
+	    'desc' => 'Add some comma separated keywords in here to describe this piece of work (optional, but recommended for search engines)',
 	    'id'   => $prefix . 'keywords',
 	    'type' => 'text'
 	) );
