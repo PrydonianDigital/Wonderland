@@ -61,7 +61,9 @@
 					<?php endif; ?>
 					<meta itemprop="keywords" content="<?php $keywords = get_post_meta( get_the_ID(), '_wl_seo_keywords', true ); echo $keywords; ?>" />
 					<meta itemprop="description" content="<?php $description = get_post_meta( get_the_ID(), '_wl_seo_desc', true ); echo $description; ?>" />
-					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>">
+					<meta itemprop="datePublished" content="<?php echo get_the_date('c'); ?>" />
+					<meta itemprop="genre" content="<?php $taxonomy = 'type'; $queried_term = get_query_var($taxonomy); $terms = get_terms($taxonomy, 'slug='.$queried_term); if ($terms) { foreach($terms as $term) { echo $term->name . ', '; } } ?>" />
+					<a href="<?php the_permalink(); ?>" title="<?php the_title(); ?>" rel="bookmark">
 						<h5 itemprop="name headline"><?php the_title(); ?></h5>
 						<div class="icons"></div>
 					</a>
