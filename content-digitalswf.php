@@ -28,9 +28,9 @@
 									if ( isset( $swfentry['swf'] ) )
 										$swf = esc_html( $swfentry['swf']);
 
+									if ($key == 0) {
 								?>
-								<span class="swfData" data-title="<?php echo $swftitle; ?>" data-swf="<?php echo $swf; ?>" data-description="<?php echo $swfdescription; ?>" data-width="<?php echo $swfwidth; ?>" data-height="<?php echo $swfheight; ?>"></span>
-								<?php } ?>
+
 								<div id="flashBanner" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
 
 									<div id="flashFail">
@@ -42,13 +42,25 @@
 									</div>
 
 								</div>
-								<span id="videoTitle" itemprop="name"></span>
+								<span id="videoTitle" itemprop="name"><?php echo $swfTitle; ?></span>
 								<meta itemprop="thumbnailUrl" content="" />
-								<meta itemprop="embedURL" content="" />
-								<p class="desc" itemprop="description"></p>
-
+								<meta itemprop="embedURL" content="<?php echo $swf; ?>" />
+								<p class="desc" itemprop="description"><?php echo $swfdescription; ?></p>
+								<script>
+								$(function() {
+									$('#flashBanner').flash({
+										swf: '<?php echo $swf; ?>',
+										width: '<?php echo $width; ?>',
+										height: '<?php echo $height; ?>'
+									});
+								});
+								</script>
 							</div>
 
+							<?php
+								}
+							}
+							?>
 						</div>
 
 						<?php
@@ -105,24 +117,6 @@
 
 					<script>
 					$(function() {
-						var $swfTitle 	= $('.swfData').first().data('title'),
-							$swf		= $('.swfData').first().data('swf'),
-							$desc		= $('.swfData').first().data('description'),
-							$width		= $('.swfData').first().data('width'),
-							$height		= $('.swfData').first().data('height');
-						if(exists($swf)) {
-						$('#videoTitle').html($swfTitle);
-						$('meta[itemprop="embedUrl"]').attr('content', $swf);
-						$('.flashBanner .desc').html($desc);
-						$('#flashBanner').flash({
-							swf: $swf,
-							width: $width,
-							height: $height
-						});
-						} else {
-							$('#flashBanner').hide();
-						}
-						$('.flashBanner .desc').html($desc);
 						$('.dg').on('click', '.selector', function(e){
 							e.preventDefault();
 							$('.selector').removeClass('selected');
