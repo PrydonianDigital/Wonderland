@@ -585,6 +585,15 @@ function my_add_cpt_to_dashboard() {
 	}
 }
 
+// Dashboard - Wonderland
+function wl_dashboard(){
+	if ( $GLOBALS['title'] != 'Dashboard' ){
+		return;
+	}
+	$GLOBALS['title'] =  __( 'Wonderland' );
+}
+add_action( 'admin_head', 'wl_dashboard' );
+
 // Dashboard Icons
 function add_menu_icons_styles(){
 
@@ -595,8 +604,16 @@ function add_menu_icons_styles(){
 	#adminmenu #menu-posts-taxonomy div.wp-menu-image:before, #dashboard_right_now .taxonomy-count a:before {
 		content: "\f323";
 	}
+	.post-title .post-state {
+		color: transparent;
+		font-size: 0rem;
+	}
+	.post-title .post-state:after {
+		content: "Archived";
+		color: #555;
+		font-size: 14px;
+	}
 	</style>';
-
 }
 add_action( 'admin_head', 'add_menu_icons_styles' );
 
