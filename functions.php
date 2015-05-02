@@ -202,6 +202,11 @@ function wl_portfolio() {
 	) );
 }
 
+function cmb2_render_callback_for_number( $field, $escaped_value, $object_id, $object_type, $field_type_object ) {
+    echo $field_type_object->input( array( 'type' => 'number' ) );
+}
+add_action( 'cmb2_render_number', 'cmb2_render_callback_for_number', 10, 5 );
+
 add_action( 'cmb2_init', 'wl_av_repeatable' );
 function wl_av_repeatable() {
 	$prefix = '_cmbav_';
@@ -255,6 +260,19 @@ function wl_av_repeatable() {
 		'description' => __( '(required)', 'wl' ),
 		'id'   => 'ogg',
 		'type' => 'file',
+	) );
+	$cmb_group->add_group_field( $group_field_id, array(
+		'name' => __( 'Video play duration', 'wl' ),
+		'description' => __( 'Video duration in minutes (required - if under 1 minute, leave blank)', 'wl' ),
+		'id'   => 'min',
+		'type' => 'number',
+	) );
+	$cmb_group->add_group_field( $group_field_id, array(
+		'name' => __( 'Video play duration', 'wl' ),
+		'description' => __( 'Video duration in seconds (required)', 'wl' ),
+		'id'   => 'sec',
+		'type' => 'number',
+		'after' => '<p>Video duration is formatted as T(minutes)M(seconds)S, so both the minutes and seconds are required for each video.</p>',
 	) );
 }
 

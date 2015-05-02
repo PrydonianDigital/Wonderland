@@ -29,13 +29,20 @@
 						    if ( isset( $entry['image'] ) )
 						        $poster = esc_html( $entry['image']);
 
+						    if ( isset( $entry['min'] ) )
+						        $min = esc_html( $entry['min']);
+
+						    if ( isset( $entry['sec'] ) )
+						        $sec = esc_html( $entry['sec']);
+
 							if ($key == 0) {
 						?>
 
 							<div id="videoWrapper" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
 								<span id="videoTitle" itemprop="name"><?php echo $title; ?></span>
 								<meta itemprop="thumbnailUrl" content="<?php echo $poster; ?>" />
-								 <meta itemprop="embedURL" content="<?php echo $mp4; ?>" />
+								<meta itemprop="embedURL" content="<?php echo $mp4; ?>" />
+								<meta itemprop="duration" content="T<?php if($min==''){echo '0';}else{echo $min;} ?>M<?php echo $sec; ?>S" />
 								<video id="wonderlandPlayer" class="video-js vjs-default-skin vjs-big-play-centered" controls width="auto" height="auto" poster="<?php echo $poster; ?>"><source src="<?php echo $mp4; ?>" type="video/mp4" /><source src="<?php echo $webm; ?>" type="video/webm" /><source src="<?php echo $ogg; ?>" type="video/ogg" /><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>
 							</div><!--videoWrapper-->
 
@@ -83,8 +90,14 @@
 								    if ( isset( $entry['image'] ) )
 								        $poster = esc_html( $entry['image']);
 
+								    if ( isset( $entry['min'] ) )
+								        $min = esc_html( $entry['min']);
+
+								    if ( isset( $entry['sec'] ) )
+								        $sec = esc_html( $entry['sec']);
+
 								?>
-								<a class="selector" data-title="<?php echo $title; ?>" data-mp4="<?php echo $mp4; ?>" data-webm="<?php echo $webm; ?>" data-ogg="<?php echo $ogg; ?>" data-poster="<?php echo $poster; ?>" data-description="<?php echo $description; ?>"><?php echo $title; ?></a>
+								<a class="selector" data-title="<?php echo $title; ?>" data-mp4="<?php echo $mp4; ?>" data-webm="<?php echo $webm; ?>" data-ogg="<?php echo $ogg; ?>" data-poster="<?php echo $poster; ?>" data-description="<?php echo $description; ?>" data-min="<?php if($min==''){echo '0';}else{echo $min;} ?>" data-sec="<?php echo $sec; ?>"><?php echo $title; ?></a>
 
 								<?php } ?>
 
@@ -115,9 +128,17 @@
 								$webm		= $(this).data('webm'),
 								$ogg		= $(this).data('ogg'),
 								$poster		= $(this).data('poster'),
+								$min		= $(this).data('min'),
+								$sec		= $(this).data('sec'),
 								$desc		= $(this).data('description');
 							var player = videojs('wonderlandPlayer');
 							player.poster($poster);
+							$('meta[itemprop="thumbnailUrl"]').attr('content', $poster);
+							$('meta[itemprop="embedURL"]').attr('content', $mp4);
+							$('meta[itemprop="duration"]').attr('content', 'T'+$min+'M'+$sec+'S');
+							$('.desc').html($desc);
+							$('#videoTitle').html($videoTitle);
+							$('#wonderlandPlayer').attr('poster', $poster);
 							player.src(
 								{ type: "video/mp4", src: $mp4 },
 								{ type: "video/webm", src: $webm },
