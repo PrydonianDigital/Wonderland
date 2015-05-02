@@ -50,8 +50,8 @@
 								$(function() {
 									$('#flashBanner').flash({
 										swf: '<?php echo $swf; ?>',
-										width: '<?php echo $width; ?>',
-										height: '<?php echo $height; ?>'
+										width: '<?php echo $swfwidth; ?>',
+										height: '<?php echo $swfheight; ?>'
 									});
 								});
 								</script>
@@ -135,14 +135,4 @@
 						$('.flashBanner .desc').html($desc);
 						});
 					});
-					function exists(data) {
-						if(!data || data==null || data=='undefined' || typeof(data)=='undefined') return false;
-						else return true;
-					}
-					function element_exists(id){
-						if($(id).length > 0){
-							return true;
-						}
-						return false;
-					}
 					</script>
