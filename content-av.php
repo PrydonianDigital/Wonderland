@@ -1,7 +1,11 @@
 					<div class="av">
 
+						<div class="videoPlay">
+
 						<?php
 						$entries = get_post_meta( get_the_ID(), '_cmbav_av', true );
+
+						$first = true;
 
 						foreach ( (array) $entries as $key => $entry ) {
 
@@ -25,22 +29,22 @@
 						    if ( isset( $entry['image'] ) )
 						        $poster = esc_html( $entry['image']);
 
+							if ($key == 0) {
 						?>
 
-						<span class="videoData" data-title="<?php echo $title; ?>" data-mp4="<?php echo $mp4; ?>" data-webm="<?php echo $webm; ?>" data-ogg="<?php echo $ogg; ?>" data-poster="<?php echo $poster; ?>" data-description="<?php echo $description; ?>"></span>
-
-						<?php } ?>
-
-						<div class="videoPlay">
-
 							<div id="videoWrapper" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
-								<span id="videoTitle" itemprop="name"></span>
-								<meta itemprop="thumbnailUrl" content="" />
-								 <meta itemprop="embedURL" content="" />
-								<video id="wonderlandPlayer" class="video-js vjs-default-skin vjs-big-play-centered" controls width="auto" height="auto" poster=""><source src="" type="video/mp4" /><source src="" type="video/webm" /><source src="" type="video/ogg" /><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>
+								<span id="videoTitle" itemprop="name"><?php echo $title; ?></span>
+								<meta itemprop="thumbnailUrl" content="<?php echo $poster; ?>" />
+								 <meta itemprop="embedURL" content="<?php echo $mp4; ?>" />
+								<video id="wonderlandPlayer" class="video-js vjs-default-skin vjs-big-play-centered" controls width="auto" height="auto" poster="<?php echo $poster; ?>"><source src="<?php echo $mp4; ?>" type="video/mp4" /><source src="<?php echo $webm; ?>" type="video/webm" /><source src="<?php echo $ogg; ?>" type="video/ogg" /><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>
 							</div><!--videoWrapper-->
 
-							<p class="desc" itemprop="description"></p>
+							<p class="desc" itemprop="description"><?php echo $description; ?></p>
+
+						<?php
+							}
+						}
+						?>
 
 						</div>
 
@@ -97,25 +101,7 @@
 					</div>
 					<script>
 					$(function() {
-						var $videoTitle = $('.videoData').first().data('title'),
-							$mp4		= $('.videoData').first().data('mp4'),
-							$webm		= $('.videoData').first().data('webm'),
-							$ogg		= $('.videoData').first().data('ogg'),
-							$poster		= $('.videoData').first().data('poster'),
-							$desc		= $('.videoData').first().data('description');
-						videojs('wonderlandPlayer', {}, function(){
-							var myPlayer = this;
-							myPlayer.poster($poster);
-							myPlayer.src(
-								{ type: "video/mp4", src: $mp4 },
-								{ type: "video/webm", src: $webm },
-								{ type: "video/ogg", src: $ogg }
-							);
-						});
-						$('#videoTitle').html($videoTitle);
-						$('meta[itemprop="thumbnailUrl"]').attr('content', $poster);
-						$('meta[itemprop="embedUrl"]').attr('content', $mp4);
-						$('.videoPlay .desc').html($desc);
+						videojs('wonderlandPlayer', {});
 						$('.av').on('click', '.selector', function(e){
 							e.preventDefault();
 							$('.selector').removeClass('selected');
