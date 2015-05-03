@@ -595,7 +595,7 @@ function wl_dashboard(){
 add_action( 'admin_head', 'wl_dashboard' );
 
 // Dashboard Icons
-function add_menu_icons_styles(){
+function wl_icons(){
 
 	echo '<style>
 	#adminmenu #menu-posts-portfolio div.wp-menu-image:before, #dashboard_right_now .portfolio-count a:before {
@@ -615,7 +615,33 @@ function add_menu_icons_styles(){
 	}
 	</style>';
 }
-add_action( 'admin_head', 'add_menu_icons_styles' );
+add_action( 'admin_head', 'wl_icons' );
+
+// Login Logo
+function wl_login() { ?>
+<style type="text/css">
+body.login	{
+	background: #fff;
+}
+body.login div#login h1 a {
+	background-image: url(<?php echo get_stylesheet_directory_uri(); ?>/images/main/logo.svg);
+	padding-bottom: 30px;
+	background-position: center top;
+	background-repeat: no-repeat;
+	background-size: 221px auto;
+	height: 24px;
+	line-height: 1;
+	margin: 0 auto 25px;
+	outline: 0 none;
+	overflow: hidden;
+	padding: 0;
+	text-decoration: none;
+	text-indent: -9999px;
+	width: 221px;
+}
+</style>
+<?php }
+add_action( 'login_enqueue_scripts', 'wl_login' );
 
 // Footer Copyrights
 function remove_footer_admin () {
