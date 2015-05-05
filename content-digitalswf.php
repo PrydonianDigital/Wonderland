@@ -71,7 +71,6 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 								</div>
 								<span id="videoTitle" itemprop="name"><?php echo $swfTitle; ?></span>
 								<meta itemprop="thumbnailUrl" content="" />
-								<meta itemprop="embedURL" content="<?php echo $swf; ?>" />
 								<p class="desc" itemprop="description"><?php echo $swfdescription; ?></p>
 								<script>
 								$(function() {

@@ -20,9 +20,8 @@
 * added 'archive' page
 * added infinite scroll
 * update translations
+* tidy up js
 
 ## Todo:
 
 * add 301 redirects for 'signature' pages
-* tidy up js
-* tidy up Schema.org markup
