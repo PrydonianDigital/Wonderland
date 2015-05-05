@@ -1,6 +1,15 @@
 //MOBILE MENU
 $(document).ready(function() {
 
+	var $container = $('.gridHolder');
+	$('#allPosts').infinitescroll({
+		navSelector  : "div#nav",
+		nextSelector : "div#nav a:first",
+		itemSelector : "#allPosts div.item"
+	},function(newElements){
+		$container.isotope( 'appended', $( newElements ) );
+	});
+
 	$('.mobileNav .closed').on('click', function(event) {
 		$(this).hide();
 		$('.open').show();

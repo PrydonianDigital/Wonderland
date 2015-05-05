@@ -442,6 +442,14 @@ function wl_SEO() {
 }
 add_action( 'cmb2_init', 'wl_SEO' );
 
+add_filter( 'pre_get_posts', 'wl_homepage' );
+function wl_homepage( $query ) {
+	if ( is_home() && $query->is_main_query() )
+		$query->set( 'post_type', array( 'portfolio' ) );
+		$query->set( 'post__not_in', get_option('sticky_posts') );
+	return $query;
+}
+
 // Repurposing Sticky as Archive
 add_action( 'admin_init', 'super_sticky_add_meta_box' );
 add_action( 'admin_init', 'super_sticky_admin_init', 20 );

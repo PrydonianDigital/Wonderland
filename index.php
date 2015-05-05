@@ -1,6 +1,6 @@
 <?php get_header(); ?>
 
-	<div class="wrapper">
+		<div class="wrapper">
 
 		<div class="container">
 
@@ -44,20 +44,9 @@
 
 				</div><!--about-->
 
-				<div class="gridHolder">
+				<div class="gridHolder" id="allPosts" data-masonry="">
 					<?php
-					$temp = $wp_query;
-					$portfolio_query = null;
-					$portfolio_query = new WP_Query();
-					$args = array(
-						'showposts' => 20,
-						'post_type' => 'portfolio',
-						'post__not_in' => get_option( 'sticky_posts' ),
-						'paged' => $paged
-					);
-					$portfolio_query->query($args);
-					while ($portfolio_query->have_posts()) : $portfolio_query->the_post();
-					$url = wp_get_attachment_url( get_post_thumbnail_id($post->ID) );
+					if (have_posts()) : while (have_posts()) : the_post();
 					$thumbLarge = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbLarge' ); $urlLarge = $thumbLarge['0'];
 					$thumbSquare = wp_get_attachment_image_src( get_post_thumbnail_id($post->ID), 'thumbSquare' ); $urlSquare = $thumbSquare['0'];
 					?>
@@ -77,11 +66,12 @@
 					</a>
 					</div>
 					<?php endwhile; ?>
+					<div id="nav">
 					<?php previous_posts_link('&laquo; Newer') ?>
 					<?php next_posts_link('Older &raquo;') ?>
+					</div>
 					<?php
-					$portfolio_query = null;
-					$portfolio_query = $temp;
+					endif;
 					?>
 				</div>
 

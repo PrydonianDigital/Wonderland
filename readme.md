@@ -18,11 +18,11 @@
 * added custom post type & taxonomy data to Dashboard
 * logo is now customisable via 'Appearance'
 * added 'archive' page
+* added infinite scroll
 
 ## Todo:
 
 * add 301 redirects for 'signature' pages
 * tidy up js
-* infinite scroll
 * update translations
 * tidy up Schema.org markup
