@@ -19,10 +19,10 @@
 * logo is now customisable via 'Appearance'
 * added 'archive' page
 * added infinite scroll
+* update translations
 
 ## Todo:
 
 * add 301 redirects for 'signature' pages
 * tidy up js
-* update translations
 * tidy up Schema.org markup

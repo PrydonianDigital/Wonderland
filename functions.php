@@ -169,6 +169,29 @@ function wl_about() {
 
 }
 
+// Portfolio Image Size
+add_action( 'cmb2_init', 'wl_featured' );
+
+function wl_featured() {
+	$prefix = '_wl_fi_';
+	$cmb_about_page = new_cmb2_box( array(
+		'id'           => $prefix . 'metabox',
+		'title'        => __( 'Featured Image Size', 'wl' ),
+		'object_types' => array( 'portfolio', ),
+		'context'      => 'side',
+		'priority'     => 'low',
+		'show_names'   => true,
+		'show_on'      => array( 'post_type' => array( 'portfolio', ) ),
+	) );
+	$cmb_about_page->add_field( array(
+		'name'    => __( ' ', 'wl' ),
+		'desc'	  => __( 'Featured Images should be 675x330 for retina devices', 'wl' ),
+		'id'      => $prefix . 'findus',
+		'type'    => 'title',
+	) );
+
+}
+
 // Portfolio Meta
 add_action( 'cmb2_init', 'wl_portfolio' );
 
@@ -260,19 +283,19 @@ function wl_av_repeatable() {
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name' => __( 'MP4', 'wl' ),
-		'description' => __( '(required)', 'wl' ),
+		'description' => __( 'Video dimensions should be 640x360 (required)', 'wl' ),
 		'id'   => 'mp4',
 		'type' => 'file',
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name' => __( 'WEBM', 'wl' ),
-		'description' => __( '(required)', 'wl' ),
+		'description' => __( 'Video dimensions should be 640x360 (required)', 'wl' ),
 		'id'   => 'webm',
 		'type' => 'file',
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name' => __( 'OGG/OGV', 'wl' ),
-		'description' => __( '(required)', 'wl' ),
+		'description' => __( 'Video dimensions should be 640x360 (required)', 'wl' ),
 		'id'   => 'ogg',
 		'type' => 'file',
 	) );
