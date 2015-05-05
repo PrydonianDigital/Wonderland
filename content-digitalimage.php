@@ -1,3 +1,23 @@
+<?php
+$entries = get_post_meta( get_the_ID(), '_cmbdigitalimg_digitalimage', true );
+
+foreach ( (array) $entries as $key => $entry ) {
+
+    $imgtitle = $imgdescription = $image = '';
+
+    if ( isset( $entry['imgtitle'] ) )
+        $imgtitle = esc_html( $entry['imgtitle'] );
+
+    if ( isset( $entry['imgdescription'] ) )
+        $imgdescription = esc_html( $entry['imgdescription'] );
+
+    if ( isset( $entry['image'] ) )
+        $image = esc_html( $entry['image']);
+
+	if ($key == 0) {
+		if($image == '') {} else {
+?>
+
 					<div class="dg">
 
 						<?php
@@ -31,3 +51,9 @@
 						<?php } ?>
 
 					</div>
+
+<?php
+		}
+	}
+}
+?>
