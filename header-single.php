@@ -68,13 +68,149 @@
 				<h4><?php the_title(); ?></h4>
 				<p><?php $client = get_post_meta( get_the_ID(), '_wl_portfolio_client', true ); echo $client; ?></p>
 				<ul>
-				<?php
-				$terms = get_the_terms( $post->ID , 'type' );
-				foreach( $terms as $term ) {
-					print '<li><a href="' . get_the_permalink() . '#' . $term->name . '">' . $term->name . '</a></li>';
-					unset($term);
-				}
-				?>
+				<?php global $post; $order = get_post_meta( $post->ID, '_wl_portfolio_media_order', true ); if( $order == 'apdids' ) : ?>
+					<?php if( has_term( 'AV', 'type' ) ) { ?>
+					<li><a href="#av">AV</a></li>
+					<?php } ?>
+					<?php if( has_term( 'Print', 'type' ) ) { ?>
+					<li><a href="#print">Print</a></li>
+					<?php } ?>
+					<?php if( has_term( 'Digital', 'type' ) ) { ?>
+					<li><a href="#digital">Digital</a></li>
+					<?php } ?>
+				<?php endif; ?>
+
+				<?php global $post; $order = get_post_meta( $post->ID, '_wl_portfolio_media_order', true ); if( $order == 'apdsdi' ) : ?>
+					<?php if( has_term( 'AV', 'type' ) ) { ?>
+					<li><a href="#av">AV</a></li>
+					<?php } ?>
+					<?php if( has_term( 'Print', 'type' ) ) { ?>
+					<li><a href="#print">Print</a></li>
+					<?php } ?>
+					<?php if( has_term( 'Digital', 'type' ) ) { ?>
+					<li><a href="#digital">Digital</a></li>
+					<?php } ?>
+				<?php endif; ?>
+
+				<?php global $post; $order = get_post_meta( $post->ID, '_wl_portfolio_media_order', true ); if( $order == 'adidsp' ) : ?>
+					<?php if( has_term( 'AV', 'type' ) ) { ?>
+					<li><a href="#av">AV</a></li>
+					<?php } ?>
+					<?php if( has_term( 'Digital', 'type' ) ) { ?>
+					<li><a href="#digital">Digital</a></li>
+					<?php } ?>
+					<?php if( has_term( 'Print', 'type' ) ) { ?>
+					<li><a href="#print">Print</a></li>
+					<?php } ?>
+				<?php endif; ?>
+
+				<?php global $post; $order = get_post_meta( $post->ID, '_wl_portfolio_media_order', true ); if( $order == 'adsdip' ) : ?>
+					<?php if( has_term( 'AV', 'type' ) ) { ?>
+					<li><a href="#av">AV</a></li>
+					<?php } ?>
+					<?php if( has_term( 'Digital', 'type' ) ) { ?>
+					<li><a href="#digital">Digital</a></li>
+					<?php } ?>
+					<?php if( has_term( 'Print', 'type' ) ) { ?>
+					<li><a href="#print">Print</a></li>
+					<?php } ?>
+				<?php endif; ?>
+
+				<?php global $post; $order = get_post_meta( $post->ID, '_wl_portfolio_media_order', true ); if( $order == 'pdidsa' ) : ?>
+					<?php if( has_term( 'Print', 'type' ) ) { ?>
+					<li><a href="#print">Print</a></li>
+					<?php } ?>
+					<?php if( has_term( 'Digital', 'type' ) ) { ?>
+					<li><a href="#digital">Digital</a></li>
+					<?php } ?>
+					<?php if( has_term( 'AV', 'type' ) ) { ?>
+					<li><a href="#av">AV</a></li>
+					<?php } ?>
+				<?php endif; ?>
+
+				<?php global $post; $order = get_post_meta( $post->ID, '_wl_portfolio_media_order', true ); if( $order == 'pdsdia' ) : ?>
+					<?php if( has_term( 'Print', 'type' ) ) { ?>
+					<li><a href="#print">Print</a></li>
+					<?php } ?>
+					<?php if( has_term( 'Digital', 'type' ) ) { ?>
+					<li><a href="#digital">Digital</a></li>
+					<?php } ?>
+					<?php if( has_term( 'AV', 'type' ) ) { ?>
+					<li><a href="#av">AV</a></li>
+					<?php } ?>
+				<?php endif; ?>
+
+				<?php global $post; $order = get_post_meta( $post->ID, '_wl_portfolio_media_order', true ); if( $order == 'padids' ) : ?>
+					<?php if( has_term( 'Print', 'type' ) ) { ?>
+					<li><a href="#print">Print</a></li>
+					<?php } ?>
+					<?php if( has_term( 'AV', 'type' ) ) { ?>
+					<li><a href="#av">AV</a></li>
+					<?php } ?>
+					<?php if( has_term( 'Digital', 'type' ) ) { ?>
+					<li><a href="#digital">Digital</a></li>
+					<?php } ?>
+				<?php endif; ?>
+
+				<?php global $post; $order = get_post_meta( $post->ID, '_wl_portfolio_media_order', true ); if( $order == 'padsdi' ) : ?>
+					<?php if( has_term( 'Print', 'type' ) ) { ?>
+					<li><a href="#print">Print</a></li>
+					<?php } ?>
+					<?php if( has_term( 'AV', 'type' ) ) { ?>
+					<li><a href="#av">AV</a></li>
+					<?php } ?>
+					<?php if( has_term( 'Digital', 'type' ) ) { ?>
+					<li><a href="#digital">Digital</a></li>
+					<?php } ?>
+				<?php endif; ?>
+
+				<?php global $post; $order = get_post_meta( $post->ID, '_wl_portfolio_media_order', true ); if( $order == 'didsap' ) : ?>
+					<?php if( has_term( 'Digital', 'type' ) ) { ?>
+					<li><a href="#digital">Digital</a></li>
+					<?php } ?>
+					<?php if( has_term( 'AV', 'type' ) ) { ?>
+					<li><a href="#av">AV</a></li>
+					<?php } ?>
+					<?php if( has_term( 'Print', 'type' ) ) { ?>
+					<li><a href="#print">Print</a></li>
+					<?php } ?>
+				<?php endif; ?>
+
+				<?php global $post; $order = get_post_meta( $post->ID, '_wl_portfolio_media_order', true ); if( $order == 'dsdiap' ) : ?>
+					<?php if( has_term( 'Digital', 'type' ) ) { ?>
+					<li><a href="#digital">Digital</a></li>
+					<?php } ?>
+					<?php if( has_term( 'AV', 'type' ) ) { ?>
+					<li><a href="#av">AV</a></li>
+					<?php } ?>
+					<?php if( has_term( 'Print', 'type' ) ) { ?>
+					<li><a href="#print">Print</a></li>
+					<?php } ?>
+				<?php endif; ?>
+
+				<?php global $post; $order = get_post_meta( $post->ID, '_wl_portfolio_media_order', true ); if( $order == 'didspa' ) : ?>
+					<?php if( has_term( 'Digital', 'type' ) ) { ?>
+					<li><a href="#digital">Digital</a></li>
+					<?php } ?>
+					<?php if( has_term( 'AV', 'type' ) ) { ?>
+					<li><a href="#av">AV</a></li>
+					<?php } ?>
+					<?php if( has_term( 'Print', 'type' ) ) { ?>
+					<li><a href="#print">Print</a></li>
+					<?php } ?>
+				<?php endif; ?>
+
+				<?php global $post; $order = get_post_meta( $post->ID, '_wl_portfolio_media_order', true ); if( $order == 'dsdipa' ) : ?>
+					<?php if( has_term( 'Digital', 'type' ) ) { ?>
+					<li><a href="#digital">Digital</a></li>
+					<?php } ?>
+					<?php if( has_term( 'Print', 'type' ) ) { ?>
+					<li><a href="#print">Print</a></li>
+					<?php } ?>
+					<?php if( has_term( 'AV', 'type' ) ) { ?>
+					<li><a href="#av">AV</a></li>
+					<?php } ?>
+				<?php endif; ?>
 				</ul>
 			</div><!--menu-->
 		</div>

@@ -1,3 +1,29 @@
+<?php
+$swfentries = get_post_meta( get_the_ID(), '_cmbdigitalswf_digitalswf', true );
+
+foreach ( (array) $swfentries as $key => $swfentry ) {
+
+	$swftitle = $swfdescription = $swfwidth = $swfheight = $swf = '';
+
+	if ( isset( $swfentry['swftitle'] ) )
+		$swftitle = esc_html( $swfentry['swftitle'] );
+
+	if ( isset( $swfentry['swfdescription'] ) )
+		$swfdescription = esc_html( $swfentry['swfdescription'] );
+
+	if ( isset( $swfentry['swfwidth'] ) )
+		$swfwidth = esc_html( $swfentry['swfwidth'] );
+
+	if ( isset( $swfentry['swfheight'] ) )
+		$swfheight = esc_html( $swfentry['swfheight'] );
+
+	if ( isset( $swfentry['swf'] ) )
+		$swf = esc_html( $swfentry['swf']);
+
+	if ($key == 0) {
+		if($swf == '') {} else {
+?>
+
 					<div class="dg">
 
 						<div class="line-break"></div>
@@ -29,6 +55,7 @@
 										$swf = esc_html( $swfentry['swf']);
 
 									if ($key == 0) {
+										if($swf == '') {} else {
 								?>
 
 								<div id="flashBanner" itemprop="video" itemscope itemtype="http://schema.org/VideoObject">
@@ -58,6 +85,7 @@
 							</div>
 
 							<?php
+									}
 								}
 							}
 							?>
@@ -136,3 +164,9 @@
 						});
 					});
 					</script>
+
+<?php
+		}
+	}
+}
+?>
