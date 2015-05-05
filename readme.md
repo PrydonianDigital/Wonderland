@@ -2,7 +2,7 @@
 
 # Theme Instructions
 
-* Install 'Smart 301 Redirects' to set up the Signature links. These can then be found under Settings  > 301 Redirects.
+* Install the 'Simple 301 Redirects' plugin (found in the theme folder) to set up the Signature links. These can then be found under Settings  > 301 Redirects.
 * Under Portfolio > Type, create AV, Print, Digital & Archive as Types.
 * Under Pages, create About Wonderland & Archive.
 * In About Wonderland, add the Find Us & Contact Us info in the relevant meta boxes. The main text goes in the main editor.
