@@ -277,7 +277,7 @@ function wl_av_repeatable() {
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name' => __( 'Poster Image', 'wl' ),
-		'description' => __( 'The poster specifies an image to be shown while the video is downloading, or until the user hits the play button. If this is not included, the first frame of the video will be used instead.', 'wl' ),
+		'description' => __( 'The poster specifies an image to be shown while the video is downloading, or until the user hits the play button. If this is not included, the first frame of the video will be used instead. Image dimensions should be 640x360 (required)', 'wl' ),
 		'id'   => 'image',
 		'type' => 'file',
 	) );
