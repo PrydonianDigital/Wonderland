@@ -1,6 +1,6 @@
 # Wonderland WordPress Theme
 
-# Done:
+## Done:
 
 * isotope homepage layout
 * added custom portfolio post type with custom 'type' taxonomy
@@ -17,12 +17,12 @@
 * added translations functionality
 * added custom post type & taxonomy data to Dashboard
 * logo is now customisable via 'Appearance'
+* added 'archive' page
 
 ## Todo:
 
 * add 301 redirects for 'signature' pages
 * tidy up js
 * infinite scroll
-* create 'archive' page
 * update translations
 * tidy up Schema.org markup
