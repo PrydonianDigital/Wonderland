@@ -2,16 +2,17 @@
 
 # Theme Instructions
 
-* Under Portfolio > Type, create AV, Print, Digital & Archive as Types
-* Under Pages, create About Wonderland & Archive
+* Install 'Smart 301 Redirects' to set up the Signature links. These can then be found under Settings  > 301 Redirects.
+* Under Portfolio > Type, create AV, Print, Digital & Archive as Types.
+* Under Pages, create About Wonderland & Archive.
 * In About Wonderland, add the Find Us & Contact Us info in the relevant meta boxes. The main text goes in the main editor.
-* The Archive page remains blank
+* The Archive page remains blank.
 * When adding a new Portfolio Item, there are sections concerning each type (AV, Print & Digital). Fill these in with the relevant information for each type.
-* Portfolio Items need a Featured image (675x330)
-* Video poster images should be 640x360 
+* Portfolio Items need a Featured image (675x330).
+* Video poster images should be 640x360.
 * Print images should be a maximum of 1000 pixels wide; they will be automatically scaled to fit the page.
-* Choose the ordering for the media types under 'Media Order'. It doesn't matter if one or more sections are not present - these will not appear if not filled out or selected under Type
-* Add SEO description and keywords in each Portfolio Item for better search engine visibility
+* Choose the ordering for the media types under 'Media Order'. It doesn't matter if one or more sections are not present - these will not appear if not filled out or selected under Type.
+* Add SEO description and keywords in each Portfolio Item for better search engine visibility.
 
 
 
