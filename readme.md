@@ -22,7 +22,5 @@
 * update translations
 * tidied up js
 * redirect /about to /#about
+* added 301 redirects for 'signature' pages
 
-## Todo:
-
-* add 301 redirects for 'signature' pages

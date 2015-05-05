@@ -49,7 +49,15 @@
 							<li class="filter"><?php _e( 'Filter &raquo;', 'wl' ); ?></li>
 							<li><a class="filterBtn selected" data-filter="*"><?php _e( 'all', 'wl' ); ?></a></li>
 							<?php
-								$types = get_terms('type','hide-empty=0&orderby=id');
+								$taxonomies = array(
+									'type'
+								);
+								$args = array(
+									'hide_empty' => true,
+									'orderby' => 'id',
+									'exclude' => '7'
+								);
+								$types = get_terms($taxonomies, $args);
 								foreach ( $types as $type ) {
 									if( ++$count > 10 ) break;
 										echo '<li><a class="filterBtn link'.$type->name.'" data-filter=".type-'.$type->slug.'">'.$type->name.'</a></li>';

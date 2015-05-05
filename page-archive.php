@@ -50,9 +50,15 @@
 					$portfolio_query = null;
 					$portfolio_query = new WP_Query();
 					$args = array(
-						'showposts' => 20,
 						'post_type' => 'portfolio',
-						'post__in' => get_option( 'sticky_posts' ),
+						'tax_query' => array(
+							array(
+								'taxonomy' => 'type',
+								'terms' => 'archive',
+								'field' => 'slug',
+								'operator' => 'IN'
+							),
+						),
 						'paged' => $paged
 					);
 					$portfolio_query->query($args);

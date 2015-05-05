@@ -467,9 +467,20 @@ add_action( 'cmb2_init', 'wl_SEO' );
 
 add_filter( 'pre_get_posts', 'wl_homepage' );
 function wl_homepage( $query ) {
+	if ( is_admin() || ! $query->is_main_query() )
+        return;
 	if ( is_home() && $query->is_main_query() )
 		$query->set( 'post_type', array( 'portfolio' ) );
-		$query->set( 'post__not_in', get_option('sticky_posts') );
+		$query->set( 'tax_query',
+            array(
+                array(
+                    'taxonomy' => 'type',
+                    'field' => 'slug',
+                    'terms' => 'archive',
+                    'operator' => 'NOT IN'
+                )
+            )
+        );
 	return $query;
 }
 
@@ -477,11 +488,9 @@ function wl_homepage( $query ) {
 add_action( 'admin_init', 'super_sticky_add_meta_box' );
 add_action( 'admin_init', 'super_sticky_admin_init', 20 );
 add_action( 'pre_get_posts', 'super_sticky_posts_filter' );
-
 function super_sticky_description() {
 	echo '<p>' . __( 'Enable support for archiving post types.' ) . '</p>';
 }
-
 function super_sticky_set_post_types() {
 	$post_types = get_post_types( array( '_builtin' => false, 'public' => true ), 'names' );
 	if ( ! empty( $post_types ) ) {
@@ -493,17 +502,13 @@ function super_sticky_set_post_types() {
 		echo '<p>' . __( 'No public custom post types found.' ) . '</p>';
 	}
 }
-
 function super_sticky_filter( $query_type ) {
 	$filters = (array) get_option( 'sticky_custom_post_types_filters', array() );
-
 	return in_array( $query_type, $filters );
 }
-
 function super_sticky_set_filters() { ?>
 	<span><input type="checkbox" id="sticky_custom_post_types_filters_home" name="sticky_custom_post_types_filters[]" value="home" <?php checked( super_sticky_filter( 'home' ) ); ?> /> <label for="sticky_custom_post_types_filters_home">home</label></span><?php
 }
-
 function super_sticky_admin_init() {
 	register_setting( 'reading', 'sticky_custom_post_types' );
 	register_setting( 'reading', 'sticky_custom_post_types_filters' );
@@ -511,22 +516,18 @@ function super_sticky_admin_init() {
 	add_settings_field( 'sticky_custom_post_types', __( 'Show "Archive" checkbox on' ), 'super_sticky_set_post_types', 'reading', 'super_sticky_options' );
 	add_settings_field( 'sticky_custom_post_types_filters', __( 'Display selected post type(s) on' ), 'super_sticky_set_filters', 'reading', 'super_sticky_options' );
 }
-
 function super_sticky_post_types() {
 	return (array) get_option( 'sticky_custom_post_types', array() );
 }
-
 function super_sticky_meta() { ?>
 	<input id="super-sticky" name="sticky" type="checkbox" value="sticky" <?php checked( is_sticky() ); ?> /> <label for="super-sticky" class="selectit"><?php _e( 'Hide from the home page' ) ?></label><?php
 }
-
 function super_sticky_add_meta_box() {
 	if( ! current_user_can( 'edit_others_posts' ) )
 		return;
 	foreach( super_sticky_post_types() as $post_type )
 		add_meta_box( 'super_sticky_meta', __( 'Archive' ), 'super_sticky_meta', $post_type, 'side', 'high' );
 }
-
 function super_sticky_posts_filter( $query ) {
 	if ( $query->is_main_query() && $query->is_home() && ! $query->get( 'suppress_filters' ) && super_sticky_filter( 'home' ) ) {
 		$super_sticky_post_types = super_sticky_post_types();
@@ -547,7 +548,6 @@ function super_sticky_posts_filter( $query ) {
 		}
 	}
 }
-
 function wl_sticky( $posts ) {
     // apply the magic on post archive only
     if ( is_main_query() && is_post_type_archive() ) {
@@ -578,17 +578,14 @@ function wl_sticky( $posts ) {
                 'post_status' => 'publish',
                 'nopaging' => true
             ) );
-
             foreach ( $stickies as $sticky_post ) {
                 array_splice( $posts, $sticky_offset, 0, array( $sticky_post ) );
                 $sticky_offset++;
             }
         }
-
     }
     return $posts;
 }
-
 add_filter( 'the_posts', 'wl_sticky' );
 
 // Upload SWF

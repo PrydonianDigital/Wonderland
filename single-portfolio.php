@@ -44,6 +44,8 @@
 
 				</div><!--about-->
 
+				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
+
 				<h2 class="entry-title"><?php the_title(); ?></h2>
 				<p><?php $client = get_post_meta( get_the_ID(), '_wl_portfolio_client', true ); echo $client; ?></p>
 
@@ -500,6 +502,10 @@
 						<?php get_template_part( 'content', 'av' ); ?>
 
 					<?php } ?>
+
+				<?php endif; ?>
+
+				<?php endwhile; ?>
 
 				<?php endif; ?>
 
