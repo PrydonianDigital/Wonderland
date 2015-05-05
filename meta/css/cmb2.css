@@ -764,7 +764,7 @@ Sidebar Placement Adjustments
 
 .inner-sidebar .cmb2-wrap > .cmb-field-list > .cmb-row,
 #side-sortables .cmb2-wrap > .cmb-field-list > .cmb-row {
-	padding: 1.4em 0;
+	padding: 0.4em 0;
 }
 
 /* line 16, sass/partials/_sidebar_placements.scss */
