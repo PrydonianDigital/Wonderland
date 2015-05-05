@@ -1,5 +1,4 @@
-//MOBILE MENU
-$(document).ready(function() {
+$(function() {
 
 	var $container = $('.gridHolder');
 	$('#allPosts').infinitescroll({
@@ -55,39 +54,6 @@ $(document).ready(function() {
 		}
 
 	});
-
-//	$('.videoPlay').first().show();
-//	$('.selector').first().addClass('selected');
-//	$('.av').on('click', '.selector', function(e){
-//		e.preventDefault();
-//		var playNext = $(this).data('video')
-//		$('.selector').removeClass('selected');
-//		$(this).addClass('selected');
-//		$('.videoPlay').hide();
-//		$('.videoPlay[data-video="'+playNext+'"]').show();
-//	});
-
-	$('.selector').first().addClass('selected');
-//	var $swfTitle 	= $('.selector').first().data('title'),
-//		$swf		= $('.selector').first().data('swf'),
-//		$desc		= $('.selector').first().data('description'),
-//		$width		= $('.selector').first().data('width'),
-//		$height		= $('.selector').first().data('height');
-//	$('#flashObject').html('var flashvars = {};var params = {};var attributes = {};attributes.id = "flashBanner";swfobject.embedSWF("'+$swf+'", "flashBanner", "'+$width+'", "'+$height+'", "9.0.0", false,flashvars, params, attributes);');
-
-//	$('.dg').on('click', '.selector', function(e){
-//		e.preventDefault();
-//		$('.selector').removeClass('selected');
-//		$('#flashObject').empty();
-//		$(this).addClass('selected');
-//	var $swfTitle 	= $(this).data('title'),
-//		$swf		= $(this).data('swf'),
-//		$desc		= $(this).data('description'),
-//		$width		= $(this).data('width'),
-//		$height		= $(this).data('height');
-//		$('#flashObject').html('var flashvars = {};var params = {};var attributes = {};attributes.id = "flashBanner";swfobject.embedSWF("'+$swf+'", "flashBanner", "'+$width+'", "'+$height+'", "9.0.0", false,flashvars, params, attributes);');
-//		$('#flashBanner').flash("'+$swf+'")
-//	});
 
 	$('.menu').hide();
 

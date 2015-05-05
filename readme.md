@@ -20,7 +20,7 @@
 * added 'archive' page
 * added infinite scroll
 * update translations
-* tidy up js
+* tidied up js
 
 ## Todo:
 
