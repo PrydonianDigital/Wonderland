@@ -17,6 +17,21 @@ function wonderland_init()	{
 	add_editor_style( 'editor-style.css' );
 	$markup = array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', );
 	add_theme_support( 'html5', $markup );
+	$defaults = array(
+		'default-image'          => get_template_directory_uri() . '/images/main/logo.svg',
+		'width'                  => 221,
+		'height'                 => 24,
+		'flex-height'            => false,
+		'flex-width'             => false,
+		'uploads'                => true,
+		'random-default'         => false,
+		'header-text'            => false,
+		'default-text-color'     => '',
+		'wp-head-callback'       => '',
+		'admin-head-callback'    => '',
+		'admin-preview-callback' => '',
+	);
+	add_theme_support( 'custom-header', $defaults );
     load_theme_textdomain('wl', get_template_directory() . '/languages');
 }
 add_action( 'after_setup_theme', 'wonderland_init' );

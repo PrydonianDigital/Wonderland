@@ -21,7 +21,7 @@
 			<div class="sixteen columns border-btm">
 				<header>
 
-					<div class="logo" itemprop="name"><a href="<?php bloginfo('url'); ?>" target="_parent"><?php _e( 'WONDERLAND', 'wl' ); ?></a></div>
+					<div class="logo"><a href="<?php bloginfo('url'); ?>" target="_parent"><img src="<?php echo( get_header_image() ); ?>" alt="<?php _e( 'WONDERLAND', 'wl' ); ?>" /></a></div>
 
 					<div class="mobileNav">
 						<div class="mobileNavBtn closed"></div>

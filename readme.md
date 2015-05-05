@@ -16,14 +16,13 @@
 * added 'archive' functionality
 * added translations functionality
 * added custom post type & taxonomy data to Dashboard
+* logo is now customisable via 'Appearance'
 
 ## Todo:
 
-* Reorganise single portfolio filters
 * add 301 redirects for 'signature' pages
 * tidy up js
 * infinite scroll
 * create 'archive' page
 * update translations
-* change hard coded logo to customisable header image
 * tidy up Schema.org markup
