@@ -1,5 +1,17 @@
 # Wonderland WordPress Theme
 
+# Theme Instructions
+
+* Under Portfolio > Type, create AV, Print, Digital & Archive as Types
+* Under Pages, create About Wonderland & Archive
+* In About Wonderland, add the Find Us & Contact Us info in the relevant meta boxes. The main text goes in the main editor.
+* The Archive page remains blank
+* When adding a new Portfolio Item, there are sections concerning each type (AV, Print & Digital). Fill these in with the relevant information for each type.
+* Choose the ordering for the media types under 'Media Order'. It doesn't matter if one or more sections are not present - these will not appear if not filled out or selected under Type
+* Add SEO description and keywords in each Portfolio Item for better search engine visibility
+
+
+
 ## Done:
 
 * isotope homepage layout
