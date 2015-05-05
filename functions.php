@@ -12,8 +12,8 @@ function wonderland_init()	{
 	add_theme_support( 'post-thumbnails' );
 	add_theme_support( 'jetpack-responsive-videos' );
 	set_post_thumbnail_size( 640, 360, true );
-	add_image_size( 'thumbLarge', 640, 360, true );
-	add_image_size( 'thumbSquare', 360, 360, true );
+	add_image_size( 'thumbLarge', 675, 330, true );
+	add_image_size( 'thumbSquare', 330, 330, true );
 	add_editor_style( 'editor-style.css' );
 	$markup = array( 'search-form', 'comment-form', 'comment-list', 'gallery', 'caption', );
 	add_theme_support( 'html5', $markup );
@@ -233,7 +233,7 @@ function wl_av_repeatable() {
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name'        => __( 'Description', 'wl' ),
-		'description' => __( 'Write a short description for this entry (optional)', 'wl' ),
+		'description' => __( 'Write a short description for this entry (optional, but recommended for search engines)', 'wl' ),
 		'id'          => 'description',
 		'type'        => 'textarea_small',
 	) );
@@ -296,7 +296,7 @@ function wl_print_repeatable() {
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name'       => __( 'Title', 'wl' ),
-		'description' => __( 'Used for the alt text of the image (optional)', 'wl' ),
+		'description' => __( 'Used for the alt text of the image (optional, but recommended for search engines)', 'wl' ),
 		'id'         => 'title',
 		'type'       => 'text',
 	) );
@@ -308,7 +308,7 @@ function wl_print_repeatable() {
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name'        => __( 'Description', 'wl' ),
-		'description' => __( 'Write a short description for this image (optional)', 'wl' ),
+		'description' => __( 'Write a short description for this image (optional, but recommended for search engines)', 'wl' ),
 		'id'          => 'description',
 		'type'        => 'textarea_small',
 	) );
@@ -334,7 +334,7 @@ function wl_digital_image_repeatable() {
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name'       => __( 'Image Title', 'wl' ),
-		'description' => __( 'Used for the alt text of the image (optional)', 'wl' ),
+		'description' => __( 'Used for the alt text of the image (optional, but recommended for search engines)', 'wl' ),
 		'id'         => 'imgtitle',
 		'type'       => 'text',
 	) );
@@ -346,7 +346,7 @@ function wl_digital_image_repeatable() {
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name'        => __( 'Image Description', 'wl' ),
-		'description' => __( 'Write a short description for this entry (optional)', 'wl' ),
+		'description' => __( 'Write a short description for this entry (optional, but recommended for search engines)', 'wl' ),
 		'id'          => 'imgdescription',
 		'type'        => 'textarea_small',
 	) );
@@ -383,7 +383,7 @@ function wl_digital_swf_repeatable() {
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name'        => __( 'SWF Description', 'wl' ),
-		'description' => __( 'Write a short description for this entry (optional)', 'wl' ),
+		'description' => __( 'Write a short description for this entry (optional,, but recommended for search engines)', 'wl' ),
 		'id'          => 'swfdescription',
 		'type'        => 'textarea_small',
 	) );
