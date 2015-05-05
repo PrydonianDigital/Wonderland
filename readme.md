@@ -21,6 +21,7 @@
 * added infinite scroll
 * update translations
 * tidied up js
+* redirect /about to /#about
 
 ## Todo:
 
