@@ -144,6 +144,7 @@
 								{ type: "video/webm", src: $webm },
 								{ type: "video/ogg", src: $ogg }
 							);
+							player.play();
 						});
 					});
 					</script>
