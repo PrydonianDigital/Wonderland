@@ -32,7 +32,7 @@ License URI: http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US
 	background-size: 450px 220px;
 }
 .item.double {
-	background-size: 220px 220px;
+	background-size: 450px 220px;
 }
 .desc {
 	padding-bottom: 10px !important;
@@ -107,13 +107,16 @@ object {
 		width: 768px;
 		margin-left: 0;
 	}
+	.additional.flashbanner {
+		display: none;
+	}
 }
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	.wrapper { width: 768px; }
 	#flashBanner {
 		width: 768px;
-		margin-left: 0;
+		margin-left: -96px;
 	}
 }
 /* All Mobile Sizes (devices and browser) */
