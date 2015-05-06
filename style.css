@@ -10,6 +10,18 @@ License: Creative Commons Attribution-NonCommercial-NoDerivs 3.0 Unported Licens
 License URI: http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US
 */
 
+#cookieInfo {
+	width: 100%;
+	position: fixed;
+	bottom: 0;
+	z-index: 1000;
+	padding: 5px 0;
+	text-align: center;
+	font-size: 12px;
+	background: #fff;
+	border: 1px solid #d9d3d3;
+	-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
+}
 .filterBtn, .logo, .filter, .aboutBtn {
 	text-transform: uppercase;
 }

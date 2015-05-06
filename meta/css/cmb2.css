@@ -184,7 +184,7 @@ Main Wrap
 /* line 146, sass/partials/_main_wrap.scss */
 
 .cmb2-wrap .cmb-row.cmb-repeat-row {
-	padding: 1.8em 0 0;
+	padding: 0.8em 0 0;
 }
 
 /* line 149, sass/partials/_main_wrap.scss */
@@ -197,7 +197,7 @@ Main Wrap
 
 .cmb2-wrap .cmb-row.cmb-repeat .cmb2-metabox-description {
 	padding-top: 0;
-	padding-bottom: 1.8em;
+	padding-bottom: 0.8em;
 }
 
 /* line 161, sass/partials/_main_wrap.scss */
@@ -583,7 +583,7 @@ Post Metaboxes
 
 .postbox-container .cmb2-wrap > .cmb-field-list > .cmb-row,
 .cmb-repeat-group-wrap .cmb2-wrap > .cmb-field-list > .cmb-row {
-	padding: 1.8em 0;
+	padding: 0.8em 0;
 }
 
 /* line 23, sass/partials/_post_metaboxes.scss */
@@ -597,7 +597,7 @@ Post Metaboxes
 
 .postbox-container .cmb-row,
 .cmb-repeat-group-wrap .cmb-row {
-	padding: 0 0 1.8em;
+	padding: 0 0 0.8em;
 	margin: 0 0 0.8em;
 }
 
@@ -646,7 +646,7 @@ Post Metaboxes
 
 .postbox-container .cmb-repeat-row .cmb-td,
 .cmb-repeat-group-wrap .cmb-repeat-row .cmb-td {
-	padding-bottom: 1.8em;
+	padding-bottom: 0.8em;
 }
 
 /* line 65, sass/partials/_post_metaboxes.scss */
@@ -966,7 +966,7 @@ Sidebar Placement Adjustments
 
 .inner-sidebar .cmb-row .cmb2-metabox-description,
 #side-sortables .cmb-row .cmb2-metabox-description {
-	padding-bottom: 1.8em;
+	padding-bottom: 0.8em;
 }
 
 /* line 134, sass/partials/_sidebar_placements.scss */

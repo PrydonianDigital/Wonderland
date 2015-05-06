@@ -176,16 +176,15 @@ function wl_featured() {
 	$prefix = '_wl_fi_';
 	$cmb_about_page = new_cmb2_box( array(
 		'id'           => $prefix . 'metabox',
-		'title'        => __( 'Info', 'wl' ),
+		'title'        => __( 'Important Info', 'wl' ),
 		'object_types' => array( 'portfolio', ),
-		'context'      => 'side',
+		'context'      => 'normal',
 		'priority'     => 'high',
 		'show_names'   => true,
 		'show_on'      => array( 'post_type' => array( 'portfolio', ) ),
 	) );
 	$cmb_about_page->add_field( array(
-		'name'    => __( ' ', 'wl' ),
-		'desc'	  => __( 'Featured Images should be 675x330 for retina devices<br /><br />The \'Archive\' type hides the post from the home page and shows it on the Archive page instead', 'wl' ),
+		'desc'	  => __( 'Featured Images should be 675x330 for retina devices<br /><br />The \'Archive\' type hides the post from the home page and shows it on the Archive page instead<br /><br />If you have multiple types of the same section (eg: 2 or more Digital Images), you can reorder them by using the up and down arrows in that section', 'wl' ),
 		'id'      => $prefix . 'findus',
 		'type'    => 'title',
 	) );
@@ -339,8 +338,8 @@ function wl_print_repeatable() {
 		'type'       => 'text',
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
-		'name' => __( 'Image', 'wl' ),
-		'description' => __( '(required)', 'wl' ),
+		'name' => __( 'Print Image', 'wl' ),
+		'description' => __( 'Max width of 1000 pixels (required)', 'wl' ),
 		'id'   => 'image',
 		'type' => 'file',
 	) );
@@ -377,8 +376,8 @@ function wl_digital_image_repeatable() {
 		'type'       => 'text',
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
-		'name'       => __( 'Image', 'wl' ),
-		'description' => __( '(required)', 'wl' ),
+		'name'       => __( 'Digital Image', 'wl' ),
+		'description' => __( 'Max width of 1000 pixels (required)', 'wl' ),
 		'id'         => 'image',
 		'type'       => 'file',
 	) );

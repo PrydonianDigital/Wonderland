@@ -34,4 +34,5 @@
 * Logo is customisable via 'Appearance'
 * Redirects /about to /#about
 * 301 redirects for 'signature' pages
+* EU cookie law info banner (appears only once and disappears after 10 seconds)
 

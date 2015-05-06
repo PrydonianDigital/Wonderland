@@ -1,5 +1,13 @@
 $(function() {
 
+	if(Cookies.get('wonderland')){
+		console.log('you already have some Wonderland cookies set. You can change your broswer preferences to stop them if you want.');
+	} else {
+		Cookies.set('wonderland', 'true');
+		$('body').append('<div id="cookieInfo">This site uses cookies in order to function properly. By continuing to browse, you agree that we can save them on your device.</div>');
+		$('#cookieInfo').delay(10000).fadeOut(1500)
+	}
+
 	var $container = $('.gridHolder');
 	$('#allPosts').infinitescroll({
 		navSelector  : "div#nav",
