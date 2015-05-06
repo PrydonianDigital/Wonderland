@@ -99,11 +99,7 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 
 								<h2>Additional formats</h2>
 								<p>
-							<?php
-									break;
-									}
-								}
-							?>
+
 								<?php
 									$swfentries = get_post_meta( get_the_ID(), '_cmbdigitalswf_digitalswf', true );
 
@@ -133,12 +129,7 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 								<?php
 									}
 								?>
-							<?php
-								$swfentries = get_post_meta( get_the_ID(), '_cmbdigitalswf_digitalswf', true );
-								$count++;
-								foreach ( (array) $swfentries as $swfentry ) {
-									if ($count++ > 1)   {
-							?>
+
 								</p>
 							</div>
 							<?php
@@ -146,8 +137,6 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 									}
 								}
 							?>
-
-						</div>
 
 					</div>
 

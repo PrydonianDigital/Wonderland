@@ -66,11 +66,6 @@
 							<h2>Additional formats</h2>
 
 							<p>
-						<?php
-								break;
-								}
-							}
-						?>
 								<?php
 								$entries = get_post_meta( get_the_ID(), '_cmbav_av', true );
 
@@ -106,13 +101,7 @@
 								<a class="selector" data-title="<?php echo $title; ?>" data-mp4="<?php echo $mp4; ?>" data-webm="<?php echo $webm; ?>" data-ogg="<?php echo $ogg; ?>" data-poster="<?php echo $poster; ?>" data-description="<?php echo $description; ?>" data-min="<?php if($min==''){echo '0';}else{echo $min;} ?>" data-sec="<?php echo $sec; ?>"><?php echo $title; ?></a>
 
 								<?php } ?>
-
-						<?php
-							$swfentries = get_post_meta( get_the_ID(), '_cmbav_av', true );
-							$count++;
-							foreach ( (array) $entries as $entry ) {
-								if ($count++ > 1)   {
-						?>							</p>
+							</p>
 
 						</div>
 						<?php
