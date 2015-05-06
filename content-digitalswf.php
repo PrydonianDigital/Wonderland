@@ -144,6 +144,7 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 
 					<script>
 					$(function() {
+						$('.selector').first().addClass('selected');
 						$('.dg').on('click', '.selector', function(e){
 							e.preventDefault();
 							$('.selector').removeClass('selected');
@@ -154,11 +155,15 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 							$desc		= $(this).data('description'),
 							$width		= $(this).data('width'),
 							$height		= $(this).data('height');
-						$('#flashBanner').flash({
-							swf: $swf,
-							width: $width,
-							height: $height
-						});
+						if($(this+'[data-swf*=".html"]')){
+							window.open($swf, '_blank');
+						} else {
+							$('#flashBanner').flash({
+								swf: $swf,
+								width: $width,
+								height: $height
+							});
+						}
 						$('.flashBanner .desc').html($desc);
 						});
 					});

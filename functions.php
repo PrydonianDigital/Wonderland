@@ -416,45 +416,45 @@ function wl_digital_swf_repeatable() {
 	$prefix = '_cmbdigitalswf_';
 	$cmb_group = new_cmb2_box( array(
 		'id'           => $prefix . 'dswf',
-		'title'        => __( 'SWF', 'wl' ),
+		'title'        => __( 'Banner', 'wl' ),
 		'object_types' => array( 'portfolio', ),
 	) );
 	$group_field_id = $cmb_group->add_field( array(
 		'id'          => $prefix . 'digitalswf',
 		'type'        => 'group',
 		'options'     => array(
-			'group_title'   => __( 'SWF #{#}', 'wl' ),
-			'add_button'    => __( 'Add Another SWF', 'wl' ),
-			'remove_button' => __( 'Remove SWF', 'wl' ),
+			'group_title'   => __( 'Banner #{#}', 'wl' ),
+			'add_button'    => __( 'Add Another Banner', 'wl' ),
+			'remove_button' => __( 'Remove Banner', 'wl' ),
 			'sortable'      => true,
 		),
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
-		'name'       => __( 'SWF Title', 'wl' ),
+		'name'       => __( 'Banner Title', 'wl' ),
 		'description' => __( 'Used for the "Additional formats" SWF switcher', 'wl' ),
 		'id'         => 'swftitle',
 		'type'       => 'text',
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
-		'name' => __( 'SWF File', 'wl' ),
-		'description' => __( '(required)', 'wl' ),
+		'name' => __( 'Banner File', 'wl' ),
+		'description' => __( 'Can be either SWF or html (required)', 'wl' ),
 		'id'   => 'swf',
 		'type' => 'file',
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
-		'name'        => __( 'SWF Description', 'wl' ),
+		'name'        => __( 'Banner Description', 'wl' ),
 		'description' => __( 'Write a short description for this entry (optional,, but recommended for search engines)', 'wl' ),
 		'id'          => 'swfdescription',
 		'type'        => 'textarea_small',
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
-		'name'        => __( 'SWF Width', 'wl' ),
+		'name'        => __( 'Banner Width', 'wl' ),
 		'description' => __( 'Used to display the SWF file properly (required)', 'wl' ),
 		'id'          => 'swfwidth',
 		'type'        => 'text_small',
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
-		'name'        => __( 'SWF Height', 'wl' ),
+		'name'        => __( 'Banner Height', 'wl' ),
 		'description' => __( 'Used to display the SWF file properly (required)', 'wl' ),
 		'id'          => 'swfheight',
 		'type'        => 'text_small',
@@ -510,6 +510,7 @@ function wl_homepage( $query ) {
 add_filter('upload_mimes', 'upload_swf');
 function upload_swf($existing_mimes){
 	$existing_mimes['swf'] = 'text/swf';
+	$existing_mimes['html'] = 'text/html';
 	return $existing_mimes;
 }
 
