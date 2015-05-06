@@ -95,7 +95,6 @@ function portfolio() {
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'capability_type'     => 'page',
-		'rewrite'			  => false
 	);
 	register_post_type( 'portfolio', $args );
 }
