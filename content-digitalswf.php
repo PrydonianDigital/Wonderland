@@ -154,26 +154,20 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 					<script>
 					$(function() {
 						$('.selector').first().addClass('selected');
-						$('.dg').on('click', '.selector', function(e){
-							e.preventDefault();
+						$('.additional').find('a[data-swf*="html"]').on('click', function(){
+							window.open($(this).data('swf'), '_blank');
 							$('.selector').removeClass('selected');
-							$('#flashObject').empty();
 							$(this).addClass('selected');
-						var $swfTitle 	= $(this).data('title'),
-							$swf		= $(this).data('swf'),
-							$desc		= $(this).data('description'),
-							$width		= $(this).data('width'),
-							$height		= $(this).data('height');
-						if($(this).data('swf$=".html')){
-							window.open($swf, '_blank');
-						} else {
+						});
+						$('.additional').find('a[data-swf*="swf"]').on('click', function(){
 							$('#flashBanner').flash({
-								swf: $swf,
-								width: $width,
-								height: $height
+								swf: $(this).data('swf'),
+								width: $(this).data('width'),
+								height: $(this).data('height')
 							});
-						}
-						$('.flashBanner .desc').html($desc);
+							$('.selector').removeClass('selected');
+							$(this).addClass('selected');
+							$('.flashBanner .desc').html($(this).data('desc'));
 						});
 					});
 					</script>
