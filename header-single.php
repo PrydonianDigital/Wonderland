@@ -34,7 +34,7 @@
 									$types = get_terms('type','hide-empty=0&orderby=id');
 									foreach ( $types as $type ) {
 										if( ++$count > 10 ) break;
-											echo '<li><a class="filterBtn" href="/wonderland/?'.$type->slug.'">'.$type->name.'</a></li>';
+											echo '<li><a class="filterBtn" href="/?'.$type->slug.'">'.$type->name.'</a></li>';
 									}
 								?>
 								<li class="break">&middot;</li>
@@ -60,7 +60,7 @@
 								$types = get_terms($taxonomies, $args);
 								foreach ( $types as $type ) {
 									if( ++$count > 10 ) break;
-										echo '<li><a class="filterBtn" href="/wonderland/?'.$type->name.'">'.$type->name.'</a></li>';
+										echo '<li><a class="filterBtn" href="/?'.$type->name.'">'.$type->name.'</a></li>';
 								}
 							?>
 							<li class="break">&middot;</li>
