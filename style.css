@@ -41,7 +41,7 @@ img[src='']{
    display: none;
 }
 object {
-	max-width: 700px;
+	max-width: 900px;
 }
 .image {
    margin: 0;
@@ -57,6 +57,10 @@ object {
 }
 #nav {
 	display: none;
+}
+#flashBanner {
+	width: 940px;
+	margin-left: -120px;
 }
 .isotope,
 .isotope .isotope-item {
@@ -99,20 +103,40 @@ object {
 /* Smaller than standard 960 (devices and browsers) */
 @media only screen and (max-width: 959px) {
 	.wrapper { width: 768px; }
+	#flashBanner {
+		width: 768px;
+		margin-left: 0;
+	}
 }
 /* Tablet Portrait size to standard 960 (devices and browsers) */
 @media only screen and (min-width: 768px) and (max-width: 959px) {
 	.wrapper { width: 768px; }
+	#flashBanner {
+		width: 768px;
+		margin-left: 0;
+	}
 }
 /* All Mobile Sizes (devices and browser) */
 @media only screen and (max-width: 767px) {
 	.wrapper { width: 300px; }
+	#flashBanner {
+		width: 300px;
+		margin-left: 0;
+	}
 }
 /* Mobile Landscape Size to Tablet Portrait (devices and browsers) */
 @media only screen and (min-width: 480px) and (max-width: 767px) {
 	.wrapper { width: 420px; }
+	#flashBanner {
+		width: 420px;
+		margin-left: 0;
+	}
 }
 /* Mobile Portrait Size to Mobile Landscape Size (devices and browsers) */
 @media only screen and (max-width: 479px) {
 	.wrapper { width: 300px; }
+	#flashBanner {
+		width: 300px;
+		margin-left: 0;
+	}
 }
