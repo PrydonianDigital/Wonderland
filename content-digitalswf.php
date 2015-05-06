@@ -81,64 +81,73 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 									});
 								});
 								</script>
+								<?php
+										}
+									}
+								}
+								?>
 							</div>
 
 							<?php
+								$swfentries = get_post_meta( get_the_ID(), '_cmbdigitalswf_digitalswf', true );
+								$count++;
+								foreach ( (array) $swfentries as $swfentry ) {
+									if ($count++ > 1)   {
+							?>
+
+							<div class="additional flashbanner">
+
+								<h2>Additional formats</h2>
+								<p>
+							<?php
+									break;
 									}
 								}
-							}
 							?>
-						</div>
-
-						<?php
-							$entries = get_post_meta( get_the_ID(), '_cmbdigitalswf_digitalswf', true );
-							foreach ( (array) $entries as $key => $entry ) {
-								if ( $key < 1 ) {} else {
-						?>
-
-						<div class="additional">
-
-							<h2>Additional formats</h2>
-
-							<p>
 								<?php
-								$swfentries = get_post_meta( get_the_ID(), '_cmbdigitalswf_digitalswf', true );
+									$swfentries = get_post_meta( get_the_ID(), '_cmbdigitalswf_digitalswf', true );
 
-								foreach ( (array) $swfentries as $key => $swfentry ) {
+									foreach ( (array) $swfentries as $key => $swfentry ) {
 
-									$swftitle = $swfdescription = $swfwidth = $swfheight = $swf = '';
+										$swftitle = $swfdescription = $swfwidth = $swfheight = $swf = '';
 
-									if ( isset( $swfentry['swftitle'] ) )
-										$swftitle = esc_html( $swfentry['swftitle'] );
+										if ( isset( $swfentry['swftitle'] ) )
+											$swftitle = esc_html( $swfentry['swftitle'] );
 
-									if ( isset( $swfentry['swfdescription'] ) )
-										$swfdescription = esc_html( $swfentry['swfdescription'] );
+										if ( isset( $swfentry['swfdescription'] ) )
+											$swfdescription = esc_html( $swfentry['swfdescription'] );
 
-									if ( isset( $swfentry['swfwidth'] ) )
-										$swfwidth = esc_html( $swfentry['swfwidth'] );
+										if ( isset( $swfentry['swfwidth'] ) )
+											$swfwidth = esc_html( $swfentry['swfwidth'] );
 
-									if ( isset( $swfentry['swfheight'] ) )
-										$swfheight = esc_html( $swfentry['swfheight'] );
+										if ( isset( $swfentry['swfheight'] ) )
+											$swfheight = esc_html( $swfentry['swfheight'] );
 
-									if ( isset( $swfentry['swf'] ) )
-										$swf = esc_html( $swfentry['swf']);
+										if ( isset( $swfentry['swf'] ) )
+											$swf = esc_html( $swfentry['swf']);
 
 								?>
 
-								<a class="selector" data-title="<?php echo $swftitle; ?>" data-swf="<?php echo $swf; ?>" data-description="<?php echo $swfdescription; ?>" data-width="<?php echo $swfwidth; ?>" data-height="<?php echo $swfheight; ?>"><?php echo $swftitle; ?></a>
+									<a class="selector" data-title="<?php echo $swftitle; ?>" data-swf="<?php echo $swf; ?>" data-description="<?php echo $swfdescription; ?>" data-width="<?php echo $swfwidth; ?>" data-height="<?php echo $swfheight; ?>"><?php echo $swftitle; ?></a>
 
-								<?php } ?>
-
-							</p>
+								<?php
+									}
+								?>
+							<?php
+								$swfentries = get_post_meta( get_the_ID(), '_cmbdigitalswf_digitalswf', true );
+								$count++;
+								foreach ( (array) $swfentries as $swfentry ) {
+									if ($count++ > 1)   {
+							?>
+								</p>
+							<?php
+									break;
+									}
+								}
+							?>
+							</div>
 
 						</div>
-
-						<?php
-								}
-						?>
-						<?php
-							}
-						?>
 
 					</div>
 
@@ -155,7 +164,7 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 							$desc		= $(this).data('description'),
 							$width		= $(this).data('width'),
 							$height		= $(this).data('height');
-						if($(this+'[data-swf*=".html"]')){
+						if($(this).data('swf$=".html')){
 							window.open($swf, '_blank');
 						} else {
 							$('#flashBanner').flash({
