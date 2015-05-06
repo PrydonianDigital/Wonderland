@@ -3,6 +3,7 @@
 # Theme Instructions
 
 * Install the 'Simple 301 Redirects' plugin by moving it to the 'plugins' folder (it's currently in the theme folder) to set up the Signature links. These can then be found under Settings  > 301 Redirects.
+* Under Settings > Reading, increase 'Blog pages show at most' to at least 20. This controls how many posts show on the homepage and archive page before the infinite scroll fires.
 * Under Portfolio > Type, create AV, Print, Digital & Archive as Types.
 * Under Pages, create About Wonderland & Archive.
 * In About Wonderland, add the Find Us & Contact Us info in the relevant meta boxes. The main text goes in the main editor.
