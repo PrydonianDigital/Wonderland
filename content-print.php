@@ -23,7 +23,7 @@
 
 							<img src="<?php echo $image; ?>"  class="scale-with-grid" alt="<?php echo $title; ?>" itemprop="contentURL" />
 
-							<p class="desc" itemprop="description"><?php echo $description; ?>
+							<p class="desc" itemprop="description"><?php echo $description; ?></p>
 
 						</div>
 
