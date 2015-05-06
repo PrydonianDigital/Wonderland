@@ -146,20 +146,18 @@ function remove_portfolio_slug( $post_link, $post, $leavename ) {
 add_filter( 'post_type_link', 'remove_portfolio_slug', 10, 3 );
 
 function custom_parse_request_portfolio( $query ) {
-    // Only noop the main query
     if ( ! $query->is_main_query() )
         return;
-    // Only noop our very specific rewrite rule match
     if ( 2 != count( $query->query ) || ! isset( $query->query['page'] ) ) {
         return;
     }
-    // 'name' will be set if post permalinks are just post_name, otherwise the page rule will match
     if ( ! empty( $query->query['name'] ) ) {
         $query->set( 'post_type', array( 'post', 'portfolio', 'page' ) );
     }
 }
 add_action( 'pre_get_posts', 'custom_parse_request_portfolio' );
 
+// Init Metaboxes
 if ( file_exists( dirname( __FILE__ ) . '/meta/init.php' ) ) {
 	require_once dirname( __FILE__ ) . '/meta/init.php';
 } elseif ( file_exists( dirname( __FILE__ ) . '/meta/init.php' ) ) {

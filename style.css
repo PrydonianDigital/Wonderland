@@ -37,7 +37,7 @@ License URI: http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US
 .desc {
 	padding-bottom: 10px !important;
 }
-img[src='']{
+.desc:empty, img[src='']{
    display: none;
 }
 .image {
