@@ -44,7 +44,7 @@
 
 				</div><!--about-->
 
-				<div class="gridHolder">
+				<div class="gridHolder" id="allPosts" data-masonry="">
 					<?php
 					$temp = $wp_query;
 					$portfolio_query = null;
