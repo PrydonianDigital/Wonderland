@@ -140,12 +140,12 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 									if ($count++ > 1)   {
 							?>
 								</p>
+							</div>
 							<?php
 									break;
 									}
 								}
 							?>
-							</div>
 
 						</div>
 

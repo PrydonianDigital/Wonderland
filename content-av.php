@@ -56,15 +56,21 @@
 						</div>
 
 						<?php
-							$entries = get_post_meta( get_the_ID(), '_cmbav_av', true );
-							foreach ( (array) $entries as $key => $entry ) {
-								if ( $key < 1 ) {} else {
+							$swfentries = get_post_meta( get_the_ID(), '_cmbav_av', true );
+							$count++;
+							foreach ( (array) $entries as $entry ) {
+								if ($count++ > 1)   {
 						?>
 						<div class="additional">
 
 							<h2>Additional formats</h2>
 
 							<p>
+						<?php
+								break;
+								}
+							}
+						?>
 								<?php
 								$entries = get_post_meta( get_the_ID(), '_cmbav_av', true );
 
@@ -101,13 +107,17 @@
 
 								<?php } ?>
 
-							</p>
+						<?php
+							$swfentries = get_post_meta( get_the_ID(), '_cmbav_av', true );
+							$count++;
+							foreach ( (array) $entries as $entry ) {
+								if ($count++ > 1)   {
+						?>							</p>
 
 						</div>
 						<?php
+								break;
 								}
-						?>
-						<?php
 							}
 						?>
 
