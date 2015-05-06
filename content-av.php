@@ -124,6 +124,7 @@
 					</div>
 					<script>
 					$(function() {
+						$('.selector').first().addClass('selected');
 						videojs('wonderlandPlayer', {});
 						$('.av').on('click', '.selector', function(e){
 							e.preventDefault();
