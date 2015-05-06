@@ -95,6 +95,7 @@ function portfolio() {
 		'exclude_from_search' => false,
 		'publicly_queryable'  => true,
 		'capability_type'     => 'page',
+		'rewrite'			  => false
 	);
 	register_post_type( 'portfolio', $args );
 }
@@ -133,6 +134,31 @@ function tax_type() {
 	register_taxonomy( 'type', array( 'portfolio' ), $args );
 }
 add_action( 'init', 'tax_type', 0 );
+
+// Fix 'portfolio' slug
+function remove_portfolio_slug( $post_link, $post, $leavename ) {
+    if ( 'portfolio' != $post->post_type || 'publish' != $post->post_status ) {
+        return $post_link;
+    }
+    $post_link = str_replace( '/' . $post->post_type . '/', '/', $post_link );
+    return $post_link;
+}
+add_filter( 'post_type_link', 'remove_portfolio_slug', 10, 3 );
+
+function custom_parse_request_portfolio( $query ) {
+    // Only noop the main query
+    if ( ! $query->is_main_query() )
+        return;
+    // Only noop our very specific rewrite rule match
+    if ( 2 != count( $query->query ) || ! isset( $query->query['page'] ) ) {
+        return;
+    }
+    // 'name' will be set if post permalinks are just post_name, otherwise the page rule will match
+    if ( ! empty( $query->query['name'] ) ) {
+        $query->set( 'post_type', array( 'post', 'portfolio', 'page' ) );
+    }
+}
+add_action( 'pre_get_posts', 'custom_parse_request_portfolio' );
 
 if ( file_exists( dirname( __FILE__ ) . '/meta/init.php' ) ) {
 	require_once dirname( __FILE__ ) . '/meta/init.php';
