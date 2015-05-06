@@ -437,7 +437,7 @@ function wl_digital_swf_repeatable() {
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name' => __( 'Banner File', 'wl' ),
-		'description' => __( 'Can be either SWF or html (required)', 'wl' ),
+		'description' => __( 'Can be either SWF or HTML (required)', 'wl' ),
 		'id'   => 'swf',
 		'type' => 'file',
 	) );
@@ -449,13 +449,13 @@ function wl_digital_swf_repeatable() {
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name'        => __( 'Banner Width', 'wl' ),
-		'description' => __( 'Used to display the SWF file properly (required)', 'wl' ),
+		'description' => __( 'Used to display the Banner file properly (required)', 'wl' ),
 		'id'          => 'swfwidth',
 		'type'        => 'text_small',
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name'        => __( 'Banner Height', 'wl' ),
-		'description' => __( 'Used to display the SWF file properly (required)', 'wl' ),
+		'description' => __( 'Used to display the Banner file properly (required)', 'wl' ),
 		'id'          => 'swfheight',
 		'type'        => 'text_small',
 	) );
