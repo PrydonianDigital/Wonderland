@@ -62,6 +62,10 @@ object {
 	width: 940px;
 	margin-left: -120px;
 }
+.flashBanner iframe {
+	display: block !important;
+	margin: 0 auto;
+}
 .isotope,
 .isotope .isotope-item {
   /* change duration value to whatever you like */

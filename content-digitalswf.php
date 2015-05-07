@@ -71,6 +71,9 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 								</div>
 								<span id="videoTitle" itemprop="name"><?php echo $swfTitle; ?></span>
 								<meta itemprop="thumbnailUrl" content="" />
+								<div id="htmlBanner">
+									<iframe width="0" height="0" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" name="" src="about:blank"></iframe>
+								</div>
 								<p class="desc" itemprop="description"><?php echo $swfdescription; ?></p>
 								<script>
 								$(function() {
@@ -144,7 +147,10 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 					$(function() {
 						$('.selector').first().addClass('selected');
 						$('.additional').find('a[data-swf*="html"]').on('click', function(){
-							window.open($(this).data('swf'), '_blank');
+							//window.open($(this).data('swf'), '_blank');
+							$('#flashBanner').flash().remove();
+							$('.flashBanner .desc').html($(this).data('description'));
+							$('#htmlBanner iframe').attr('width', $(this).data('width')).attr('height', $(this).data('height')).attr('src', $(this).data('swf'));
 							$('.selector').removeClass('selected');
 							$(this).addClass('selected');
 						});
@@ -154,9 +160,10 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 								width: $(this).data('width'),
 								height: $(this).data('height')
 							});
+							$('#htmlBanner').empty();
 							$('.selector').removeClass('selected');
 							$(this).addClass('selected');
-							$('.flashBanner .desc').html($(this).data('desc'));
+							$('.flashBanner .desc').html($(this).data('description'));
 						});
 					});
 					</script>
