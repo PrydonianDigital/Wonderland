@@ -207,7 +207,7 @@ function wl_featured() {
 		'show_on'      => array( 'post_type' => array( 'portfolio', ) ),
 	) );
 	$cmb_about_page->add_field( array(
-		'desc'	  => __( 'Featured Images should be 675x330 for retina devices<br /><br />The \'Archive\' type hides the post from the home page and shows it on the Archive page instead<br /><br />If you have multiple types of the same section (eg: 2 or more Digital Images), you can reorder them by using the up and down arrows in that section', 'wl' ),
+		'desc'	  => __( 'Featured Images should be 675x330 for retina devices<br /><br />The \'Archive\' type hides the post from the home page and shows it on the Archive page instead<br /><br />If you have multiple types of the same section (eg: 2 or more Digital Images), you can reorder them by using the up and down arrows in that section<br /><br />You can add line breaks to description text by adding &lt;br /&gt', 'wl' ),
 		'id'      => $prefix . 'findus',
 		'type'    => 'title',
 	) );
@@ -443,7 +443,7 @@ function wl_digital_swf_repeatable() {
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
 		'name'        => __( 'Banner Description', 'wl' ),
-		'description' => __( 'Write a short description for this entry (optional,, but recommended for search engines)', 'wl' ),
+		'description' => __( 'Write a short description for this entry (optional, but recommended for search engines)', 'wl' ),
 		'id'          => 'swfdescription',
 		'type'        => 'textarea_small',
 	) );
