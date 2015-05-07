@@ -160,7 +160,7 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 								width: $(this).data('width'),
 								height: $(this).data('height')
 							});
-							$('#htmlBanner').empty();
+							$('#htmlBanner iframe').attr('width', '0').attr('height', '0').attr('src', 'about:blank');
 							$('.selector').removeClass('selected');
 							$(this).addClass('selected');
 							$('.flashBanner .desc').html($(this).data('description'));
