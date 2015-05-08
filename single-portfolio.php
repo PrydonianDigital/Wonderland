@@ -47,7 +47,7 @@
 				<?php if (have_posts()) : while (have_posts()) : the_post(); ?>
 
 				<h2 class="entry-title"><?php the_title(); ?></h2>
-				<p><?php $client = get_post_meta( get_the_ID(), '_wl_portfolio_client', true ); echo $client; ?></p>
+				<p class="client"><?php $client = get_post_meta( get_the_ID(), '_wl_portfolio_client', true ); echo $client; ?></p>
 
 				<?php global $post; $order = get_post_meta( $post->ID, '_wl_portfolio_media_order', true ); if( $order == 'apdids' ) : ?>
 

@@ -22,6 +22,9 @@ License URI: http://creativecommons.org/licenses/by-nc-nd/3.0/deed.en_US
 	border: 1px solid #d9d3d3;
 	-webkit-box-sizing: border-box; -moz-box-sizing: border-box; box-sizing: border-box;
 }
+.client {
+	padding-bottom: 0;
+}
 .section404 .line-break  {
 	padding-bottom: 15px;
 }
