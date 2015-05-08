@@ -136,7 +136,7 @@
 							$('meta[itemprop="thumbnailUrl"]').attr('content', $poster);
 							$('meta[itemprop="embedURL"]').attr('content', $mp4);
 							$('meta[itemprop="duration"]').attr('content', 'T'+$min+'M'+$sec+'S');
-							$('.desc').html($desc);
+							$('.videoPlay .desc').html($desc);
 							$('#videoTitle').html($videoTitle);
 							$('#wonderlandPlayer').attr('poster', $poster);
 							player.src(
