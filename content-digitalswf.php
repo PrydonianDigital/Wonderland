@@ -43,7 +43,7 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 										$swftitle = esc_html( $swfentry['swftitle'] );
 
 									if ( isset( $swfentry['swfdescription'] ) )
-										$swfdescription = esc_html( $swfentry['swfdescription'] );
+										$swfdescription = $swfentry['swfdescription'];
 
 									if ( isset( $swfentry['swfwidth'] ) )
 										$swfwidth = esc_html( $swfentry['swfwidth'] );
@@ -114,7 +114,7 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 											$swftitle = esc_html( $swfentry['swftitle'] );
 
 										if ( isset( $swfentry['swfdescription'] ) )
-											$swfdescription = esc_html( $swfentry['swfdescription'] );
+											$swfdescription = $swfentry['swfdescription'];
 
 										if ( isset( $swfentry['swfwidth'] ) )
 											$swfwidth = esc_html( $swfentry['swfwidth'] );

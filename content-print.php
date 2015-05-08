@@ -10,7 +10,7 @@
 						        $title = esc_html( $entry['title'] );
 
 						    if ( isset( $entry['description'] ) )
-						        $description = esc_html( $entry['description'] );
+						        $description = $entry['description'];
 
 						    if ( isset( $entry['image'] ) )
 						        $image = esc_html( $entry['image']);

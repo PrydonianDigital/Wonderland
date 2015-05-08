@@ -15,7 +15,7 @@
 						        $title = esc_html( $entry['title'] );
 
 						    if ( isset( $entry['description'] ) )
-						        $description = esc_html( $entry['description'] );
+						        $description = $entry['description'];
 
 						    if ( isset( $entry['mp4'] ) )
 						        $mp4 = esc_html( $entry['mp4']);
@@ -77,7 +77,7 @@
 								        $title = esc_html( $entry['title'] );
 
 								    if ( isset( $entry['description'] ) )
-								        $description = esc_html( $entry['description'] );
+								        $description = $entry['description'];
 
 								    if ( isset( $entry['mp4'] ) )
 								        $mp4 = esc_html( $entry['mp4']);
