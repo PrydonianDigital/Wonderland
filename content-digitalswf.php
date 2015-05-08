@@ -167,7 +167,6 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 						});
 					});
 					</script>
-
 <?php
 		}
 	}
