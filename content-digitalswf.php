@@ -146,29 +146,6 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 
 					</div>
 
-					<script>
-					$(function() {
-						$('.flashbanner .selector').first().addClass('selected');
-						$('.additional').find('a[data-html="on"]').on('click', function(){
-							$('#flashBanner').flash().remove();
-							$('.flashBanner .desc').html($(this).data('description'));
-							$('#htmlBanner iframe').attr('width', $(this).data('width')).attr('height', $(this).data('height')).attr('src', $(this).data('swf'));
-							$('.flashbanner .selector').removeClass('selected');
-							$(this).addClass('selected');
-						});
-						$('.additional').find('a[data-html=""]').on('click', function(){
-							$('#flashBanner').flash({
-								swf: $(this).data('swf'),
-								width: $(this).data('width'),
-								height: $(this).data('height')
-							});
-							$('#htmlBanner iframe').attr('width', '0').attr('height', '0').attr('src', 'about:blank');
-							$('.flashbanner .selector').removeClass('selected');
-							$(this).addClass('selected');
-							$('.flashBanner .desc').html($(this).data('description'));
-						});
-					});
-					</script>
 <?php
 		}
 	}
