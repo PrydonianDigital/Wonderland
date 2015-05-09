@@ -61,7 +61,7 @@
 							foreach ( (array) $entries as $entry ) {
 								if ($count++ > 1)   {
 						?>
-						<div class="additional">
+						<div class="additional avplayer">
 
 							<h2>Additional formats</h2>
 
@@ -113,11 +113,11 @@
 					</div>
 					<script>
 					$(function() {
-						$('.selector').first().addClass('selected');
+						$('.avplayer .selector').first().addClass('selected');
 						videojs('wonderlandPlayer', {});
 						$('.av').on('click', '.selector', function(e){
 							e.preventDefault();
-							$('.selector').removeClass('selected');
+							$('.avplayer .selector').removeClass('selected');
 							videojs('wonderlandPlayer', {}, function(){
 								var myPlayer = this;
 								myPlayer.dispose();

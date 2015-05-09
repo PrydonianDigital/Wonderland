@@ -442,6 +442,12 @@ function wl_digital_swf_repeatable() {
 		'type' => 'file',
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
+		'name' => __( 'Is banner HTML?', 'wl' ),
+		'description' => __( 'Check box if banner is HTML (required)', 'wl' ),
+		'id'   => 'html',
+		'type' => 'checkbox',
+	) );
+	$cmb_group->add_group_field( $group_field_id, array(
 		'name'        => __( 'Banner Description', 'wl' ),
 		'description' => __( 'Write a short description for this entry (optional, but recommended for search engines)', 'wl' ),
 		'id'          => 'swfdescription',

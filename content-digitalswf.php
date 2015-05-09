@@ -108,7 +108,7 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 
 									foreach ( (array) $swfentries as $key => $swfentry ) {
 
-										$swftitle = $swfdescription = $swfwidth = $swfheight = $swf = '';
+										$swftitle = $swfdescription = $swfwidth = $swfheight = $swf = $html = '';
 
 										if ( isset( $swfentry['swftitle'] ) )
 											$swftitle = esc_html( $swfentry['swftitle'] );
@@ -125,9 +125,12 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 										if ( isset( $swfentry['swf'] ) )
 											$swf = esc_html( $swfentry['swf']);
 
+										if ( isset( $swfentry['html'] ) )
+											$html = $swfentry['html']
+
 								?>
 
-									<a class="selector" data-title="<?php echo $swftitle; ?>" data-swf="<?php echo $swf; ?>" data-description="<?php echo $swfdescription; ?>" data-width="<?php echo $swfwidth; ?>" data-height="<?php echo $swfheight; ?>"><?php echo $swftitle; ?></a>
+									<a class="selector" data-title="<?php echo $swftitle; ?>" data-swf="<?php echo $swf; ?>" data-description="<?php echo $swfdescription; ?>" data-width="<?php echo $swfwidth; ?>" data-height="<?php echo $swfheight; ?>" data-html="<?php echo $html; ?>"><?php echo $swftitle; ?></a>
 
 								<?php
 									}
@@ -145,23 +148,22 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 
 					<script>
 					$(function() {
-						$('.selector').first().addClass('selected');
-						$('.additional').find('a[data-swf*="html"]').on('click', function(){
-							//window.open($(this).data('swf'), '_blank');
+						$('.flashbanner .selector').first().addClass('selected');
+						$('.additional').find('a[data-html="on"]').on('click', function(){
 							$('#flashBanner').flash().remove();
 							$('.flashBanner .desc').html($(this).data('description'));
 							$('#htmlBanner iframe').attr('width', $(this).data('width')).attr('height', $(this).data('height')).attr('src', $(this).data('swf'));
-							$('.selector').removeClass('selected');
+							$('.flashbanner .selector').removeClass('selected');
 							$(this).addClass('selected');
 						});
-						$('.additional').find('a[data-swf*="swf"]').on('click', function(){
+						$('.additional').find('a[data-html=""]').on('click', function(){
 							$('#flashBanner').flash({
 								swf: $(this).data('swf'),
 								width: $(this).data('width'),
 								height: $(this).data('height')
 							});
 							$('#htmlBanner iframe').attr('width', '0').attr('height', '0').attr('src', 'about:blank');
-							$('.selector').removeClass('selected');
+							$('.flashbanner .selector').removeClass('selected');
 							$(this).addClass('selected');
 							$('.flashBanner .desc').html($(this).data('description'));
 						});
