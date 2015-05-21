@@ -14,7 +14,7 @@ $(function() {
 		nextSelector : "div#nav a:first",
 		itemSelector : "#allPosts div.item"
 	},function(newElements){
-		$container.isotope( 'appended', $( newElements ) );
+		$container.isotope( 'insert', $( newElements ) );
 	});
 
 	$('.mobileNav .closed').on('click', function(event) {
