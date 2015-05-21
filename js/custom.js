@@ -82,6 +82,30 @@ $(function() {
 	    $('html,body').animate( { scrollTop:$(this.hash).offset().top } , 1000);
 	});
 
+	$('.flashbanner .selector').first().addClass('selected');
+
+	$('.additional a').on('click', function(){
+		var dataAttr = $(this).attr('data-html');
+		if (dataAttr == 'on') {
+			$('#flashBanner').flash().remove();
+			$('.flashBanner .desc').html($(this).data('description'));
+			$('#htmlBanner iframe').attr('width', $(this).data('width')).attr('height', $(this).data('height')).attr('src', $(this).data('swf'));
+			$('.flashbanner .selector').removeClass('selected');
+			$(this).addClass('selected');
+		} else {
+			$('#flashBanner').flash({
+				swf: $(this).data('swf'),
+				width: $(this).data('width'),
+				height: $(this).data('height')
+			});
+			$('#htmlBanner iframe').attr('width', '0').attr('height', '0').attr('src', 'about:blank');
+			$('.flashbanner .selector').removeClass('selected');
+			$(this).addClass('selected');
+			$('.flashBanner .desc').html($(this).data('description'));
+		}
+	});
+
+
 	$('.avplayer .selector').first().addClass('selected');
 	videojs('wonderlandPlayer', {});
 	$('.av').on('click', '.selector', function(e){
@@ -115,29 +139,6 @@ $(function() {
 		);
 		player.play();
 	});
-
-	$('.flashbanner .selector').first().addClass('selected');
-
-	$('.additional a[data-html="on"]').on('click', function(){
-		$('#flashBanner').flash().remove();
-		$('.flashBanner .desc').html($(this).data('description'));
-		$('#htmlBanner iframe').attr('width', $(this).data('width')).attr('height', $(this).data('height')).attr('src', $(this).data('swf'));
-		$('.flashbanner .selector').removeClass('selected');
-		$(this).addClass('selected');
-	});
-
-	$('.additional a[data-html=""]').on('click', function(){
-		$('#flashBanner').flash({
-			swf: $(this).data('swf'),
-			width: $(this).data('width'),
-			height: $(this).data('height')
-		});
-		$('#htmlBanner iframe').attr('width', '0').attr('height', '0').attr('src', 'about:blank');
-		$('.flashbanner .selector').removeClass('selected');
-		$(this).addClass('selected');
-		$('.flashBanner .desc').html($(this).data('description'));
-	});
-
 });
 
 // ISOTOPE SETUP
