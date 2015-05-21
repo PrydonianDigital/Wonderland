@@ -15,6 +15,18 @@ $(function() {
 		itemSelector : "#allPosts div.item"
 	},function(newElements){
 		$container.isotope( 'insert', $( newElements ) );
+		$( newElements ).each(function() {
+			if ($(this).hasClass('type-av')){
+				$(this).find('.icons').append('<span>AV</span>');
+			}
+			if ($(this).hasClass('type-print')){
+				$(this).find('.icons').append('<span>Print</span>');
+			}
+			if ($(this).hasClass('type-digital')){
+				$(this).find('.icons').append('<span>Digital</span>');
+			}
+
+		});
 	});
 
 	$('.mobileNav .closed').on('click', function(event) {
