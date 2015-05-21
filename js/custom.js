@@ -117,14 +117,16 @@ $(function() {
 	});
 
 	$('.flashbanner .selector').first().addClass('selected');
-	$('.additional').find('a[data-html="on"]').on('click', function(){
+
+	$('.additional a[data-html="on"]').on('click', function(){
 		$('#flashBanner').flash().remove();
 		$('.flashBanner .desc').html($(this).data('description'));
 		$('#htmlBanner iframe').attr('width', $(this).data('width')).attr('height', $(this).data('height')).attr('src', $(this).data('swf'));
 		$('.flashbanner .selector').removeClass('selected');
 		$(this).addClass('selected');
 	});
-	$('.additional').find('a[data-html=""]').on('click', function(){
+
+	$('.additional a[data-html=""]').on('click', function(){
 		$('#flashBanner').flash({
 			swf: $(this).data('swf'),
 			width: $(this).data('width'),
