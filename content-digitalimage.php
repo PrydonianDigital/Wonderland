@@ -31,7 +31,7 @@ foreach ( (array) $entries as $key => $entry ) {
 						        $imgtitle = esc_html( $entry['imgtitle'] );
 
 						    if ( isset( $entry['imgdescription'] ) )
-						        $imgdescription = esc_html( $entry['imgdescription'] );
+						        $imgdescription = $entry['imgdescription'];
 
 						    if ( isset( $entry['image'] ) )
 						        $image = esc_html( $entry['image']);
