@@ -84,9 +84,12 @@ $(function() {
 
 	$('.flashbanner .selector').first().addClass('selected');
 
-	if($('.flashbanner .selected').attr('data-html') == 'on') {
-		$('#htmlBanner iframe').attr('width', $(this).data('width')).attr('height', $(this).data('height')).attr('src', $(this).data('swf'));
+	if($('.flashbanner .selector').first().attr('data-html') == 'on') {
+		console.log();
+		$('#htmlBanner iframe').attr('width', $('.flashbanner .selector').first().data('width')).attr('height', $('.flashbanner .selector').first().data('height')).attr('src', $('.flashbanner .selector').first().data('swf'));
+		$('#flashBanner').hide();
 	} else {
+		$('#flashBanner').show();
 		$('#flashBanner').flash({
 			swf: $(this).data('swf'),
 			width: $(this).data('width'),
