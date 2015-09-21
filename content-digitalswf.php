@@ -55,7 +55,7 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 										$swf = esc_html( $swfentry['swf']);
 
 									if ( isset( $swfentry['html'] ) )
-											$html = $swfentry['html']
+											$html = $swfentry['html'];
 
 									if ($key == 0) {
 										if($swf == '') {} else {
@@ -81,7 +81,7 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 								<script>
 								$(function() {
 									if($('.flashbanner .selector.selected').attr('data-html') == 'on') {
-										$('#htmlBanner iframe').attr('src', <?php echo $swf; ?>)
+										$('#htmlBanner iframe').attr('src', <?php echo $swf; ?>).attr('width', <?php echo $swfwidth; ?>).attr('height', <?php echo $swfheight; ?>);
 									} else {
 										$('#flashBanner').flash({
 											swf: '<?php echo $swf; ?>',
