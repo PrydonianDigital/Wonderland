@@ -78,19 +78,6 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 									<iframe width="0" height="0" frameborder="0" scrolling="no" marginheight="0" marginwidth="0" name="" src="about:blank"></iframe>
 								</div>
 								<p class="desc" itemprop="description"><?php echo $swfdescription; ?></p>
-								<script>
-								$(function() {
-									if($('.flashbanner .selector.selected').attr('data-html') == 'on') {
-										$('#htmlBanner iframe').attr('src', <?php echo $swf; ?>).attr('width', <?php echo $swfwidth; ?>).attr('height', <?php echo $swfheight; ?>);
-									} else {
-										$('#flashBanner').flash({
-											swf: '<?php echo $swf; ?>',
-											width: '<?php echo $swfwidth; ?>',
-											height: '<?php echo $swfheight; ?>'
-										});
-									}
-								});
-								</script>
 								<?php
 										}
 									}
