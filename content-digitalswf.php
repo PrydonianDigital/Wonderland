@@ -54,6 +54,9 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 									if ( isset( $swfentry['swf'] ) )
 										$swf = esc_html( $swfentry['swf']);
 
+									if ( isset( $swfentry['html'] ) )
+											$html = $swfentry['html']
+
 									if ($key == 0) {
 										if($swf == '') {} else {
 								?>
@@ -77,11 +80,15 @@ foreach ( (array) $swfentries as $key => $swfentry ) {
 								<p class="desc" itemprop="description"><?php echo $swfdescription; ?></p>
 								<script>
 								$(function() {
-									$('#flashBanner').flash({
-										swf: '<?php echo $swf; ?>',
-										width: '<?php echo $swfwidth; ?>',
-										height: '<?php echo $swfheight; ?>'
-									});
+									if($('.flashbanner .selector.selected').attr('data-html') == 'on') {
+										$('#htmlBanner iframe').attr('src', <?php echo $swf; ?>)
+									} else {
+										$('#flashBanner').flash({
+											swf: '<?php echo $swf; ?>',
+											width: '<?php echo $swfwidth; ?>',
+											height: '<?php echo $swfheight; ?>'
+										});
+									}
 								});
 								</script>
 								<?php
