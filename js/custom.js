@@ -85,15 +85,15 @@ $(function() {
 	$('.flashbanner .selector').first().addClass('selected');
 
 	if($('.flashbanner .selector').first().attr('data-html') == 'on') {
-		console.log();
 		$('#htmlBanner iframe').attr('width', $('.flashbanner .selector').first().data('width')).attr('height', $('.flashbanner .selector').first().data('height')).attr('src', $('.flashbanner .selector').first().data('swf'));
 		$('#flashBanner').hide();
 	} else {
 		$('#flashBanner').show();
+		$('#htmlBanner iframe').attr('width', '0').attr('height', '0').attr('src', 'about:blank');
 		$('#flashBanner').flash({
-			swf: $(this).data('swf'),
-			width: $(this).data('width'),
-			height: $(this).data('height')
+			swf: $('.flashbanner .selector').first().data('swf'),
+			width: $('.flashbanner .selector').first().data('width'),
+			height: $('.flashbanner .selector').first().data('height')
 		});
 	}
 
