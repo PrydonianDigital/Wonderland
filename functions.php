@@ -411,6 +411,7 @@ function wl_digital_image_repeatable() {
 		'type'        => 'textarea_small',
 	) );
 }
+
 add_action( 'cmb2_init', 'wl_digital_swf_repeatable' );
 function wl_digital_swf_repeatable() {
 	$prefix = '_cmbdigitalswf_';
@@ -464,6 +465,87 @@ function wl_digital_swf_repeatable() {
 		'description' => __( 'Used to display the Banner file properly (required)', 'wl' ),
 		'id'          => 'swfheight',
 		'type'        => 'text_small',
+	) );
+}
+
+add_action( 'cmb2_init', 'wl_digital_av_repeatable' );
+function wl_digital_av_repeatable() {
+	$prefix = '_cmbdav_';
+	$cmb_group = new_cmb2_box( array(
+		'id'           => $prefix . 'metabox',
+		'title'        => __( 'Digital AV', 'wl' ),
+		'object_types' => array( 'portfolio', ),
+	) );
+	$group_field_id = $cmb_group->add_field( array(
+		'id'          => $prefix . 'dav',
+		'type'        => 'group',
+		'options'     => array(
+			'group_title'   => __( 'Digital AV #{#}', 'wl' ),
+			'add_button'    => __( 'Add Another Digital AV Item', 'wl' ),
+			'remove_button' => __( 'Remove Digital AV', 'wl' ),
+			'sortable'      => true,
+		),
+	) );
+	$cmb_group->add_group_field( $group_field_id, array(
+		'name'       => __( 'Title', 'wl' ),
+		'description' => __( 'Used for the "Additional formats" video switcher', 'wl' ),
+		'id'         => 'dtitle',
+		'type'       => 'text',
+	) );
+	$cmb_group->add_group_field( $group_field_id, array(
+		'name'        => __( 'Description', 'wl' ),
+		'description' => __( 'Write a short description for this entry (optional, but recommended for search engines)', 'wl' ),
+		'id'          => 'ddescription',
+		'type'        => 'textarea_small',
+	) );
+	$cmb_group->add_group_field( $group_field_id, array(
+		'name' => __( 'Poster Image', 'wl' ),
+		'description' => __( 'The poster specifies an image to be shown while the video is downloading, or until the user hits the play button. If this is not included, the first frame of the video will be used instead. Image dimensions should be the same size as the video (required)', 'wl' ),
+		'id'   => 'dimage',
+		'type' => 'file',
+	) );
+	$cmb_group->add_group_field( $group_field_id, array(
+		'name' => __( 'MP4', 'wl' ),
+		'description' => __( '(required)', 'wl' ),
+		'id'   => 'dmp4',
+		'type' => 'file',
+	) );
+	$cmb_group->add_group_field( $group_field_id, array(
+		'name' => __( 'WEBM', 'wl' ),
+		'description' => __( '(required)', 'wl' ),
+		'id'   => 'dwebm',
+		'type' => 'file',
+	) );
+	$cmb_group->add_group_field( $group_field_id, array(
+		'name' => __( 'OGG/OGV', 'wl' ),
+		'description' => __( '(required)', 'wl' ),
+		'id'   => 'dogg',
+		'type' => 'file',
+	) );
+	$cmb_group->add_group_field( $group_field_id, array(
+		'name'        => __( 'Video Width', 'wl' ),
+		'description' => __( 'Used to display the Video properly (required)', 'wl' ),
+		'id'          => 'dwidth',
+		'type'        => 'text_small',
+	) );
+	$cmb_group->add_group_field( $group_field_id, array(
+		'name'        => __( 'Video Height', 'wl' ),
+		'description' => __( 'Used to display the Video properly (required)', 'wl' ),
+		'id'          => 'dheight',
+		'type'        => 'text_small',
+	) );
+	$cmb_group->add_group_field( $group_field_id, array(
+		'name' => __( 'Video play duration', 'wl' ),
+		'description' => __( 'Video duration in minutes (required - if under 1 minute, leave blank)', 'wl' ),
+		'id'   => 'dmin',
+		'type' => 'number',
+	) );
+	$cmb_group->add_group_field( $group_field_id, array(
+		'name' => __( 'Video play duration', 'wl' ),
+		'description' => __( 'Video duration in seconds (required)', 'wl' ),
+		'id'   => 'dsec',
+		'type' => 'number',
+		'after' => '<p>Video duration is formatted as T(minutes)M(seconds)S, so both the minutes and seconds are required for each video.</p>',
 	) );
 }
 

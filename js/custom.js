@@ -97,7 +97,7 @@ $(function() {
 		});
 	}
 
-	$('.additional a').on('click', function(){
+	$('.additional.flashbanner a').on('click', function(){
 		var dataAttr = $(this).attr('data-html');
 		if (dataAttr == 'on') {
 			$('#flashBanner').flash().remove();
@@ -114,8 +114,54 @@ $(function() {
 			$('#htmlBanner iframe').attr('width', '0').attr('height', '0').attr('src', 'about:blank');
 			$('.flashbanner .selector').removeClass('selected');
 			$(this).addClass('selected');
-			$('.flashBanner .desc').html($(this).data('description'));
+			$('.flashPlay .desc').html($(this).data('description'));
 		}
+	});
+
+
+	$('.davplayer .selector').first().addClass('selected');
+	videojs('wonderlandPlayerDigital', {});
+	$('.additional.davplayer a').on('click', function(e){
+		e.preventDefault();
+		$('.davplayer .selector').removeClass('selected');
+		videojs('wonderlandPlayerDigital', {}, function(){
+			var myPlayer = this;
+			myPlayer.dispose();
+		});
+		$(this).addClass('selected');
+		var $videoTitle = $(this).data('title'),
+			$mp4		= $(this).data('mp4'),
+			$webm		= $(this).data('webm'),
+			$ogg		= $(this).data('ogg'),
+			$poster		= $(this).data('poster'),
+			$min		= $(this).data('min'),
+			$sec		= $(this).data('sec'),
+			$desc		= $(this).data('description');
+			$width		= $(this).data('width');
+			$height		= $(this).data('height');
+		var dplayer = videojs('wonderlandPlayerDigital');
+		dplayer.poster($poster);
+		$('.dav meta[itemprop="thumbnailUrl"]').attr('content', $poster);
+		$('.dav meta[itemprop="embedURL"]').attr('content', $mp4);
+		$('.dav meta[itemprop="duration"]').attr('content', 'T'+$min+'M'+$sec+'S');
+		$('.dav .videoPlay .desc').html($desc);
+		$('.dav #videoTitle').html($videoTitle);
+		$('.dav #wonderlandPlayer').attr('poster', $poster);
+		$('.dav #videoWrapper').attr('data-width', $width).attr('data-height', $height)
+		dplayer.src(
+			{ type: "video/mp4", src: $mp4 },
+			{ type: "video/webm", src: $webm },
+			{ type: "video/ogg", src: $ogg }
+		);
+		if($(window).width() < 700) {
+		var pw = $('.dav .videoPlay').width(),
+			aspectW = pw / $width,
+			aspectH = $height * aspectW;
+		dplayer.width($width).height(aspectH)
+		} else {
+			dplayer.width($width).height($height)
+		}
+		dplayer.play();
 	});
 
 
@@ -136,15 +182,17 @@ $(function() {
 			$poster		= $(this).data('poster'),
 			$min		= $(this).data('min'),
 			$sec		= $(this).data('sec'),
+			$width		= $(this).data('width'),
+			$height		= $(this).data('height'),
 			$desc		= $(this).data('description');
 		var player = videojs('wonderlandPlayer');
 		player.poster($poster);
-		$('meta[itemprop="thumbnailUrl"]').attr('content', $poster);
-		$('meta[itemprop="embedURL"]').attr('content', $mp4);
-		$('meta[itemprop="duration"]').attr('content', 'T'+$min+'M'+$sec+'S');
-		$('.videoPlay .desc').html($desc);
-		$('#videoTitle').html($videoTitle);
-		$('#wonderlandPlayer').attr('poster', $poster);
+		$('.av meta[itemprop="thumbnailUrl"]').attr('content', $poster);
+		$('.av meta[itemprop="embedURL"]').attr('content', $mp4);
+		$('.av meta[itemprop="duration"]').attr('content', 'T'+$min+'M'+$sec+'S');
+		$('.av .videoPlay .desc').html($desc);
+		$('.av #videoTitle').html($videoTitle);
+		$('.av #wonderlandPlayer').attr('poster', $poster);
 		player.src(
 			{ type: "video/mp4", src: $mp4 },
 			{ type: "video/webm", src: $webm },
@@ -205,6 +253,13 @@ if (showHash == 'about') {
 // Side Menu
 $(window).load(function() {
 
+	var wlpdw = $('#videoWrapper').data('width'),
+		wlpdh = $('#videoWrapper').data('height'),
+		pw = $('.videoPlay').width(),
+		aspectW = pw / wlpdw,
+		aspectH = wlpdh * aspectW;
+	$('#wonderlandPlayerDigital').width(pw).height(aspectH);
+
 	var topOfOthDiv = 65;
 
 	$('.aboutBtn').on('click', function(event) {
@@ -231,4 +286,3 @@ $(window).load(function() {
 
 	});
 });
-

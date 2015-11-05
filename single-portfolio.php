@@ -83,6 +83,8 @@
 
 						<?php get_template_part( 'content', 'digitalswf' ); ?>
 
+						<?php get_template_part( 'content', 'digitalav' ); ?>
+
 					<?php } ?>
 
 				<?php endif; ?>
@@ -119,6 +121,8 @@
 
 						<?php get_template_part( 'content', 'digitalswf' ); ?>
 
+						<?php get_template_part( 'content', 'digitalav' ); ?>
+
 						<?php get_template_part( 'content', 'digitalimage' ); ?>
 
 					<?php } ?>
@@ -148,6 +152,8 @@
 						<?php get_template_part( 'content', 'digitalimage' ); ?>
 
 						<?php get_template_part( 'content', 'digitalswf' ); ?>
+
+						<?php get_template_part( 'content', 'digitalav' ); ?>
 
 					<?php } ?>
 
@@ -184,6 +190,8 @@
 						<h3>Digital</h3><a class="anchor" id="digital"></a>
 
 						<?php get_template_part( 'content', 'digitalswf' ); ?>
+
+						<?php get_template_part( 'content', 'digitalav' ); ?>
 
 						<?php get_template_part( 'content', 'digitalimage' ); ?>
 
@@ -225,6 +233,8 @@
 
 						<?php get_template_part( 'content', 'digitalswf' ); ?>
 
+						<?php get_template_part( 'content', 'digitalav' ); ?>
+
 					<?php } ?>
 
 					<?php if( has_term( 'AV', 'type' ) ) { ?>
@@ -260,6 +270,8 @@
 						<h3>Digital</h3><a class="anchor" id="digital"></a>
 
 						<?php get_template_part( 'content', 'digitalswf' ); ?>
+
+						<?php get_template_part( 'content', 'digitalav' ); ?>
 
 						<?php get_template_part( 'content', 'digitalimage' ); ?>
 
@@ -311,6 +323,8 @@
 
 						<?php get_template_part( 'content', 'digitalswf' ); ?>
 
+						<?php get_template_part( 'content', 'digitalav' ); ?>
+
 					<?php } ?>
 
 				<?php endif; ?>
@@ -347,8 +361,9 @@
 
 						<?php get_template_part( 'content', 'digitalswf' ); ?>
 
-						<?php get_template_part( 'content', 'digitalimage' ); ?>
+						<?php get_template_part( 'content', 'digitalav' ); ?>
 
+						<?php get_template_part( 'content', 'digitalimage' ); ?>
 					<?php } ?>
 
 				<?php endif; ?>
@@ -366,6 +381,8 @@
 						<?php get_template_part( 'content', 'digitalimage' ); ?>
 
 						<?php get_template_part( 'content', 'digitalswf' ); ?>
+
+						<?php get_template_part( 'content', 'digitalav' ); ?>
 
 					<?php } ?>
 
@@ -402,6 +419,8 @@
 						<h3>Digital</h3><a class="anchor" id="digital"></a>
 
 						<?php get_template_part( 'content', 'digitalswf' ); ?>
+
+						<?php get_template_part( 'content', 'digitalav' ); ?>
 
 						<?php get_template_part( 'content', 'digitalimage' ); ?>
 
@@ -443,6 +462,8 @@
 
 						<?php get_template_part( 'content', 'digitalswf' ); ?>
 
+						<?php get_template_part( 'content', 'digitalav' ); ?>
+
 					<?php } ?>
 
 					<?php if( has_term( 'Print', 'type' ) ) { ?>
@@ -478,6 +499,8 @@
 						<h3>Digital</h3><a class="anchor" id="digital"></a>
 
 						<?php get_template_part( 'content', 'digitalswf' ); ?>
+
+						<?php get_template_part( 'content', 'digitalav' ); ?>
 
 						<?php get_template_part( 'content', 'digitalimage' ); ?>
 
