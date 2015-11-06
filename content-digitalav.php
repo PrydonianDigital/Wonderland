@@ -47,7 +47,7 @@
 
 							if ($key == 0) {
 						?>
-
+							<?php if($dtitle != '') : ?>
 							<div id="videoWrapper" itemprop="video" itemscope itemtype="http://schema.org/VideoObject" data-width="<?php echo $dwidth; ?>" data-height="<?php echo $dheight; ?>">
 								<span id="videoTitle" itemprop="name"><?php echo $dtitle; ?></span>
 								<meta itemprop="thumbnailUrl" content="<?php echo $dposter; ?>" />
@@ -57,7 +57,8 @@
 							</div><!--videoWrapper-->
 
 							<p class="desc" itemprop="description"><?php echo $ddescription; ?></p>
-
+							<?php else : ?>
+							<?php endif; ?>
 						<?php
 							}
 						}
@@ -117,8 +118,11 @@
 								        $dloop = esc_html( $entry['dloop']);
 
 								?>
+								<?php if($dtitle != '') : ?>
 								<a class="selector" data-title="<?php echo $dtitle; ?>" data-mp4="<?php echo $dmp4; ?>" data-webm="<?php echo $dwebm; ?>" data-ogg="<?php echo $dogg; ?>" data-poster="<?php echo $dposter; ?>" data-description="<?php echo $ddescription; ?>" data-width="<?php echo $dwidth; ?>" data-height="<?php echo $dheight; ?>" data-min="<?php if($dmin==''){echo '0';}else{echo $dmin;} ?>" data-sec="<?php echo $dsec; ?>" data-loop="<?php echo $dloop; ?>"><?php echo $dtitle; ?></a>
 
+								<?php else : ?>
+								<?php endif; ?>
 								<?php } ?>
 							</p>
 
