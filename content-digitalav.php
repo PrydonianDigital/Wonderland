@@ -53,7 +53,7 @@
 								<meta itemprop="thumbnailUrl" content="<?php echo $dposter; ?>" />
 								<meta itemprop="embedURL" content="<?php echo $dmp4; ?>" />
 								<meta itemprop="duration" content="T<?php if($dmin==''){echo '0';}else{echo $dmin;} ?>M<?php echo $dsec; ?>S" />
-								<video id="wonderlandPlayerDigital" class="video-js vjs-default-skin vjs-big-play-centered" controls <?php if($dloop == 'on') : ?>loop<?php endif; ?> width="<?php echo $dwidth; ?>" height="<?php echo $dheight; ?>" poster="<?php echo $dposter; ?>"><source src="<?php echo $dmp4; ?>" type="video/mp4" /><source src="<?php echo $dwebm; ?>" type="video/webm" /><source src="<?php echo $dogg; ?>" type="video/ogg" /><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>
+								<video id="wonderlandPlayerDigital" class="video-js vjs-default-skin vjs-big-play-centered" controls <?php if($dloop == 'on') : ?>loop<?php else : ?><?php endif; ?> width="<?php echo $dwidth; ?>" height="<?php echo $dheight; ?>" poster="<?php echo $dposter; ?>"><source src="<?php echo $dmp4; ?>" type="video/mp4" /><source src="<?php echo $dwebm; ?>" type="video/webm" /><source src="<?php echo $dogg; ?>" type="video/ogg" /><p class="vjs-no-js">To view this video please enable JavaScript, and consider upgrading to a web browser that <a href="http://videojs.com/html5-video-support/" target="_blank">supports HTML5 video</a></p></video>
 							</div><!--videoWrapper-->
 
 							<p class="desc" itemprop="description"><?php echo $ddescription; ?></p>

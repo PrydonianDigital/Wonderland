@@ -125,16 +125,16 @@ $(function() {
 	}
 
 	if(element_exists('#wonderlandPlayerDigital')) {
-		var player = videojs('wonderlandPlayerDigital').ready(function() {
-			console.log('AV ready');
+		var dplayer = videojs('wonderlandPlayerDigital').ready(function() {
+			console.log('Digital AV ready');
 		});
 	}
 
 	$('.avplayer .selector').first().addClass('selected');
-	$('.av').on('click', '.selector', function(e){
+	$('.additional.avplayer a').on('click', function(e){
 		e.preventDefault();
 		$('.avplayer .selector').removeClass('selected');
-		player.dispose();
+		//player.dispose();
 		$(this).addClass('selected');
 		var $videoTitle = $(this).data('title'),
 			$mp4		= $(this).data('mp4'),
@@ -165,18 +165,18 @@ $(function() {
 	$('.additional.davplayer a').on('click', function(e){
 		e.preventDefault();
 		$('.davplayer .selector').removeClass('selected');
-		dplayer.dispose();
+		//dplayer.dispose();
 		$(this).addClass('selected');
 		var $dvideoTitle = $(this).data('title'),
 			$dmp4		= $(this).data('mp4'),
 			$dwebm		= $(this).data('webm'),
 			$dogg		= $(this).data('ogg'),
-			$dposter		= $(this).data('poster'),
+			$dposter	= $(this).data('poster'),
 			$dmin		= $(this).data('min'),
 			$dsec		= $(this).data('sec'),
 			$ddesc		= $(this).data('description');
 			$dwidth		= $(this).data('width');
-			$dheight		= $(this).data('height');
+			$dheight	= $(this).data('height');
 			$dloop		= $(this).data('loop');
 		dplayer.poster($dposter);
 		$('.dav meta[itemprop="thumbnailUrl"]').attr('content', $dposter);
