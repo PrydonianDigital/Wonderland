@@ -139,6 +139,7 @@ $(function() {
 			$desc		= $(this).data('description');
 			$width		= $(this).data('width');
 			$height		= $(this).data('height');
+			$loop		= $(this).data('loop');
 		var dplayer = videojs('wonderlandPlayerDigital');
 		dplayer.poster($poster);
 		$('.dav meta[itemprop="thumbnailUrl"]').attr('content', $poster);
@@ -160,6 +161,11 @@ $(function() {
 		dplayer.width($width).height(aspectH)
 		} else {
 			dplayer.width($width).height($height)
+		}
+		if($loop == 'on') {
+			dplayer.loop(true);
+		} else {
+			dplayer.loop(false);
 		}
 		dplayer.play();
 	});

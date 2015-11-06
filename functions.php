@@ -499,6 +499,12 @@ function wl_digital_av_repeatable() {
 		'type'        => 'textarea_small',
 	) );
 	$cmb_group->add_group_field( $group_field_id, array(
+	    'name' => __( 'Loop', 'wl' ),
+		'description' => __( 'Loop the video? (required)', 'wl' ),
+		'id'   => 'dloop',
+		'type' => 'checkbox'
+	) );
+	$cmb_group->add_group_field( $group_field_id, array(
 		'name' => __( 'Poster Image', 'wl' ),
 		'description' => __( 'The poster specifies an image to be shown while the video is downloading, or until the user hits the play button. If this is not included, the first frame of the video will be used instead. Image dimensions should be the same size as the video (required)', 'wl' ),
 		'id'   => 'dimage',
