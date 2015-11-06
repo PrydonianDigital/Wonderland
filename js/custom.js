@@ -253,12 +253,6 @@ if (showHash == 'about') {
 // Side Menu
 $(window).load(function() {
 
-	var wlpdw = $('#videoWrapper').data('width'),
-		wlpdh = $('#videoWrapper').data('height'),
-		pw = $('.videoPlay').width(),
-		aspectW = pw / wlpdw,
-		aspectH = wlpdh * aspectW;
-	$('#wonderlandPlayerDigital').width(pw).height(aspectH);
 
 	var topOfOthDiv = 65;
 
