@@ -184,7 +184,7 @@ $(function() {
 		$('.dav meta[itemprop="duration"]').attr('content', 'T'+$dmin+'M'+$dsec+'S');
 		$('.dav .videoPlay .desc').html($ddesc);
 		$('.dav #videoTitle').html($dvideoTitle);
-		$('.dav #id="wonderlandPlayerDigital"').attr('poster', $dposter);
+		$('.dav #wonderlandPlayerDigital').attr('poster', $dposter);
 		$('.dav #videoWrapper').attr('data-width', $dwidth).attr('data-height', $dheight)
 		dplayer.src(
 			{ type: "video/mp4", src: $dmp4 },
